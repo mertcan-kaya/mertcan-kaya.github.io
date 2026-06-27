@@ -156,7 +156,7 @@
         .card-content h3 { font-size: 1rem; color: var(--techslate); margin-bottom: 6px; font-weight: 700; }
         .card-content p { font-size: 0.85rem; color: #4A5568; }
 
-        /* --- OPEN-SOURCE SOFTWARE REPOSITORY MATRIX --- */
+        /* --- CARD GRID LAYOUT FOR THEMES & REPOS --- */
         .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
         .repo-card { 
             background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px;
@@ -166,7 +166,7 @@
         .repo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.06); border-color: var(--linkblue); }
         .repo-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
         .repo-header i { font-size: 1.25rem; color: var(--techslate); }
-        .repo-header h3 { font-size: 1rem; color: var(--linkblue); font-weight: 700; word-break: break-all; }
+        .repo-header h3 { font-size: 1.05rem; color: var(--techslate); font-weight: 700; word-break: break-all; }
         .repo-description { font-size: 0.88rem; color: #4A5568; margin-bottom: 15px; flex-grow: 1; }
         .repo-meta-strip { display: flex; gap: 16px; font-size: 0.8rem; font-weight: 600; color: #718096; }
         .repo-lang { display: inline-flex; align-items: center; gap: 5px; }
@@ -222,6 +222,7 @@
             <div class="nav-brand">Mertcan Kaya // Robotics</div>
             <ul class="nav-links">
                 <li><a href="#demos">Hardware Demos</a></li>
+                <li><a href="#themes">Research Highlights</a></li>
                 <li><a href="#open-source">Open Source</a></li>
                 <li><a href="#research">Current Research</a></li>
                 <li><a href="#publications">Publications</a></li>
@@ -236,7 +237,6 @@
             <div class="hero-layout">
                 <div class="hero-text">
                     <h1>Mertcan Kaya</h1>
-                    <!-- ENRICHED COMPACT SINGLE-LINE HIGH IMPACT STATEMENT -->
                     <div class="subtitle">I bridge control theory and human biomechanics to develop predictive motion-planning frameworks that enable robots to coordinate naturally with human movement in shared workspaces.</div>
                     
                     <div class="social-links">
@@ -392,7 +392,48 @@
         </div>
     </section>
 
-    <!-- --- SECTION 2: OPEN-SOURCE REPOSITORIES --- -->
+    <!-- --- SECTION 2: RESEARCH HIGHLIGHTS (THEME CARDS) --- -->
+    <section id="themes" style="background-color: var(--lightbg);">
+        <div class="container">
+            <h2>Research Highlights</h2>
+            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Transforming theoretical publication outputs into clear, foundational research themes driving our robotic system deployments:</p>
+            
+            <div class="repo-grid">
+                <!-- Theme Card 1 -->
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Spatial Negotiation</h3>
+                    </div>
+                    <p class="repo-description">
+                        Quantifying how humans adapt their positions and spatial movement profiles when interacting inside shared boundaries with active robotic configurations.
+                    </p>
+                </div>
+                <!-- Theme Card 2 -->
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header">
+                        <i class="fas fa-wave-square"></i>
+                        <h3>Motor Interference</h3>
+                    </div>
+                    <p class="repo-description">
+                        Leveraging mathematical human motor adaptation profiles as an objective, empirical measure for certifying and evaluating the operational human-likeness of robot motions.
+                    </p>
+                </div>
+                <!-- Theme Card 3 -->
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Human-Aware Motion Planning</h3>
+                    </div>
+                    <p class="repo-description">
+                        Architecting real-time, congruency-sensitive trajectory optimization loops that dynamically regulate workspace kinematics based on predicted human behavior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- SECTION 3: OPEN-SOURCE REPOSITORIES --- -->
     <section id="open-source">
         <div class="container">
             <h2>Open-Source Software Suites</h2>
@@ -451,7 +492,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 3: CURRENT RESEARCH & FUNDING MATRIX --- -->
+    <!-- --- SECTION 4: CURRENT RESEARCH & FUNDING MATRIX --- -->
     <section id="research">
         <div class="container">
             <h2>Current Research Focus & Grant Alignment</h2>
@@ -469,7 +510,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 4: FEATURED PUBLICATIONS --- -->
+    <!-- --- SECTION 5: FEATURED PUBLICATIONS --- -->
     <section id="publications">
         <div class="container">
             <h2>Selected Publications & Core Formulations</h2>
@@ -507,7 +548,7 @@
                         <summary>View BibTeX Source</summary>
                         <div class="bibtex-box">@article{kaya2024novel,
   title={A novel recursive algorithm for adaptive robot controllers},
-  author={Kaya, Mertcan and Kühnlenz, Kolja},
+  author={Kaya, Mertcan &amp; Kühnlenz, Kolja},
   journal={Journal of Intelligent \& Robotic Systems},
   volume={110},
   number={2},
@@ -534,7 +575,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 5: TECHNICAL ENGINE STACKS --- -->
+    <!-- --- SECTION 6: TECHNICAL ENGINE STACKS --- -->
     <section id="skills">
         <div class="container">
             <h2>Technical Core Stacks</h2>
@@ -573,7 +614,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 6: COMPREHENSIVE DOWNSTREAM DOSSIERS --- -->
+    <!-- --- SECTION 7: COMPREHENSIVE DOWNSTREAM DOSSIERS --- -->
     <section id="downloads" style="background-color: var(--lightbg);">
         <div class="container">
             <h2>Dossier Downloads & Academic Records</h2>
@@ -597,7 +638,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 7: CONTACT CALL OUT --- -->
+    <!-- --- SECTION 8: CONTACT CALL OUT --- -->
     <section id="contact" style="text-align: center; background: var(--techslate); color: #FFFFFF; border-bottom: none;">
         <div class="container">
             <h2 style="color: #FFFFFF; margin-bottom: 15px;">Connect & Collaborate</h2>
@@ -609,7 +650,7 @@
         </div>
     </section>
 
-    <!-- --- FOOTER --- -->
+    <!-- --- --- FOOTER --- --- -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Mertcan Kaya. Engineered natively using HTML5 & CSS3. Hosted securely via GitHub Pages.</p>

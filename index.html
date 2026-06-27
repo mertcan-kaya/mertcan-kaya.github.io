@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mertcan Kaya | Robotics R&D Engineer & Researcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Include KaTeX for beautiful, lightning-fast mathematical rendering -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
     
     <style>
         /* --- THEME COLORS & VARIABLES --- */
@@ -158,7 +156,6 @@
 </head>
 <body>
 
-    <!-- --- STICKY NAVIGATION BAR --- -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">MK / Robotics</div>
@@ -171,7 +168,6 @@
         </div>
     </nav>
 
-    <!-- --- HEADER HERO BLOCK --- -->
     <header>
         <div class="container">
             <h1>Mertcan Kaya</h1>
@@ -191,7 +187,6 @@
         </div>
     </header>
 
-    <!-- --- ABOUT SECTION --- -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -232,14 +227,12 @@
         </div>
     </section>
 
-    <!-- --- MULTIMEDIA PORTFOLIO SECTION --- -->
     <section id="portfolio">
         <div class="container">
             <h2>Robotics Deployment Portfolio</h2>
             <p style="margin-bottom: 20px;">Direct technical demonstrations of software frameworks executed across physical robot hardware configurations:</p>
             
             <div class="portfolio-grid">
-                <!-- Video Card 1: AgileX SLAM -->
                 <div class="portfolio-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/zq1n08jojjY" allowfullscreen></iframe>
@@ -250,7 +243,6 @@
                     </div>
                 </div>
 
-                <!-- Video Card 2: TurtleBot 4 Navigation -->
                 <div class="portfolio-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/wKTWUI6W_yU" allowfullscreen></iframe>
@@ -261,7 +253,6 @@
                     </div>
                 </div>
 
-                <!-- Video Card 3: Franka Panda Arm -->
                 <div class="portfolio-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/aLx3pHwVC0A" allowfullscreen></iframe>
@@ -272,7 +263,6 @@
                     </div>
                 </div>
 
-                <!-- Video Card 4: Human-Robot Force Control -->
                 <div class="portfolio-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/B89a4sofGeU" allowfullscreen></iframe>
@@ -283,7 +273,6 @@
                     </div>
                 </div>
 
-                <!-- Video Card 5: Robot-Robot Force Control -->
                 <div class="portfolio-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/FfO-nDWP9zw" allowfullscreen></iframe>
@@ -297,12 +286,10 @@
         </div>
     </section>
 
-    <!-- --- PUBLICATIONS SECTION --- -->
     <section id="publications">
         <div class="container">
             <h2>Selected Publications & Mathematical Foundations</h2>
             
-            <!-- Computational Theoretical Banner Block -->
             <div class="math-block">
                 <h4>Core Mathematical Framework: Distractor-Aligned Variance (DAV)</h4>
                 <p>To mathematically isolate and measure human motor interference during synchronous coordination tasks, my research structures human trajectory deviations orthogonal to the core task geometry vector \(\mathbf{x}(t)\):</p>
@@ -310,7 +297,6 @@
             </div>
 
             <ul class="item-list">
-                <!-- Publication 1 -->
                 <li>
                     <div class="item-meta">Journal Article &bull; Interaction Studies &bull; 2026</div>
                     <div class="item-title">Motor interference of elbow configuration changes in human-robot interaction</div>
@@ -323,7 +309,6 @@
                     </details>
                 </li>
 
-                <!-- Publication 2 -->
                 <li>
                     <div class="item-meta">Journal Article &bull; Journal of Intelligent & Robotic Systems &bull; 2024</div>
                     <div class="item-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
@@ -347,7 +332,6 @@
                     </details>
                 </li>
 
-                <!-- Publication 3 -->
                 <li>
                     <div class="item-meta">Preprint Framework &bull; Under Active Review &bull; 2026</div>
                     <div class="item-title">The Geometry of Interference: Quantifying Spatial Leakage and Biomechanical Adaptation During Human–Robot Collaboration</div>
@@ -363,7 +347,6 @@
         </div>
     </section>
 
-    <!-- --- DOWNLOAD RESUMES SECTION --- -->
     <section id="downloads" style="background-color: var(--lightbg);">
         <div class="container">
             <h2>Dossier Downloads</h2>
@@ -375,12 +358,27 @@
         </div>
     </section>
 
-    <!-- --- FOOTER --- -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Mertcan Kaya. Built natively with HTML5 & CSS3. Hosted on GitHub Pages.</p>
         </div>
     </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError : false
+            });
+        });
+    </script>
 
 </body>
 </html>

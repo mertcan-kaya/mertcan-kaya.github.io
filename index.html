@@ -63,11 +63,11 @@
         .container { max-width: 1050px; margin: 0 auto; padding: 0 20px; }
         section { padding: 50px 0; border-bottom: 1px solid var(--bordergray); }
 
-        /* --- TIGHTENED HERO BLOCK (FIXED VERTICAL GAP) --- */
+        /* --- HERO BLOCK (VERTICAL GAP ELIMINATED) --- */
         header {
             background-color: var(--techslate);
             color: #FFFFFF;
-            padding: 40px 0; /* Tightened tracking space boundaries */
+            padding: 40px 0;
         }
         .hero-layout {
             display: flex;
@@ -79,15 +79,15 @@
         .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
         .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 16px 0; font-weight: 400; color: #E2E8F0; }
         
-        /* --- VISUAL PORTFOLIO HEADSHOT SLIME --- */
+        /* --- PORTFOLIO HEADSHOT PROFILE IMAGE --- */
         .hero-photo-container { flex-shrink: 0; margin: 0; }
         .hero-photo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.15);
-            background-color: #4A5568;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         /* --- SOCIAL LINKS AND CTA --- */
@@ -109,7 +109,7 @@
         h2 { font-size: 1.6rem; color: var(--techslate); margin-bottom: 20px; position: relative; padding-bottom: 8px; }
         h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background-color: var(--linkblue); }
 
-        /* --- METRIC HIGH-LIGHTS STRIP --- */
+        /* --- METRIC HIGHLIGHTS PANEL --- */
         .highlights-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
         .highlight-card {
             background: var(--lightbg);
@@ -164,7 +164,7 @@
 
         @media (max-width: 768px) {
             .hero-layout { flex-direction: column; text-align: center; gap: 15px; }
-            .nav-links, .hero-photo-container { display: none; }
+            .nav-links { display: none; }
             body { padding-top: 0; }
             .navbar { position: relative; }
             header { padding: 30px 0; }
@@ -209,7 +209,7 @@
                     </div>
                 </div>
                 <div class="hero-photo-container">
-                    <img src="profile.jpg" alt="Mertcan Kaya" class="hero-photo" onerror="this.style.display='none'">
+                    <img src="profile.jpg" alt="Mertcan Kaya" class="hero-photo">
                 </div>
             </div>
         </div>
@@ -239,7 +239,7 @@
         </div>
     </section>
 
-    <!-- --- SECTION 1: HARDWARE DEPLOYMENTS (VECTORS FIRST) --- -->
+    <!-- --- SECTION 1: HARDWARE DEPLOYMENTS --- -->
     <section id="demos">
         <div class="container">
             <h2>Featured Robotics Demonstrations</h2>
@@ -318,10 +318,10 @@
         </div>
     </section>
 
-    <!-- --- SECTION 3: COMPACT PUBLICATIONS --- -->
+    <!-- --- SECTION 3: FEATURED PUBLICATIONS --- -->
     <section id="publications">
         <div class="container">
-            <h2>Selected Publications & Structural Mechanics</h2>
+            <h2>Selected Publications & Core Formulations</h2>
             
             <!-- Collapsible Mathematics Drawer -->
             <details class="pub-details" style="margin-bottom: 20px; background-color: var(--lightbg); padding: 12px 15px; border-radius: 6px; border: 1px solid var(--bordergray);">
@@ -348,7 +348,7 @@
                     <div class="item-meta">Journal Article &bull; Journal of Intelligent & Robotic Systems &bull; 2024</div>
                     <div class="item-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
                     <div class="pco-structure">
-                        <strong>Problem:</strong> Traditional adaptive controllers demand high-dimensional regressor structural formulations, capping loop iteration cycles on industrial target processors.<br>
+                        <strong>Problem:</strong> Traditional adaptive controllers demand high-dimensional regressor structural formulations, capping loop iteration cycles on industrial embedded processors.<br>
                         <strong>Contribution:</strong> Developed an alternative recursive inversion mapping framework leveraging multi-body inverse Newton-Euler dynamics parameters.<br>
                         <strong>Outcome:</strong> Eliminated explicit matrix build parameters completely, cutting loop overhead and tracking lag while expanding tracking speeds on running physical processors.
                     </div>
@@ -375,6 +375,11 @@
                     </div>
                 </li>
             </ul>
+
+            <!-- DIRECT INTERACTIVE ROUTING GATEWAY TO SUBPAGE -->
+            <div style="margin-top: 25px;">
+                <a href="publications.html" class="btn" style="background-color: var(--linkblue);"><i class="fas fa-book-open"></i> View Full Publication Catalog (9 Papers)</a>
+            </div>
         </div>
     </section>
 
@@ -434,7 +439,6 @@
             <div>
                 <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--techslate); margin-bottom: 8px; letter-spacing: 0.3px;">Supplementary Academic Files:</h4>
                 <div class="btn-group">
-                    <!-- Placeholder href links ready to map your research statement and full output logs -->
                     <a href="Mertcan_Kaya_Research_Statement.pdf" class="btn btn-secondary" download><i class="fas fa-scroll"></i> Download Research Statement (2-Page)</a>
                     <a href="Mertcan_Kaya_Complete_Publications.pdf" class="btn btn-secondary" download><i class="fas fa-book-open"></i> Download Full Publication List</a>
                 </div>
@@ -462,7 +466,6 @@
     </footer>
 
     <!-- --- KATEX MATH AUTO-RENDER EXECUTABLE SCRIPT --- -->
-    <!-- Positioned downstream to ensure the complete layout has loaded before mathematical injection happens -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
     <script>

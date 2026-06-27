@@ -17,7 +17,7 @@
     <meta property="og:description" content="I translate advanced control theory into fluid, deployable software for collaborative robots. Explore my physical hardware deployment portfolio.">
     <meta property="og:image" content="https://mertcan-kaya.github.io/profile.jpg">
 
-    <!-- --- MODERN BROWSER FAVICON (NATIVE EMOJI TRICK) --- -->
+    <!-- --- MODERN BROWSER FAVICON --- -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🤖</text></svg>">
 
     <!-- --- EXTERNAL STYLE & MATH ENGINE ASSETS --- -->
@@ -94,7 +94,7 @@
         .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
         .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 16px 0; font-weight: 400; color: #E2E8F0; }
         
-        /* --- PROFILE IMAGE PROFILE --- */
+        /* --- PROFILE IMAGE CONTAINER --- */
         .hero-photo-container { flex-shrink: 0; margin: 0; }
         .hero-photo {
             width: 150px;
@@ -149,9 +149,9 @@
         .play-overlay-btn {
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             font-size: 3.6rem; color: rgba(255, 255, 255, 0.9); transition: color 0.2s, transform 0.2s;
-            z-index: 2; pointer-events: none; drop-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 2; pointer-events: none; text-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-        .video-container:hover .play-overlay-btn { color: var(--ytred); transform: translate(-50%, -50__) scale(1.1); }
+        .video-container:hover .play-overlay-btn { color: var(--ytred); transform: translate(-50%, -50%) scale(1.1); }
 
         .card-content { padding: 14px; flex-grow: 1; display: flex; flex-direction: column; }
         .card-content h3 { font-size: 1rem; color: var(--techslate); margin-bottom: 6px; font-weight: 700; }
@@ -201,6 +201,7 @@
 </head>
 <body>
 
+    <!-- --- STICKY NAVIGATION BAR --- -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">Mertcan Kaya // Robotics</div>
@@ -214,6 +215,7 @@
         </div>
     </nav>
 
+    <!-- --- HERO HEADER BLOCK --- -->
     <header>
         <div class="container">
             <div class="hero-layout">
@@ -240,6 +242,7 @@
         </div>
     </header>
 
+    <!-- --- RESEARCH HIGHLIGHTS PANEL --- -->
     <section id="highlights" style="padding: 25px 0; background-color: var(--lightbg);">
         <div class="container">
             <div class="highlights-strip">
@@ -263,12 +266,14 @@
         </div>
     </section>
 
+    <!-- --- SECTION 1: HARDWARE DEPLOYMENTS (LAZY LOOKUP HOOKS ACTIVE) --- -->
     <section id="demos">
         <div class="container">
             <h2>Featured Robotics Demonstrations</h2>
             <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Direct empirical validation of real-time planning, localization, and feedback control layers running on hardware platforms:</p>
             
             <div class="portfolio-grid">
+                <!-- Card 1: AgileX SLAM -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'zq1n08jojjY')">
                         <img src="https://img.youtube.com/vi/zq1n08jojjY/hqdefault.jpg" alt="Lab Mapping Deployment">
@@ -279,6 +284,7 @@
                         <p>Executing real-time laser Simultaneous Localization and Mapping (SLAM) on the AgileX mobile base to construct detailed spatial occupancy grids of the research facility.</p>
                     </div>
                 </div>
+                <!-- Card 2: TurtleBot 4 Navigation -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'wKTWUI6W_yU')">
                         <img src="https://img.youtube.com/vi/wKTWUI6W_yU/hqdefault.jpg" alt="TurtleBot 4 Execution">
@@ -289,6 +295,7 @@
                         <p>Configured ROS 2 Navigation stack architectures, integrating dynamic local/global costmaps and behavior trees for reactive trajectory adaptation inside shared configurations.</p>
                     </div>
                 </div>
+                <!-- Card 3: Real-Time Hand Following Tracking -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
                         <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/hqdefault.jpg" alt="Hand Following Robot Tracking Loop">
@@ -299,6 +306,7 @@
                         <p>Empirical verification of predictive manipulator tracking loops executing seamless task-space path updates to follow human hand vectors actively in real time.</p>
                     </div>
                 </div>
+                <!-- Card 4: Franka Panda Arm Teleoperation -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
                         <img src="https://img.youtube.com/vi/aLx3pHwVC0A/hqdefault.jpg" alt="Manipulator Arm Teleoperation">
@@ -309,6 +317,18 @@
                         <p>ROS-integrated end-effector telemanipulation framework running across collaborative robot arm geometries to automate stable industrial pick-and-place trajectories.</p>
                     </div>
                 </div>
+                <!-- Card 5: Anthropomorphic Motion Tracking (NEW ADDITION) -->
+                <div class="portfolio-card">
+                    <div class="video-container" onclick="injectActiveStream(this, '9rHDIeRKd8U')">
+                        <img src="https://img.youtube.com/vi/9rHDIeRKd8U/hqdefault.jpg" alt="Anthropomorphic Robot Motion Profile Study">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Anthropomorphism & Kinetic Human-Likeness Modeling</h3>
+                        <p>Experimental validation trials evaluating human behavioral responses and motor synchronization paths relative to high-fidelity human-like robotic platforms.</p>
+                    </div>
+                </div>
+                <!-- Card 6: Human-Robot Force Control -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
                         <img src="https://img.youtube.com/vi/B89a4sofGeU/hqdefault.jpg" alt="Human-Robot Physical Compliance Tracking">
@@ -319,6 +339,7 @@
                         <p>Empirical verification of hybrid position/force control loops, showcasing compliant trajectory adjustments and immediate kinetic adaptation during continuous, direct human physical contact.</p>
                     </div>
                 </div>
+                <!-- Card 7: Robot-Robot Force Control -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'FfO-nDWP9zw')">
                         <img src="https://img.youtube.com/vi/FfO-nDWP9zw/hqdefault.jpg" alt="Robot-Robot Collaborative Optimization">
@@ -329,6 +350,7 @@
                         <p>Multi-agent closed-kinematic chain coordination tracking executed via hybrid force laws, maintaining target tracking limits while managing contact forces between interaction boundaries.</p>
                     </div>
                 </div>
+                <!-- Card 8: Custom Embedded Timorous Mobile Robot -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
                         <img src="https://img.youtube.com/vi/VcGA7Ie5stE/hqdefault.jpg" alt="Timorous Mobile Robot Firmware Control">
@@ -339,10 +361,22 @@
                         <p>Deployment of low-level firmware architecture driving real-time crawler locomotion, synchronous scissor-lift elevation cycles, and responsive interactive tracking mechanics.</p>
                     </div>
                 </div>
+                <!-- Card 9: Low-Level Servo Control via ROS (NEW ADDITION) -->
+                <div class="portfolio-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'uuwwoLcsMk8')">
+                        <img src="https://img.youtube.com/vi/uuwwoLcsMk8/hqdefault.jpg" alt="Servo Control Firmware Stack via ROS">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Low-Level Micro-Servo Control via ROS Middleware</h3>
+                        <p>Implementation of modular, low-latency device abstraction layers designed to link active high-level ROS execution graphs down to custom hardware micro-actuator arrays.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- --- SECTION 2: CURRENT RESEARCH & FUNDING MATRIX --- -->
     <section id="research">
         <div class="container">
             <h2>Current Research Focus & Grant Alignment</h2>
@@ -360,19 +394,22 @@
         </div>
     </section>
 
+    <!-- --- SECTION 3: FEATURED PUBLICATIONS --- -->
     <section id="publications">
         <div class="container">
             <h2>Selected Publications & Core Formulations</h2>
             
+            <!-- Collapsible Mathematics Drawer -->
             <details class="pub-details" style="margin-bottom: 20px; background-color: var(--lightbg); padding: 12px 15px; border-radius: 6px; border: 1px solid var(--bordergray);">
                 <summary style="font-size: 0.95rem; color: var(--techslate); font-weight: 600;">📐 View Mathematical Formulation: Distractor-Aligned Variance (DAV)</summary>
                 <div class="pub-content" style="background: none; border: none; padding: 10px 0 0 0; margin: 0;">
                     <p style="margin-bottom: 10px; font-size: 0.88rem;">To isolate true physical human motor interference metrics from intentional task trajectories, the framework maps tracking path deviations orthogonal to the core geometric task vector \(\mathbf{x}(t)\):</p>
-                    <div>$$\text{DAV} = \frac{1}{T} \int_{0}^{T} \left\| \mathbf{e}(t) - \left( \mathbf{e}(t)^T \hat{\mathbf{v}}_d(t) \right) \hat{\mathbf{v}}_d(t) \right\|^2 dt$$</div>
+                    <div>$$text{DAV} = \frac{1}{T} \int_{0}^{T} \left\| \mathbf{e}(t) - \left( \mathbf{e}(t)^T \hat{\mathbf{v}}_d(t) \right) \hat{\mathbf{v}}_d(t) \right\|^2 dt$$</div>
                 </div>
             </details>
 
             <ul class="item-list">
+                <!-- Paper 1 -->
                 <li>
                     <div class="item-meta">Journal Article &bull; Interaction Studies &bull; 2026</div>
                     <div class="item-title">Motor interference of elbow configuration changes in human-robot interaction</div>
@@ -382,6 +419,7 @@
                         <strong>Outcome:</strong> Verified that null-space re-orientation drives involuntary trace adaptations, revealing clear boundaries for proactive trajectory layout.
                     </div>
                 </li>
+                <!-- Paper 2 -->
                 <li>
                     <div class="item-meta">Journal Article &bull; Journal of Intelligent & Robotic Systems &bull; 2024</div>
                     <div class="item-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
@@ -402,6 +440,7 @@
 }</div>
                     </details>
                 </li>
+                <!-- Paper 3 -->
                 <li>
                     <div class="item-meta">Preprint &bull; Under Active Review &bull; 2026</div>
                     <div class="item-title">The Geometry of Interference: Quantifying Spatial Leakage and Biomechanical Adaptation During Human–Robot Collaboration</div>
@@ -413,12 +452,14 @@
                 </li>
             </ul>
 
+            <!-- DIRECT ROUTING GATEWAY TO STANDALONE CATALOG -->
             <div style="margin-top: 25px;">
                 <a href="publications.html" class="btn" style="background-color: var(--linkblue);"><i class="fas fa-book-open"></i> View Full Publication Catalog (11 Papers)</a>
             </div>
         </div>
     </section>
 
+    <!-- --- SECTION 4: TECHNICAL ENGINE STACKS --- -->
     <section id="skills">
         <div class="container">
             <h2>Technical Core Stacks</h2>
@@ -457,6 +498,7 @@
         </div>
     </section>
 
+    <!-- --- SECTION 5: COMPREHENSIVE DOWNSTREAM DOSSIERS --- -->
     <section id="downloads" style="background-color: var(--lightbg);">
         <div class="container">
             <h2>Dossier Downloads & Academic Records</h2>
@@ -480,6 +522,7 @@
         </div>
     </section>
 
+    <!-- --- SECTION 6: CONTACT CALL OUT --- -->
     <section id="contact" style="text-align: center; background: var(--techslate); color: #FFFFFF; border-bottom: none;">
         <div class="container">
             <h2 style="color: #FFFFFF; margin-bottom: 15px;">Connect & Collaborate</h2>
@@ -491,21 +534,22 @@
         </div>
     </section>
 
+    <!-- --- FOOTER --- -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Mertcan Kaya. Engineered natively using HTML5 & CSS3. Hosted securely via GitHub Pages.</p>
         </div>
     </footer>
 
+    <!-- --- HIGH-PERFORMANCE VIDEO INJECTION ENGINE --- -->
     <script>
         function injectActiveStream(container, videoId) {
-            // Swap out image container instantly for autoplay frame stack
             container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-            // Unbind handler to prevent loop interruptions on double clicks
             container.removeAttribute('onclick'); 
         }
     </script>
 
+    <!-- --- KATEX MATH AUTO-RENDER EXECUTABLE SCRIPT --- -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
     <script>

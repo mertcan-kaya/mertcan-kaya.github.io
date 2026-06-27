@@ -172,6 +172,39 @@
         .repo-lang { display: inline-flex; align-items: center; gap: 5px; }
         .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 
+        /* --- ACADEMIC METRICS SCORECARD BLOCK --- */
+        .metrics-table {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 0 25px 0;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: var(--lightbg);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--bordergray);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .metrics-table th {
+            background-color: var(--techslate);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+        }
+        .metrics-table td {
+            padding: 12px 14px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--techslate);
+            border-top: 1px solid var(--bordergray);
+        }
+
         /* --- SKILLS/PLATFORMS GRID --- */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .skills-category { background: var(--lightbg); padding: 16px; border-radius: 6px; border: 1px solid var(--bordergray); }
@@ -406,7 +439,7 @@
                         <h3>Spatial Negotiation</h3>
                     </div>
                     <p class="repo-description">
-                        Quantifying how humans adapt their positions and spatial movement profiles when interacting inside shared boundaries with active robotic configurations.
+                        Quantifying how humans adapt their positions and spatial movement profiles when interacting inside shared workspaces with active robotic configurations.
                     </p>
                 </div>
                 <!-- Theme Card 2 -->
@@ -510,10 +543,28 @@
         </div>
     </section>
 
-    <!-- --- SECTION 5: FEATURED PUBLICATIONS --- -->
+    <!-- --- SECTION 5: SELECTED PUBLICATIONS --- -->
     <section id="publications">
         <div class="container">
             <h2>Selected Publications & Core Formulations</h2>
+            
+            <!-- --- NEW INTEGRATED ACADEMIC METRICS SCORECARD --- -->
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Total Publications</th>
+                        <th>Citations (Scholar)</th>
+                        <th>h-index</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>11</td>
+                        <td>140+</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
             
             <!-- Collapsible Mathematics Drawer -->
             <details class="pub-details" style="margin-bottom: 20px; background-color: var(--lightbg); padding: 12px 15px; border-radius: 6px; border: 1px solid var(--bordergray);">

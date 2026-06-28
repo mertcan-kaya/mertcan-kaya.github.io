@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mertcan Kaya | Robotics R&D Engineer & Researcher</title>
+    <title>Mertcan Kaya | Robotics Researcher</title>
     
     <!-- --- STANDARD SEO METADATA --- -->
-    <meta name="description" content="Mertcan Kaya - Robotics R&D Engineer & Doctoral Researcher specializing in human-aware motion planning, model-based control loops, and Human-Robot Interaction (HRI).">
-    <meta name="keywords" content="Mertcan Kaya, Robotics, Motion Planning, Control Systems, HRI, ROS 2, DFG, TUM, Coburg, Human-Robot Interaction, Trajectory Optimization">
+    <meta name="description" content="Mertcan Kaya - Doctoral Researcher specializing in human-aware motion planning, control systems, and Human-Robot Interaction (HRI).">
     <meta name="author" content="Mertcan Kaya">
 
     <!-- --- OPENGRAPH (LINKEDIN, SLACK, & EMAIL PREVIEWS) --- -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mertcan-kaya.github.io/">
-    <meta property="og:title" content="Mertcan Kaya | Robotics R&D Engineer & Researcher">
-    <meta property="og:description" content="I bridge control theory and human biomechanics to develop predictive motion-planning frameworks that enable robots to coordinate naturally with human movement in shared workspaces.">
+    <meta property="og:title" content="Mertcan Kaya | Robotics Researcher">
+    <meta property="og:description" content="Developing human-aware motion planning and control methods for safe and efficient collaboration between humans and robots.">
     <meta property="og:image" content="https://mertcan-kaya.github.io/profile.jpg">
+
+    <!-- --- JSON-LD SCHEMA MARKUP (FOR GOOGLE SCHOLAR/ACADEMIC SEO) --- -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Mertcan Kaya",
+      "jobTitle":"Research Associate & Doctoral Candidate",
+      "affiliation":[
+        {
+          "@type":"CollegeOrUniversity",
+          "name":"Coburg University of Applied Sciences"
+        },
+        {
+          "@type":"CollegeOrUniversity",
+          "name":"Technical University of Munich"
+        }
+      ],
+      "sameAs":[
+        "https://scholar.google.com/citations?user=cU3jkSAAAAAJ",
+        "https://orcid.org/0000-0002-3174-9394",
+        "https://github.com/mertcan-kaya",
+        "https://linkedin.com/in/mertcankaya/"
+      ]
+    }
+    </script>
 
     <!-- --- MODERN BROWSER FAVICON --- -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🤖</text></svg>">
 
-    <!-- --- EXTERNAL STYLE & MATH ENGINE ASSETS --- -->
+    <!-- --- EXTERNAL STYLE ASSETS --- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
     
     <style>
         /* --- THEME COLORS & VARIABLES --- */
@@ -43,32 +67,18 @@
             color: var(--textgray);
             line-height: 1.5;
             background-color: #FFFFFF;
-            padding-top: 60px; /* Precise navbar offset */
+            padding-top: 60px;
         }
         a { color: var(--linkblue); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--techslate); }
 
         /* --- STICKY NAVIGATION BAR --- */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: rgba(33, 47, 61, 0.96);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: rgba(33, 47, 61, 0.96); backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .nav-container {
-            max-width: 1050px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+        .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; }
         .nav-links { display: flex; gap: 24px; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
@@ -79,671 +89,398 @@
         section { padding: 50px 0; border-bottom: 1px solid var(--bordergray); }
 
         /* --- HERO BLOCK --- */
-        header {
-            background-color: var(--techslate);
-            color: #FFFFFF;
-            padding: 40px 0;
-        }
-        .hero-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
+        header { background-color: var(--techslate); color: #FFFFFF; padding: 45px 0; }
+        .hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
         .hero-text { flex: 1; }
         .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
         .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 16px 0; font-weight: 400; color: #E2E8F0; line-height: 1.4; }
         
-        /* --- UPGRADED HEADSHOT CONFIGURATION --- */
         .hero-photo-container { flex-shrink: 0; margin: 0; }
         .hero-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            background-color: #ECEFF1; /* Smooth loading backdrop */
+            width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.2); background-color: #ECEFF1;
         }
 
-        /* --- SOCIAL LINKS AND CTA --- */
         .social-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px 0; }
         .social-links a { color: #FFFFFF; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; opacity: 0.85; }
         .social-links a:hover { opacity: 1; color: #3498DB; }
         
         .cta-banner {
-            background-color: rgba(41, 128, 185, 0.2);
-            border: 1px solid #3498DB;
-            color: #FFFFFF;
-            padding: 8px 14px;
-            border-radius: 6px;
-            display: inline-block;
-            font-weight: 600;
-            font-size: 0.88rem;
-            margin-bottom: 15px;
+            background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF;
+            padding: 8px 14px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.88rem; margin-bottom: 15px;
         }
 
         /* --- HEADINGS --- */
         h2 { font-size: 1.6rem; color: var(--techslate); margin-bottom: 20px; position: relative; padding-bottom: 8px; }
         h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background-color: var(--linkblue); }
+        h3 { font-size: 1.15rem; color: var(--techslate); font-weight: 700; margin-bottom: 8px; }
 
-        /* --- METRIC HIGHLIGHTS PANEL --- */
+        /* --- HIGHLIGHTS PANEL (ACADEMIC METRICS) --- */
         .highlights-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
         .highlight-card {
-            background: var(--lightbg);
-            border-left: 4px solid var(--linkblue);
-            padding: 12px 15px;
-            border-radius: 0 6px 6px 0;
-            border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray);
+            background: var(--lightbg); border-left: 4px solid var(--linkblue); padding: 12px 15px;
+            border-radius: 0 6px 6px 0; border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray);
         }
-        .highlight-card h3 { font-size: 1.4rem; color: var(--techslate); font-weight: 700; margin-bottom: 2px; }
+        .highlight-card h3 { font-size: 1.3rem; color: var(--techslate); font-weight: 700; margin-bottom: 2px; }
         .highlight-card p { font-size: 0.8rem; color: #4A5568; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* --- LINEAR SCANNABLE TIMELINE ENGINE --- */
+        /* --- TIMELINE COMPONENT --- */
         .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 12px; margin-top: 15px; }
-        .timeline-card {
-            background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 3px solid var(--techslate);
-            padding: 12px; border-radius: 0 6px 6px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.01);
-        }
-        .timeline-card:hover { border-left-color: var(--linkblue); }
+        .timeline-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 3px solid var(--techslate); padding: 12px; border-radius: 0 6px 6px 0; }
         .timeline-year { font-size: 1.15rem; font-weight: 800; color: var(--linkblue); margin-bottom: 2px; }
         .timeline-title { font-size: 0.85rem; font-weight: 700; color: var(--techslate); }
 
-        /* --- MULTIMEDIA HARDWARE PORTFOLIO GRID --- */
+        /* --- HARDWARE DEMOS (WITH NEW PLATFORM TAGS) --- */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
-        .portfolio-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.04); display: flex; flex-direction: column; }
+        .portfolio-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
         
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; cursor: pointer; }
-        .video-container iframe, .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .video-container img { object-fit: cover; transition: transform 0.3s ease; }
-        .video-container:hover img { transform: scale(1.03); }
-        
-        .play-overlay-btn {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            font-size: 3.6rem; color: rgba(255, 255, 255, 0.9); transition: color 0.2s, transform 0.2s;
-            z-index: 2; pointer-events: none; text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .video-container:hover .play-overlay-btn { color: var(--ytred); transform: translate(-50%, -50%) scale(1.1); }
+        .video-container iframe, .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+        .play-overlay-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3.6rem; color: rgba(255, 255, 255, 0.9); z-index: 2; pointer-events: none; }
+        .video-container:hover .play-overlay-btn { color: var(--ytred); }
 
         .card-content { padding: 14px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-content h3 { font-size: 1rem; color: var(--techslate); margin-bottom: 6px; font-weight: 700; }
-        .card-content p { font-size: 0.85rem; color: #4A5568; }
+        .card-content h3 { font-size: 1rem; margin-bottom: 6px; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; list-style: none; }
+        .tech-tags li { background: var(--lightbg); color: var(--linkblue); font-size: 0.75rem; font-weight: 600; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--bordergray); }
 
-        /* --- CARD GRID LAYOUT FOR THEMES & ACHIEVEMENTS --- */
+        /* --- THEMES & REPOS GRID --- */
         .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
-        .repo-card { 
-            background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .repo-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.06); border-color: var(--linkblue); }
-        .repo-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .repo-header i { font-size: 1.25rem; color: var(--techslate); }
-        .repo-header h3 { font-size: 1.05rem; color: var(--techslate); font-weight: 700; word-break: break-all; }
-        .repo-description { font-size: 0.88rem; color: #4A5568; margin-bottom: 15px; flex-grow: 1; }
-        .repo-meta-strip { display: flex; gap: 16px; font-size: 0.8rem; font-weight: 600; color: #718096; }
-        .repo-lang { display: inline-flex; align-items: center; gap: 5px; }
-        .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .repo-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; }
+        .repo-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .repo-header i { font-size: 1.1rem; color: var(--techslate); }
+        .repo-description { font-size: 0.9rem; color: #4A5568; line-height: 1.4; }
 
-        /* --- STYLED FOCUS BLOCKS FOR CURRENT RESEARCH MATRIX --- */
-        .research-focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
-        .focus-card {
-            background: #FFFFFF;
-            border: 1px solid var(--bordergray);
-            border-top: 3px solid var(--linkblue);
-            padding: 15px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        .focus-card h4 { font-size: 0.95rem; color: var(--techslate); font-weight: 700; margin-bottom: 6px; }
-        .focus-card p { font-size: 0.85rem; color: #4A5568; line-height: 1.4; }
+        /* --- FUNDING & TEACHING BLOCKS --- */
+        .academic-block { margin-bottom: 25px; }
+        .academic-block-title { font-weight: 700; color: var(--techslate); font-size: 1.05rem; }
+        .academic-block-meta { font-size: 0.85rem; color: #718096; font-weight: 600; margin-bottom: 4px; text-transform: uppercase; }
+        .academic-block-desc { font-size: 0.9rem; color: #4A5568; }
 
-        /* --- SKILLS/PLATFORMS GRID --- */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .skills-category { background: var(--lightbg); padding: 16px; border-radius: 6px; border: 1px solid var(--bordergray); }
-        .skills-category h3 { font-size: 1rem; color: var(--techslate); margin-bottom: 10px; border-bottom: 2px solid var(--bordergray); padding-bottom: 4px; }
-        .skills-category ul { list-style: none; }
-        .skills-category ul li { font-size: 0.88rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-        .skills-category ul li::before { content: "▪"; color: var(--linkblue); }
+        /* --- PUBLICATIONS (CLEAN LAYOUT) --- */
+        .pub-list { list-style: none; }
+        .pub-item { margin-bottom: 20px; padding-left: 15px; border-left: 3px solid var(--bordergray); }
+        .pub-year { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 2px; }
+        .pub-title { font-weight: 700; font-size: 1.05rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
+        .pub-venue { font-size: 0.9rem; color: #4A5568; font-style: italic; margin-bottom: 8px; }
+        .pub-actions { display: flex; gap: 8px; }
+        .btn-small { font-size: 0.75rem; padding: 4px 10px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+        .btn-small:hover { background: var(--bordergray); }
 
-        /* --- ACADEMIC COMPRESSION DROPDOWNS --- */
-        .pub-details { margin-top: 8px; font-size: 0.85rem; }
-        .pub-details summary { font-weight: 600; color: var(--linkblue); cursor: pointer; outline: none; user-select: none; }
-        .pub-content { background: var(--lightbg); padding: 12px; border-radius: 4px; border: 1px solid var(--bordergray); margin-top: 6px; color: #4A5568; }
-        .bibtex-box { font-family: "Courier New", Courier, monospace; white-space: pre-wrap; background: #2D3748; color: #EDF2F7; padding: 10px; border-radius: 4px; margin-top: 6px; overflow-x: auto; }
-
-        /* --- LIST CONFIGURATIONS (PUBLICATIONS) --- */
-        .item-list { list-style: none; }
-        .item-list li { margin-bottom: 24px; padding-left: 15px; border-left: 3px solid var(--bordergray); }
-        .item-list li:hover { border-left-color: var(--linkblue); }
-        .item-meta { font-size: 0.82rem; color: #718096; font-weight: 600; text-transform: uppercase; margin-bottom: 2px; }
-        .item-title { font-weight: 700; font-size: 1.05rem; color: var(--techslate); }
-        .pco-structure { font-size: 0.88rem; margin-top: 6px; }
-
-        /* --- ACTIONS INTERACTIVE REGION --- */
+        /* --- BUTTONS --- */
         .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 5px; }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: var(--techslate); color: #FFFFFF; font-weight: 600; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; transition: background 0.2s; }
         .btn:hover { background-color: var(--linkblue); color: #FFFFFF; }
         .btn-secondary { background-color: #718096; }
-        .btn-secondary:hover { background-color: #4A5568; }
+
+        /* --- CONTACT FOOTER --- */
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; }
+        footer { background: var(--techslate); padding: 40px 0; color: #FFFFFF; border-top: 1px solid var(--bordergray); }
+        .footer-text { font-size: 0.9rem; color: #CBD5E0; line-height: 1.6; }
+        .footer-links a { color: #3498DB; display: block; margin-bottom: 6px; font-weight: 600; }
+        .footer-links a:hover { color: #FFFFFF; }
 
         @media (max-width: 768px) {
             .hero-layout { flex-direction: column; text-align: center; gap: 15px; }
             .nav-links { display: none; }
             body { padding-top: 0; }
             .navbar { position: relative; }
-            header { padding: 30px 0; }
-            section { padding: 35px 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- --- STICKY NAVIGATION BAR --- -->
+    <!-- --- NAVIGATION --- -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">Mertcan Kaya // Robotics</div>
             <ul class="nav-links">
                 <li><a href="#demos">Hardware Demos</a></li>
-                <li><a href="#themes">Research Highlights</a></li>
-                <li><a href="#open-source">Software Frameworks</a></li>
-                <li><a href="#research">Current Research</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#funding">Grants & Teaching</a></li>
                 <li><a href="#publications">Publications</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- --- HERO HEADER BLOCK --- -->
+    <!-- --- ACADEMIC HERO BLOCK --- -->
     <header>
         <div class="container">
             <div class="hero-layout">
                 <div class="hero-text">
                     <h1>Mertcan Kaya</h1>
-                    <div class="subtitle">I bridge control theory and human biomechanics to develop predictive motion-planning frameworks that enable robots to coordinate naturally with human movement in shared workspaces.</div>
+                    <!-- Simplified, direct academic identity -->
+                    <div class="subtitle">I am a doctoral researcher in Human-Robot Interaction and Robotics, developing human-aware motion planning and control methods for safe and efficient collaboration between humans and robots.</div>
                     
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/mertcankaya/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/mertcan-kaya" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         <a href="https://scholar.google.com/citations?user=cU3jkSAAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
                         <a href="https://orcid.org/0000-0002-3174-9394" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+                        <a href="https://linkedin.com/in/mertcankaya/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/mertcan-kaya" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
 
-                    <!-- --- NEW IMMEDIATE DOSSIER ACCESS ROW (TOP ACTION GATEWAY) --- -->
                     <div style="margin: 12px 0 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="Mertcan_Kaya_Academic_CV.pdf" class="btn" download style="padding: 8px 14px; font-size: 0.82rem; background-color: var(--linkblue);"><i class="fas fa-university"></i> Academic CV (PDF)</a>
-                        <a href="Mertcan_Kaya_Industry_Resume.pdf" class="btn anonymity-lock" style="padding: 10px 14px; font-size: 0.82rem; background-color: #2E4053;" download><i class="fas fa-file-pdf"></i> Industry Resume</a>
-                        <a href="Mertcan_Kaya_Complete_Publications.pdf" class="btn btn-secondary" style="padding: 10px 14px; font-size: 0.8rem; background-color: #5D6D7E;" download><i class="fas fa-book-open"></i> Publication List</a>
+                        <a href="Mertcan_Kaya_Academic_CV.pdf" class="btn" style="padding: 8px 14px; font-size: 0.82rem; background-color: var(--linkblue);" download><i class="fas fa-university"></i> Academic CV</a>
+                        <a href="Mertcan_Kaya_Complete_Publications.pdf" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.82rem; background-color: #5D6D7E;" download><i class="fas fa-book-open"></i> Full Publication List</a>
                     </div>
 
-                    <!-- ESTABLISHED BANNER AMENDMENT -->
                     <div class="cta-banner">
-                        <i class="fas fa-calendar-alt"></i> Available for Postdoctoral and Robotics R&D opportunities beginning December 2026.
+                        Available for Postdoctoral and Robotics R&D opportunities beginning December 2026.
                     </div>
                 </div>
                 <div class="hero-photo-container">
-                    <!-- Headshot parameters optimized: neutral background, high-res layout bounds -->
                     <img src="profile.jpg" alt="Mertcan Kaya" class="hero-photo">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- --- SOFTWARE & SYSTEMS HIGHLIGHTS PANEL --- -->
+    <!-- --- ACADEMIC HIGHLIGHTS STRIP --- -->
     <section id="highlights" style="padding: 25px 0; background-color: var(--lightbg);">
         <div class="container">
             <div class="highlights-strip">
                 <div class="highlight-card">
-                    <h3>11 Indexations</h3>
-                    <p>Peer-Reviewed Works</p>
+                    <h3>11 Publications</h3>
+                    <p>Peer-Reviewed Research</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>3 Open-Source</h3>
-                    <p>Core Algorithmic Repos</p>
+                    <h3>3 Journals</h3>
+                    <p>Indexed Articles</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>9 Tech Demos</h3>
-                    <p>Physical Live Deployments</p>
+                    <h3>DFG Funded</h3>
+                    <p>Active Project Grants</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>ARSO 2026</h3>
-                    <p>Associate Editor / PC Committee</p>
+                    <h3>Associate Editor</h3>
+                    <p>ARSO 2026</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- SECTION 1: HARDWARE DEPLOYMENTS (LAZY LOOKUP HOOKS ACTIVE) --- -->
-    <section id="demos">
+    <!-- --- CAREER TIMELINE --- -->
+    <section id="timeline" style="padding: 40px 0;">
         <div class="container">
-            <h2>Featured Robotics Demonstrations</h2>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Direct empirical validation of real-time planning, localization, and feedback control layers running on hardware platforms:</p>
+            <h2>Career Trajectory</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <div class="timeline-year">2014</div>
+                    <div class="timeline-title">BSc Mechanical Engineering (Koç University)</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-title">MSc Control Engineering (ITU)</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2021–Present</div>
+                    <div class="timeline-title">Research Associate (Coburg University)</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2023–Present</div>
+                    <div class="timeline-title">Doctoral Candidate (TUM)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- HARDWARE DEMOS (WITH SKIMMABLE TAGS) --- -->
+    <section id="demos" style="background-color: var(--lightbg);">
+        <div class="container">
+            <h2>Hardware Demonstrations</h2>
             
             <div class="portfolio-grid">
-                <!-- Card 1: AgileX SLAM -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'zq1n08jojjY')">
-                        <img src="https://img.youtube.com/vi/zq1n08jojjY/hqdefault.jpg" alt="Lab Mapping Deployment">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Lab Mapping with AgileX Scout Mini (ROS SLAM)</h3>
-                        <p>Executing real-time laser Simultaneous Localization and Mapping (SLAM) on the AgileX mobile base to construct detailed spatial occupancy grids of the research facility.</p>
-                    </div>
-                </div>
-                <!-- Card 2: TurtleBot 4 Navigation -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'wKTWUI6W_yU')">
-                        <img src="https://img.youtube.com/vi/wKTWUI6W_yU/hqdefault.jpg" alt="TurtleBot 4 Execution">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Autonomous Navigation of the TurtleBot 4 (ROS 2 Nav2)</h3>
-                        <p>Configured ROS 2 Navigation stack architectures, integrating dynamic local/global costmaps and behavior trees for reactive trajectory adaptation inside shared configurations.</p>
-                    </div>
-                </div>
-                <!-- Card 3: Real-Time Hand Following Tracking -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
-                        <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/hqdefault.jpg" alt="Hand Following Robot Tracking Loop">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Real-Time Hand-Following Control Stack</h3>
-                        <p>Empirical verification of predictive manipulator tracking loops executing seamless task-space path updates to follow human hand vectors actively in real time.</p>
-                    </div>
-                </div>
-                <!-- Card 4: Franka Panda Arm Teleoperation -->
+                <!-- Card 1 -->
                 <div class="portfolio-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
-                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/hqdefault.jpg" alt="Manipulator Arm Teleoperation">
+                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/hqdefault.jpg" alt="Teleoperation">
                         <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
                     </div>
                     <div class="card-content">
-                        <h3>Manipulator Teleoperation & Pick-and-Place</h3>
-                        <p>ROS-integrated end-effector telemanipulation framework running across collaborative robot arm geometries to automate stable industrial pick-and-place trajectories.</p>
+                        <h3>Manipulator Teleoperation</h3>
+                        <ul class="tech-tags">
+                            <li>Franka Emika Panda</li>
+                            <li>Teleoperation</li>
+                            <li>Pick-and-place</li>
+                            <li>ROS integration</li>
+                        </ul>
                     </div>
                 </div>
-                <!-- Card 5: Anthropomorphic Motion Tracking -->
+                <!-- Card 2 -->
                 <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, '9rHDIeRKd8U')">
-                        <img src="https://img.youtube.com/vi/9rHDIeRKd8U/hqdefault.jpg" alt="Anthropomorphic Robot Motion Profile Study">
+                    <div class="video-container" onclick="injectActiveStream(this, 'wKTWUI6W_yU')">
+                        <img src="https://img.youtube.com/vi/wKTWUI6W_yU/hqdefault.jpg" alt="TurtleBot Navigation">
                         <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
                     </div>
                     <div class="card-content">
-                        <h3>Anthropomorphism & Kinetic Human-Likeness Modeling</h3>
-                        <p>Experimental validation trials evaluating human behavioral responses and motor synchronization paths relative to high-fidelity human-like robotic platforms.</p>
+                        <h3>Autonomous Navigation</h3>
+                        <ul class="tech-tags">
+                            <li>TurtleBot 4</li>
+                            <li>ROS 2 Nav2</li>
+                            <li>SLAM</li>
+                            <li>Autonomous exploration</li>
+                        </ul>
                     </div>
                 </div>
-                <!-- Card 6: Human-Robot Force Control -->
+                <!-- Card 3 -->
                 <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
-                        <img src="https://img.youtube.com/vi/B89a4sofGeU/hqdefault.jpg" alt="Human-Robot Physical Compliance Tracking">
+                    <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
+                        <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/hqdefault.jpg" alt="Hand Following">
                         <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
                     </div>
                     <div class="card-content">
-                        <h3>Human-Robot Physical Compliance Tracking</h3>
-                        <p>Empirical verification of hybrid position/force control loops, showcasing compliant trajectory adjustments and immediate kinetic adaptation during continuous, direct human physical contact.</p>
-                    </div>
-                </div>
-                <!-- Card 7: Robot-Robot Force Control -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'FfO-nDWP9zw')">
-                        <img src="https://img.youtube.com/vi/FfO-nDWP9zw/hqdefault.jpg" alt="Robot-Robot Collaborative Optimization">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Robot-Robot Collaborative Load Optimization</h3>
-                        <p>Multi-agent closed-kinematic chain coordination tracking executed via hybrid force laws, maintaining target tracking limits while managing contact forces between interaction boundaries.</p>
-                    </div>
-                </div>
-                <!-- Card 8: Custom Embedded Timorous Mobile Robot -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
-                        <img src="https://img.youtube.com/vi/VcGA7Ie5stE/hqdefault.jpg" alt="Timorous Mobile Robot Firmware Control">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Multi-Axis Embedded Servo & Scissor-Lift Control</h3>
-                        <p>Deployment of low-level firmware architecture driving real-time crawler locomotion, synchronous scissor-lift elevation cycles, and responsive interactive tracking mechanics.</p>
-                    </div>
-                </div>
-                <!-- Card 9: Low-Level Servo Control via ROS -->
-                <div class="portfolio-card">
-                    <div class="video-container" onclick="injectActiveStream(this, 'uuwwoLcsMk8')">
-                        <img src="https://img.youtube.com/vi/uuwwoLcsMk8/hqdefault.jpg" alt="Servo Control Firmware Stack via ROS">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Low-Level Micro-Servo Control via ROS Middleware</h3>
-                        <p>Implementation of modular, low-latency device abstraction layers designed to link active high-level ROS execution graphs down to custom hardware micro-actuator arrays.</p>
+                        <h3>Real-Time Hand Following</h3>
+                        <ul class="tech-tags">
+                            <li>Predictive Control</li>
+                            <li>Task-space tracking</li>
+                            <li>HRI</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- SECTION 2: NEW ACADEMIC TIMELINE / CAREER MILESTONES TRACK --- -->
-    <section id="timeline" style="background-color: var(--lightbg); padding: 40px 0;">
-        <div class="container">
-            <h2>Career Timeline Matrix</h2>
-            <div class="research-focus-grid">
-                <div class="focus-card">
-                    <h4>2009 — 2014</h4>
-                    <p><strong>BSc in Mechanical Engineering</strong><br>Koç University, Istanbul</p>
-                </div>
-                <div class="focus-card">
-                    <h4>2015 — 2019</h4>
-                    <p><strong>MSc in Systems & Controls</strong><br>Istanbul Technical University (ITU)</p>
-                </div>
-                <div class="focus-card">
-                    <h4>2021 — Present</h4>
-                    <p><strong>Research Associate</strong><br>Coburg University of Applied Sciences</p>
-                </div>
-                <div class="focus-card">
-                    <h4>2023 — Present</h4>
-                    <p><strong>Doctoral Candidate</strong><br>Technical University of Munich (TUM)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- SECTION 3: RESEARCH HIGHLIGHTS (THEME CARDS) --- -->
-    <section id="themes">
-        <div class="container">
-            <h2>Research Themes & Paradigms</h2>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Transforming theoretical publication outputs into clear, foundational research themes driving our robotic system deployments:</p>
-            
-            <div class="repo-grid">
-                <!-- Theme Card 1 -->
-                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
-                    <div class="repo-header">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h3>Spatial Negotiation</h3>
-                    </div>
-                    <p class="repo-description">
-                        Quantifying how humans adapt their positions and spatial movement profiles when interacting inside shared workspaces with active robotic configurations.
-                    </p>
-                </div>
-                <!-- Theme Card 2 -->
-                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
-                    <div class="repo-header">
-                        <i class="fas fa-wave-square"></i>
-                        <h3>Motor Interference</h3>
-                    </div>
-                    <p class="repo-description">
-                        Leveraging mathematical human motor adaptation profiles as an objective, empirical measure for certifying and evaluating the operational human-likeness of robot motions.
-                    </p>
-                </div>
-                <!-- Theme Card 3 -->
-                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
-                    <div class="repo-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>Human-Aware Motion Planning</h3>
-                    </div>
-                    <p class="repo-description">
-                        Architecting real-time, congruency-sensitive trajectory optimization loops that dynamically regulate workspace kinematics based on predicted human behavior.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- SECTION 4: OPEN-SOURCE REPOSITORIES (SOFTWARE MATRIX) --- -->
-    <section id="open-source" style="background-color: var(--lightbg);">
-        <div class="container">
-            <h2>Open-Source Software Suites</h2>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Core algorithmic implementations and simulation engines developed to support experimental validation pipelines:</p>
-            
-            <div class="repo-grid">
-                <!-- Repo 1 -->
-                <div class="repo-card">
-                    <div>
-                        <div class="repo-header">
-                            <i class="fab fa-github"></i>
-                            <h3><a href="https://github.com/mertcan-kaya/adaptive-newton-euler-algorithm-simulation" target="_blank">adaptive-newton-euler-algorithm-simulation</a></h3>
-                        </div>
-                        <div class="repo-description">
-                            Computational implementation of a recursive adaptive robot controller. Bypasses high-dimensional regressor formulations entirely to achieve linear computational scaling on physics targets.
-                        </div>
-                    </div>
-                    <div class="repo-meta-strip">
-                        <div class="repo-lang"><span class="lang-dot" style="background-color: #DA5B0B;"></span> MATLAB / C++</div>
-                        <div><i class="fas fa-star"></i> Core Module</div>
-                    </div>
-                </div>
-                <!-- Repo 2 -->
-                <div class="repo-card">
-                    <div>
-                        <div class="repo-header">
-                            <i class="fab fa-github"></i>
-                            <h3><a href="https://github.com/mertcan-kaya/robot-simulation-matlab-gui" target="_blank">robot-simulation-matlab-gui</a></h3>
-                        </div>
-                        <div class="repo-description">
-                            Interactive real-time 3D forward and inverse kinematics trajectory visualization engine engineered natively using MATLAB App Designer layout parameters.
-                        </div>
-                    </div>
-                    <div class="repo-meta-strip">
-                        <div class="repo-lang"><span class="lang-dot" style="background-color: #DA5B0B;"></span> MATLAB GUI</div>
-                        <div><i class="fas fa-code-branch"></i> Standalone App</div>
-                    </div>
-                </div>
-                <!-- Repo 3 -->
-                <div class="repo-card">
-                    <div>
-                        <div class="repo-header">
-                            <i class="fab fa-github"></i>
-                            <h3><a href="https://github.com/mertcan-kaya/probabilistic-mobile-robot-simulation" target="_blank">probabilistic-mobile-robot-simulation</a></h3>
-                        </div>
-                        <div class="repo-description">
-                            Algorithmic codebase executing mobile agent state estimation, occupancy grid mapping, Extended Kalman Filter (EKF) localization loops, and local/global planning.
-                        </div>
-                    </div>
-                    <div class="repo-meta-strip">
-                        <div class="repo-lang"><span class="lang-dot" style="background-color: #3572A5;"></span> Python</div>
-                        <div><i class="fas fa-star"></i> Navigation Core</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- SECTION 5: CURRENT RESEARCH PROJECTS ENGINE --- -->
+    <!-- --- RESEARCH THEMES & CURRENT FOCUS (CONCRETE & ACADEMIC) --- -->
     <section id="research">
         <div class="container">
-            <h2>Current Research Focus & Grant Alignment</h2>
-            <p style="margin-bottom: 5px;"><strong>DFG-Funded CoSMoC Project (2025–Present):</strong> Designing congruency-sensitive human-robot motion coordination architectures in physical production clusters.</p>
+            <h2>Research Themes & Current Focus</h2>
             
-            <div class="research-focus-grid">
-                <div class="focus-card">
-                    <h4>Hierarchical Motion Planning</h4>
-                    <p>Formulating decoupling optimization targets that compute safe operational pathways without sacrificing tracking reactivity on local execution targets.</p>
+            <div class="repo-grid">
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header"><h3>Spatial Negotiation</h3></div>
+                    <p class="repo-description">Investigating how humans adapt their positions and spatial movement profiles when interacting in shared workspaces with robots.</p>
                 </div>
-                <div class="focus-card">
-                    <h4>Inverse Optimal Control</h4>
-                    <p>Reconstructing hidden cost functions from recorded human trajectory sets to reverse-engineer exact biological optimization weights.</p>
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header"><h3>Motor Interference</h3></div>
+                    <p class="repo-description">Investigating motor interference as an objective measure of perceived human-likeness in robot motion.</p>
                 </div>
-                <div class="focus-card">
-                    <h4>Human Task Prediction</h4>
-                    <p>Using stochastic modeling arrays and hidden state sequence networks to actively guess human step sequences inside joint assembly spaces.</p>
+                <div class="repo-card" style="border-top: 4px solid var(--linkblue);">
+                    <div class="repo-header"><h3>Human-Aware Motion Planning</h3></div>
+                    <p class="repo-description">Developing motion planning methods that adapt robot trajectories according to predicted human actions during collaborative tasks.</p>
                 </div>
-                <div class="focus-card">
-                    <h4>Spatial Negotiation Models</h4>
-                    <p>Constructing multi-agent optimization models that govern non-verbal navigation boundaries between mobile assets and crossing operators.</p>
+                <div class="repo-card" style="border-top: 4px solid var(--techslate);">
+                    <div class="repo-header"><h3>Hierarchical Planning</h3></div>
+                    <p class="repo-description">Formulating decoupled optimization targets to compute safe operational pathways without sacrificing tracking reactivity.</p>
+                </div>
+                <div class="repo-card" style="border-top: 4px solid var(--techslate);">
+                    <div class="repo-header"><h3>Inverse Optimal Control</h3></div>
+                    <p class="repo-description">Using inverse optimal control to infer task-relevant objectives from observed human movement trajectories.</p>
+                </div>
+                <div class="repo-card" style="border-top: 4px solid var(--techslate);">
+                    <div class="repo-header"><h3>Human Task Prediction</h3></div>
+                    <p class="repo-description">Employing stochastic modeling to infer human intentions and handle timing uncertainty in joint assembly tasks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- --- SECTION 6: PUBLICATIONS PORTAL --- -->
+    <!-- --- FUNDING & TEACHING (NEW SECTION FOR CREDIBILITY) --- -->
+    <section id="funding" style="background-color: var(--lightbg);">
+        <div class="container">
+            <h2>Funding & Teaching Experience</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px;">
+                <!-- Funding Column -->
+                <div>
+                    <h3><i class="fas fa-project-diagram"></i> Research Funding</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">2025 – Present</div>
+                        <div class="academic-block-title">DFG Project: CoSMoC</div>
+                        <div class="academic-block-desc">Congruency-Sensitive Human-Robot Motion Coordination.<br><em>Role: Research Associate</em></div>
+                    </div>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">2021 – 2025</div>
+                        <div class="academic-block-title">DFG Project: Motor Interference</div>
+                        <div class="academic-block-desc">Motor Interference Models for Human-Robot Interaction.<br><em>Role: Research Associate</em></div>
+                    </div>
+                </div>
+
+                <!-- Teaching Column -->
+                <div>
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Academic Teaching</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">Summer Semester 2025</div>
+                        <div class="academic-block-title">Guest Lecturer</div>
+                        <div class="academic-block-desc">Module: Control Engineering 2 (Regelungstechnik 2)<br><em>Coburg University of Applied Sciences</em></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- PUBLICATIONS (CLEAN, SKIMMABLE, NO FORMULAS) --- -->
     <section id="publications">
         <div class="container">
-            <h2>Selected Publications & Core Formulations</h2>
+            <h2>Selected Publications</h2>
             
-            <!-- Collapsible Mathematics Drawer -->
-            <details class="pub-details" style="margin-bottom: 20px; background-color: var(--lightbg); padding: 12px 15px; border-radius: 6px; border: 1px solid var(--bordergray);">
-                <summary style="font-size: 0.95rem; color: var(--techslate); font-weight: 600;">📐 View Mathematical Formulation: Distractor-Aligned Variance (DAV)</summary>
-                <div class="pub-content" style="background: none; border: none; padding: 10px 0 0 0; margin: 0;">
-                    <p style="margin-bottom: 10px; font-size: 0.88rem;">To isolate true physical human motor interference metrics from intentional task trajectories, the framework maps tracking path deviations orthogonal to the core geometric task vector \(\mathbf{x}(t)\):</p>
-                    <div>$$\text{DAV} = \frac{1}{T} \int_{0}^{T} \left\| \mathbf{e}(t) - \left( \mathbf{e}(t)^T \hat{\mathbf{v}}_d(t) \right) \hat{\mathbf{v}}_d(t) \right\|^2 dt$$</div>
-                </div>
-            </details>
-
-            <ul class="item-list">
-                <!-- Paper 1 -->
-                <li>
-                    <div class="item-meta">Journal Article &bull; Interaction Studies &bull; 2026</div>
-                    <div class="item-title">Motor interference of elbow configuration changes in human-robot interaction</div>
-                    <div class="pco-structure">
-                        <strong>Problem:</strong> Collaborative robots changing kinematic configurations in shared sightlines provoke hidden cognitive friction and sub-optimal motion path corrections in humans.<br>
-                        <strong>Contribution:</strong> Tracked visual gaze and upper-body multi-joint trajectories to chart human biomechanical path adaptation relative to robot null-space positioning.<br>
-                        <strong>Outcome:</strong> Verified that null-space re-orientation drives involuntary trace adaptations, revealing clear boundaries for proactive trajectory layout.
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-title">Motor interference of elbow configuration changes in human-robot interaction</div>
+                    <div class="pub-venue">Interaction Studies</div>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1075/is.25026.kay" target="_blank" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <button class="btn-small"><i class="fas fa-quote-right"></i> BibTeX</button>
                     </div>
                 </li>
-                <!-- Paper 2 -->
-                <li>
-                    <div class="item-meta">Journal Article &bull; Journal of Intelligent & Robotic Systems &bull; 2024</div>
-                    <div class="item-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
-                    <div class="pco-structure">
-                        <strong>Problem:</strong> Traditional adaptive controllers demand high-dimensional regressor structural formulations, capping loop iteration cycles on industrial embedded processors.<br>
-                        <strong>Contribution:</strong> Developed an alternative recursive inversion mapping framework leveraging multi-body inverse Newton-Euler dynamics parameters.<br>
-                        <strong>Outcome:</strong> Eliminated explicit matrix build parameters completely, cutting loop overhead and tracking lag while expanding tracking speeds on running physical processors.
+                <li class="pub-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-title">Subjective task-load influences anthropomorphism during cooperative human and robot hand movements</div>
+                    <div class="pub-venue">at - Automatisierungstechnik</div>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1515/auto-2024-0031" target="_blank" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <button class="btn-small"><i class="fas fa-quote-right"></i> BibTeX</button>
                     </div>
-                    <details class="pub-details">
-                        <summary>View BibTeX Source</summary>
-                        <div class="bibtex-box">@article{kaya2024novel,
-  title={A novel recursive algorithm for adaptive robot controllers},
-  author={Kaya, Mertcan &amp; Kühnlenz, Kolja},
-  journal={Journal of Intelligent \& Robotic Systems},
-  volume={110},
-  number={2},
-  year={2024}
-}</div>
-                    </details>
                 </li>
-                <!-- Paper 3 -->
-                <li>
-                    <div class="item-meta">Preprint &bull; Under Active Review &bull; 2026</div>
-                    <div class="item-title">The Geometry of Interference: Quantifying Spatial Leakage and Biomechanical Adaptation During Human–Robot Collaboration</div>
-                    <div class="pco-structure">
-                        <strong>Problem:</strong> Standard workspace metrics conflate baseline intentional movement tracking changes with erratic human control noise, clouding target safety parameters.<br>
-                        <strong>Contribution:</strong> Formulated the Distractor-Aligned Variance (DAV) algorithm pipeline to isolate orthogonal trace deviations from baseline geometry task paths.<br>
-                        <strong>Outcome:</strong> Isolated behavioral compliance leakage data from clean paths to drive human-aware reactive costmap updates.
+                <li class="pub-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
+                    <div class="pub-venue">Journal of Intelligent & Robotic Systems</div>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1007/s10846-024-02135-x" target="_blank" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <button class="btn-small"><i class="fas fa-quote-right"></i> BibTeX</button>
                     </div>
                 </li>
             </ul>
 
-            <!-- DIRECT ROUTING GATEWAY TO STANDALONE CATALOG -->
             <div style="margin-top: 25px;">
-                <a href="publications.html" class="btn" style="background-color: var(--linkblue);"><i class="fas fa-book-open"></i> View Full Publication Catalog (11 Papers)</a>
+                <a href="publications.html" class="btn" style="background-color: var(--linkblue);"><i class="fas fa-book-open"></i> View Full Publication List (11 Papers)</a>
             </div>
         </div>
     </section>
 
-    <!-- --- SECTION 6: TECHNICAL ENGINE STACKS --- -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Core Stacks</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Domain Expertise</h3>
-                    <ul>
-                        <li>Motion Planning & Trajectory Tuning</li>
-                        <li>Recursive Adaptive Robot Control</li>
-                        <li>Mobile Base Navigation & SLAM Maps</li>
-                        <li>Human Intention Prediction Trajectories</li>
-                        <li>Multi-Agent Position/Force Loops</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Software Architecture</h3>
-                    <ul>
-                        <li>ROS & ROS 2 (Nav2 Nodes, MoveIt API)</li>
-                        <li>Object-Oriented C++, Python, Linux</li>
-                        <li>MATLAB, Simulink Core, App Designer</li>
-                        <li>Git Versioning, CMake Pipelines</li>
-                        <li>Gazebo Physics, CoppeliaSim Engine</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Physical Platforms Deployed</h3>
-                    <ul>
-                        <li>Franka Emika Panda (7-DoF Manipulator)</li>
-                        <li>Universal Robots (UR3 Arm Architecture)</li>
-                        <li>AgileX Scout Mini (Autonomous Rover SLAM)</li>
-                        <li>TurtleBot 4 (ROS 2 Mobile Agent Navigation)</li>
-                        <li>Nvidia Jetson Compute, Pepper, NAO Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- SECTION 7: COMPREHENSIVE DOWNSTREAM DOSSIERS --- -->
-    <section id="downloads" style="background-color: var(--lightbg);">
-        <div class="container">
-            <h2>Dossier Downloads & Academic Records</h2>
-            <p style="margin-bottom: 20px; font-size: 0.95rem; color: #4A5568;">Access full structural summaries targeted toward engineering panel evaluations, postdoctoral review boards, or faculty hiring matrices:</p>
-            
-            <div style="margin-bottom: 20px;">
-                <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--techslate); margin-bottom: 8px; letter-spacing: 0.3px;">Primary Core Credentials:</h4>
-                <div class="btn-group">
-                    <a href="Mertcan_Kaya_Industry_Resume.pdf" class="btn" download><i class="fas fa-file-pdf"></i> Download Industry Resume</a>
-                    <a href="Mertcan_Kaya_Academic_CV.pdf" class="btn btn-secondary" download><i class="fas fa-university"></i> Download Academic CV</a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--techslate); margin-bottom: 8px; letter-spacing: 0.3px;">Supplementary Academic Files:</h4>
-                <div class="btn-group">
-                    <a href="Mertcan_Kaya_Research_Statement.pdf" class="btn btn-secondary" download><i class="fas fa-scroll"></i> Download Research Statement (2-Page)</a>
-                    <a href="Mertcan_Kaya_Complete_Publications.pdf" class="btn btn-secondary" download><i class="fas fa-book-open"></i> Download Full Publication List</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- SECTION 8: CONTACT CALL OUT --- -->
-    <section id="contact" style="text-align: center; background: var(--techslate); color: #FFFFFF; border-bottom: none;">
-        <div class="container">
-            <h2 style="color: #FFFFFF; margin-bottom: 15px;">Connect & Collaborate</h2>
-            <p style="max-width: 600px; margin: 0 auto 20px auto; font-size: 1rem; opacity: 0.9;">Interested in research collaboration, postdoctoral hosting fellowships, or specialized corporate robotics R&D positions? Let's connect.</p>
-            <div class="btn-group" style="justify-content: center;">
-                <a href="mailto:mertcan.kaya@hs-coburg.de" class="btn"><i class="fas fa-envelope"></i> Email Inquiries</a>
-                <a href="https://linkedin.com/in/mertcankaya/" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> Professional LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- --- --- FOOTER --- --- -->
+    <!-- --- PROFESSIONAL ACADEMIC FOOTER --- -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Mertcan Kaya. Engineered natively using HTML5 & CSS3. Hosted securely via GitHub Pages.</p>
+            <div class="contact-grid">
+                <div>
+                    <h2 style="color: #FFFFFF; font-size: 1.4rem;">Mertcan Kaya</h2>
+                    <p class="footer-text">
+                        <strong>Research Associate</strong><br>Coburg University of Applied Sciences<br><br>
+                        <strong>Doctoral Candidate</strong><br>Technical University of Munich
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h3 style="color: #FFFFFF; font-size: 1.1rem;">Academic Links</h3>
+                    <a href="mailto:mertcan.kaya@hs-coburg.de"><i class="fas fa-envelope"></i> mertcan.kaya@hs-coburg.de</a>
+                    <a href="https://scholar.google.com/citations?user=cU3jkSAAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar Profile</a>
+                    <a href="https://orcid.org/0000-0002-3174-9394" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+                    <a href="https://linkedin.com/in/mertcankaya/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center; color: #A0AEC0; font-size: 0.8rem;">
+                &copy; 2026 Mertcan Kaya. Engineered natively using HTML5 & CSS3. Hosted securely via GitHub Pages.
+            </div>
         </div>
     </footer>
 
-    <!-- --- HIGH-PERFORMANCE VIDEO INJECTION ENGINE --- -->
+    <!-- --- YOUTUBE SCRIPT --- -->
     <script>
         function injectActiveStream(container, videoId) {
             container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
             container.removeAttribute('onclick'); 
         }
-    </script>
-
-    <!-- --- KATEX MATH AUTO-RENDER EXECUTABLE SCRIPT --- -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            renderMathInElement(document.body, {
-                delimiters: [
-                    {left: '$$', right: '$$', display: true},
-                    {left: '\\[', right: '\\]', display: true},
-                    {left: '\\(', right: '\\)', display: false},
-                    {left: '$', right: '$', display: false}
-                ],
-                throwOnError : false
-            });
-        });
     </script>
 
 </body>

@@ -4,348 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Mertcan Kaya</title>
-    
-    <!-- --- STANDARD SEO METADATA --- -->
-    <meta name="description" content="Full peer-reviewed publications archive for Mertcan Kaya. Indexing journal articles, refereed proceedings, and preprints across advanced robotics.">
-    <meta name="author" content="Mertcan Kaya">
-
-    <!-- --- OPENGRAPH --- -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mertcan-kaya.github.io/publications.html">
-    <meta property="og:title" content="Publications Archive | Mertcan Kaya">
-    <meta property="og:description" content="Chronological catalog of 11 peer-reviewed works and active working manuscripts in controls, trajectory optimization, and HRI.">
-    <meta property="og:image" content="https://mertcan-kaya.github.io/profile.jpg">
-
-    <!-- --- MODERN BROWSER FAVICON --- -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>📚</text></svg>">
-
+    <link rel="canonical" href="https://mertcan-kaya.github.io/publications.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* --- THEME COLORS & VARIABLES (Synchronized with Homepage) --- */
-        :root {
-            --techslate: #212F3D;
-            --textgray: #2D3748;
-            --linkblue: #2980B9;
-            --lightbg: #F8F9FA;
-            --bordergray: #E2E8F0;
-        }
-
-        /* --- BASIC RESET & TYPOGRAPHY --- */
+        :root { --techslate: #212F3D; --textgray: #2D3748; --linkblue: #2980B9; --lightbg: #F8F9FA; --bordergray: #E2E8F0; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--textgray);
-            line-height: 1.6;
-            background-color: #FFFFFF;
-            padding-top: 60px;
-        }
-        a { color: var(--linkblue); text-decoration: none; transition: color 0.2s; }
-        a:hover { color: var(--techslate); }
-
-        /* --- STICKY NAVIGATION BAR --- */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: rgba(33, 47, 61, 0.96);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .nav-container {
-            max-width: 900px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; }
-        .nav-links { display: flex; gap: 24px; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
-        .nav-links a:hover { color: #FFFFFF; }
-
-        /* --- MAIN CONTAINER --- */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--textgray); line-height: 1.6; background-color: #FFFFFF; padding-top: 60px; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-
-        /* --- PAGE HEADER --- */
-        .page-header { margin-bottom: 35px; border-bottom: 2px solid var(--bordergray); padding-bottom: 20px; }
-        .page-header h1 { font-size: 2.4rem; color: var(--techslate); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
-        .page-header p { font-size: 1.1rem; color: #718096; }
-
-        /* --- SECTION HEADINGS --- */
-        h2 { font-size: 1.4rem; color: var(--techslate); margin: 35px 0 15px 0; position: relative; padding-bottom: 6px; border-bottom: 1px solid var(--bordergray); }
-        h2::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 50px; height: 2px; background-color: var(--linkblue); }
-
-        /* --- PUBLICATION LIST LOGIC --- */
+        
+        /* Navbar */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: var(--techslate); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .nav-brand { color: #FFFFFF; font-weight: 700; }
+        
+        /* Publications List */
+        h2 { font-size: 1.8rem; color: var(--techslate); margin-bottom: 30px; border-bottom: 2px solid var(--linkblue); padding-bottom: 10px; display: inline-block; }
         .pub-list { list-style: none; }
-        .pub-item { padding: 20px; border: 1px solid var(--bordergray); border-radius: 6px; margin-bottom: 18px; background: #FFFFFF; transition: transform 0.2s, box-shadow 0.2s; }
-        .pub-item:hover { transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        
-        .pub-meta { font-size: 0.82rem; font-weight: 700; color: var(--linkblue); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
-        .pub-title { font-size: 1.1rem; font-weight: 700; color: var(--techslate); margin-bottom: 6px; line-height: 1.3; }
-        .pub-authors { font-size: 0.92rem; color: #4A5568; margin-bottom: 6px; }
-        .pub-venue { font-size: 0.92rem; font-style: italic; color: #718096; margin-bottom: 12px; }
-        
-        /* --- ACTION LINKS BAR --- */
-        .pub-actions { display: flex; gap: 14px; font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
-        .pub-actions a { display: inline-flex; align-items: center; gap: 4px; }
-        
-        /* --- COLLAPSIBLE DRAWERS --- */
-        .pub-details { margin-top: 8px; font-size: 0.88rem; }
-        .pub-details summary { font-weight: 600; color: #4A5568; cursor: pointer; outline: none; user-select: none; }
-        .pub-details summary:hover { color: var(--linkblue); }
-        .pub-content { background: var(--lightbg); padding: 12px; border-radius: 4px; border: 1px solid var(--bordergray); margin-top: 6px; color: #2D3748; text-align: justify; }
-        .bibtex-box { font-family: "Courier New", Courier, monospace; white-space: pre-wrap; background: #2D3748; color: #EDF2F7; padding: 10px; border-radius: 4px; margin-top: 6px; overflow-x: auto; font-size: 0.82rem; }
+        .pub-item { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--bordergray); transition: border-color 0.2s; }
+        .pub-item:hover { border-left-color: var(--linkblue); }
+        .pub-year { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 2px; }
+        .pub-title { font-weight: 700; font-size: 1.1rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
+        .pub-venue { font-size: 0.9rem; color: #4A5568; font-style: italic; margin-bottom: 10px; }
+        .pub-actions { display: flex; gap: 8px; }
+        .btn-small { font-size: 0.8rem; padding: 5px 12px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 4px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
+        .btn-small:hover { background: var(--bordergray); }
 
-        /* --- FOOTER --- */
-        footer { background: var(--lightbg); padding: 25px 0; text-align: center; font-size: 0.85rem; color: #718096; border-top: 1px solid var(--bordergray); margin-top: 50px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            body { padding-top: 0; }
-            .navbar { position: relative; }
-            .page-header h1 { font-size: 1.8rem; }
-        }
+        footer { text-align: center; padding: 40px 0; color: #718096; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <!-- --- STICKY NAVIGATION BAR --- -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">Mertcan Kaya // Research Portal</div>
-            <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Return Home</a></li>
-                <li><a href="index.html#demos">Hardware Demos</a></li>
-                <li><a href="index.html#downloads">CV Dossiers</a></li>
-            </ul>
+            <div class="nav-brand"><a href="index.html" style="color: white;">Mertcan Kaya // Robotics</a></div>
         </div>
     </nav>
 
-    <!-- --- MAIN CONTENT CONTAINER --- -->
     <div class="container">
-        
-        <div class="page-header">
-            <h1>Complete Publications & Research Output</h1>
-            <p>Full chronological archive of peer-reviewed records across advanced controls, trajectory generation, and human-aware robotics.</p>
-        </div>
+        <h2>Full Publication Record</h2>
 
-        <!-- ==========================================
-             SECTION 1: PEER-REVIEWED JOURNAL ARTICLES
-             ========================================== -->
-        <h2>Journal Articles</h2>
         <ul class="pub-list">
-            
-            <!-- Journal 1 -->
             <li class="pub-item">
-                <div class="pub-meta">Journal Article &bull; 2026</div>
+                <div class="pub-year">2026</div>
                 <div class="pub-title">Motor interference of elbow configuration changes in human-robot interaction</div>
-                <div class="pub-authors"><strong>M. Kaya</strong>, K. Becker, J. Greve, J. Keller, M. Meserle, C. Först, R. Siegel, J. Stelzer, and K. Kühnlenz</div>
-                <div class="pub-venue">Interaction Studies, 26(1), 130–149.</div>
+                <div class="pub-venue">Interaction Studies (2026)</div>
                 <div class="pub-actions">
-                    <a href="https://doi.org/10.1075/is.25026.kay" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-                <details class="pub-details">
-                    <summary>View Abstract</summary>
-                    <div class="pub-content">
-                        This work explores the cross-modal behavioral adaptations executed by human participants when interacting in synchronous proximity with collaborative industrial redundant manipulators. Our statistical results prove that null-space orientation shifts within the user's field of view provoke subconscious joint trajectory corrections and localized biomechanical alignment actions across human tracking paths.
-                    </div>
-                </details>
-                <details class="pub-details">
-                    <summary>View BibTeX</summary>
-                    <div class="bibtex-box">@article{kaya2026motor,
-  title={Motor interference of elbow configuration changes in human-robot interaction},
-  author={Kaya, Mertcan and Becker, K. and Greve, J. and Keller, J. and Meserle, M. and F{\"o}rst, C. and Siegel, R. and Stelzer, J. and K{\"u}hnlenz, Kolja},
-  journal={Interaction Studies},
-  volume={26},
-  number={1},
-  pages={130--149},
-  year={2026},
-  doi={10.1075/is.25026.kay}
-}</div>
-                </details>
-            </li>
-
-            <!-- Journal 2 -->
-            <li class="pub-item">
-                <div class="pub-meta">Journal Article &bull; 2025</div>
-                <div class="pub-title">Subjective task-load influences anthropomorphism during cooperative human and robot hand movements</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">at - Automatisierungstechnik, 73(1), 22–28.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1515/auto-2024-0031" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-                <details class="pub-details">
-                    <summary>View Abstract</summary>
-                    <div class="pub-content">
-                        This study isolates the psychological interactions between physical work boundaries and cognitive human attributions during synchronous hand tracking. The experimental results reveal that modulating structural task-loads significantly variations the baseline anthropomorphic scores assigned to standard industrial robotic configurations.
-                    </div>
-                </details>
-                <details class="pub-details">
-                    <summary>View BibTeX</summary>
-                    <div class="bibtex-box">@article{kaya2025subjective,
-  title={Subjective task-load influences anthropomorphism during cooperative human and robot hand movements},
-  author={Kaya, Mertcan and K{\"u}hnlenz, Kolja},
-  journal={at - Automatisierungstechnik},
-  volume={73},
-  number={1},
-  pages={22--28},
-  year={2025},
-  doi={10.1515/auto-2024-0031}
-}</div>
-                </details>
-            </li>
-
-            <!-- Journal 3 -->
-            <li class="pub-item">
-                <div class="pub-meta">Journal Article &bull; 2024</div>
-                <div class="pub-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
-                <div class="pub-authors"><strong>M. Kaya</strong>, M. A. Akbulut, Z. Y. Bayraktaroglu, and K. Kühnlenz</div>
-                <div class="pub-venue">Journal of Intelligent & Robotic Systems, 110(3), 115.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1007/s10846-024-02135-x" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-                <details class="pub-details">
-                    <summary>View Abstract</summary>
-                    <div class="pub-content">
-                        We present an optimized, recursive formulation of model-based robot dynamics based on inverse Newton-Euler tracking strategies. By completely removing high-dimensional regressor matrix structural requirements, we eliminate computational matrix building latency and scale loop execution frequencies smoothly on production hardware microprocessors.
-                    </div>
-                </details>
-                <details class="pub-details">
-                    <summary>View BibTeX</summary>
-                    <div class="bibtex-box">@article{kaya2024novel,
-  title={A novel recursive algorithm for the implementation of adaptive robot controllers},
-  author={Kaya, Mertcan and Akbulut, Mehmet Arif and Bayraktaroglu, Zafer Bingul and K{\"u}hnlenz, Kolja},
-  journal={Journal of Intelligent \& Robotic Systems},
-  volume={110},
-  number={3},
-  pages={115},
-  year={2024},
-  doi={10.1007/s10846-024-02135-x}
-}</div>
-                </details>
-            </li>
-        </ul>
-
-        <!-- ==========================================
-             SECTION 2: REFEREED CONFERENCES & PROCEEDINGS
-             ========================================== -->
-        <h2>Conference Proceedings</h2>
-        <ul class="pub-list">
-            
-            <!-- Conference 1 -->
-            <li class="pub-item">
-                <div class="pub-meta">Conference Paper &bull; 2025</div>
-                <div class="pub-title">Towards motor interference of limb configuration changes -- A potential measure for human-likeness of robots</div>
-                <div class="pub-authors"><strong>M. Kaya</strong>, J. Bauer, F. Nickl, and K. Kühnlenz</div>
-                <div class="pub-venue">Artificial Intelligence in HCI. HCII 2025. Springer, Cham.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1007/978-3-031-93429-2_9" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
+                    <a href="https://doi.org/10.1075/is.25026.kay" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                    <button class="btn-small"><i class="fas fa-quote-right"></i> BibTeX</button>
                 </div>
             </li>
-
-            <!-- Conference 2 -->
-            <li class="pub-item">
-                <div class="pub-meta">IEEE Conference Paper &bull; 2024</div>
-                <div class="pub-title">Explorative study on motor interference during synchronous human and robot arm movements under varied presence of a robot head</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">2024 IEEE International Conference on Robotics and Biomimetics (ROBIO).</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1109/ROBIO64047.2024.10907577" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-            </li>
-
-            <!-- Conference 3 -->
-            <li class="pub-item">
-                <div class="pub-meta">IEEE Conference Paper &bull; 2023</div>
-                <div class="pub-title">Towards prediction of motor interference during synchronous human-robot arm movements using subjective ratings of anthropomorphism</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">2023 IEEE International Conference on Robot and Human Interactive Communication (RO-MAN).</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1109/RO-MAN57019.2023.10309618" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-            </li>
-
-            <!-- Conference 4 -->
-            <li class="pub-item">
-                <div class="pub-meta">Conference Paper &bull; 2022</div>
-                <div class="pub-title">Motor interference of incongruent hand motions in HRI depends on movement velocity</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">Social Robotics. ICSR 2022. Springer, Cham.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.1007/978-3-031-24667-8_30" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Publisher Link</a>
-                </div>
-            </li>
-
-            <!-- Conference 5 -->
-            <li class="pub-item">
-                <div class="pub-meta">National Conference Paper &bull; 2018</div>
-                <div class="pub-title">İşbirlikçi robot uygulamaları için hibrit konum/kuvvet kontrolü</div>
-                <div class="pub-authors"><strong>M. Kaya</strong>, Ö. F. Argın, S. Akbaş, and Z. Y. Bayraktaroğlu</div>
-                <div class="pub-venue">TOK2018 Otomatik Kontrol Ulusal Toplantısı.</div>
-                <div class="pub-actions">
-                    <a href="https://www.researchgate.net/publication/327819785_Isbirlikci_Robot_Uygulamalari_icin_Hibrit_KonumKuvvet_Kontrolu" target="_blank"><i class="fab fa-researchgate"></i> View on ResearchGate</a>
-                </div>
-            </li>
-
-            <!-- Conference 6 -->
-            <li class="pub-item">
-                <div class="pub-meta">National Conference Paper &bull; 2018</div>
-                <div class="pub-title">6-eksenli endüstriyel manipülatörün eklem sürtünmelerinin tanılanması</div>
-                <div class="pub-authors">Ö. F. Argın, S. Akbaş, <strong>M. Kaya</strong>, and Z. Y. Bayraktaroğlu</div>
-                <div class="pub-venue">TOK2018 Otomatik Kontrol Ulusal Toplantısı.</div>
-                <div class="pub-actions">
-                    <a href="https://www.researchgate.net/publication/327821137_6-eksenli_Endustriyel_Manipulatorun_Eklem_Surtunmelerinin_Tanilanmasi" target="_blank"><i class="fab fa-researchgate"></i> View on ResearchGate</a>
-                </div>
-            </li>
-        </ul>
-
-        <!-- ==========================================
-             SECTION 3: PREPRINTS & SUBMISSIONS
-             ========================================== -->
-        <h2>Preprints & Manuscripts Under Review</h2>
-        <ul class="pub-list">
-            
-            <!-- Preprint 1 -->
-            <li class="pub-item" style="border-left: 3px solid #E67E22;">
-                <div class="pub-meta" style="color: #E67E22;">Advanced Robotics Research &bull; Under Active Review (2026)</div>
-                <div class="pub-title">Disentangling Hardware Embodiment and Trajectory Kinematics During Human-Robot Spatial Negotiation</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">Manuscript under review at Advanced Robotics Research.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.5281/zenodo.20611666" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Preprint Link</a>
-                </div>
-            </li>
-
-            <!-- Preprint 2 -->
-            <li class="pub-item" style="border-left: 3px solid #E67E22;">
-                <div class="pub-meta" style="color: #E67E22;">Zenodo Preprint &bull; 2026</div>
-                <div class="pub-title">The Geometry of Interference: Quantifying Spatial Leakage and Biomechanical Adaptation During Human-Robot Collaboration</div>
-                <div class="pub-authors"><strong>M. Kaya</strong> and K. Kühnlenz</div>
-                <div class="pub-venue">Zenodo Repository Preprint Portal.</div>
-                <div class="pub-actions">
-                    <a href="https://doi.org/10.5281/zenodo.20609858" target="_blank"><i class="fas fa-external-link-alt"></i> DOI Preprint Link</a>
-                </div>
-                <details class="pub-details">
-                    <summary>View Technical Summary</summary>
-                    <div class="pub-content">
-                        Introduces the formal pipeline of Distractor-Aligned Variance (DAV) modeling. The algorithm isolates task-orthogonal trace leakage vectors from baseline planned target paths, extracting pure control noise to serve as a feedback primitive for reactive costmap generation.
-                    </div>
-                </details>
-            </li>
-        </ul>
-
+            </ul>
     </div>
 
-    <!-- --- FOOTER BLOCK --- -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Mertcan Kaya. Index compiled natively via HTML5 & CSS3. Hosted on GitHub Pages.</p>
-        </div>
+        <p>&copy; 2026 Mertcan Kaya. <a href="index.html">Return to Homepage</a></p>
     </footer>
 
 </body>

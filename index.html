@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* --- CSS Custom Properties (Theme Palette) --- */
         :root {
             --techslate: #212F3D;      
             --textgray: #2D3748;       
@@ -54,7 +55,8 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        /* ADDED: scroll-padding-top prevents the sticky navbar from hiding section titles */
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--textgray); line-height: 1.6; background-color: #FFFFFF; padding-top: 60px; }
         a { color: var(--linkblue); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--techslate); }
@@ -62,129 +64,129 @@
         /* --- Sticky Navigation & Mobile Menu --- */
         .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: rgba(33, 47, 61, 0.98); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; }
+        .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; transition: opacity 0.2s; }
+        .nav-brand:hover { opacity: 0.8; }
         
         .nav-links { display: flex; gap: 24px; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
         .nav-links a:hover { color: #FFFFFF; }
-        
-        /* Mobile Menu Toggle */
         .menu-toggle { display: none; color: #FFFFFF; font-size: 1.5rem; cursor: pointer; background: none; border: none; }
         
         /* --- Layout Containers --- */
         .container { max-width: 1050px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 50px 0; border-bottom: 1px solid var(--bordergray); }
+        section { padding: 60px 0; border-bottom: 1px solid var(--bordergray); }
         .bg-light { background-color: var(--lightbg); }
 
         /* --- Hero Section --- */
-        header { background-color: var(--techslate); color: #FFFFFF; padding: 45px 0; }
+        header { background-color: var(--techslate); color: #FFFFFF; padding: 55px 0; }
         .hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
         .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
-        .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 8px 0; font-weight: 400; color: #E2E8F0; line-height: 1.4; }
-        .keyword-strip { font-size: 0.9rem; color: #63B3ED; font-weight: 600; margin-bottom: 18px; letter-spacing: 0.3px; }
+        .hero-text h1 { font-size: 2.8rem; font-weight: 800; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
+        .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 8px 0; font-weight: 400; color: #E2E8F0; line-height: 1.5; }
+        .keyword-strip { font-size: 0.9rem; color: #63B3ED; font-weight: 600; margin-bottom: 22px; letter-spacing: 0.3px; }
         
         .hero-photo-container { flex-shrink: 0; margin: 0; }
-        .hero-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.2); background-color: #ECEFF1; }
+        .hero-photo { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 24px rgba(0,0,0,0.3); background-color: #ECEFF1; }
         
-        .social-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px 0; }
-        .social-links a { color: #FFFFFF; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; opacity: 0.85; }
-        .social-links a:hover { opacity: 1; color: #3498DB; }
-        .cta-banner { background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF; padding: 8px 14px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.88rem; margin-bottom: 15px; }
+        .social-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 20px 0; }
+        .social-links a { color: #FFFFFF; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; opacity: 0.85; transition: opacity 0.2s, transform 0.2s; }
+        .social-links a:hover { opacity: 1; color: #3498DB; transform: translateY(-2px); }
+        .cta-banner { background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF; padding: 10px 16px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; }
 
         /* --- General Headings --- */
-        h2 { font-size: 1.6rem; color: var(--techslate); margin-bottom: 20px; position: relative; padding-bottom: 8px; }
-        h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background-color: var(--linkblue); }
-        h3 { font-size: 1.15rem; color: var(--techslate); font-weight: 700; margin-bottom: 8px; }
+        h2 { font-size: 1.8rem; color: var(--techslate); margin-bottom: 25px; position: relative; padding-bottom: 10px; font-weight: 800; }
+        h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 4px; background-color: var(--linkblue); border-radius: 2px; }
+        h3 { font-size: 1.2rem; color: var(--techslate); font-weight: 700; margin-bottom: 8px; }
 
-        /* --- Research Vision / About --- */
-        .vision-text { font-size: 1.05rem; color: var(--textgray); line-height: 1.7; margin-bottom: 15px; max-width: 900px; }
-
-        /* --- Metrics Strip (Achievement Based) --- */
+        /* --- Research Vision & Metrics --- */
+        .vision-text { font-size: 1.1rem; color: var(--textgray); line-height: 1.7; margin-bottom: 15px; max-width: 900px; }
         .highlights-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .highlight-card { background: #FFFFFF; border-left: 4px solid var(--linkblue); padding: 12px 15px; border-radius: 0 6px 6px 0; border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        .highlight-card h3 { font-size: 1.1rem; color: var(--techslate); font-weight: 700; margin-bottom: 2px; }
-        .highlight-card p { font-size: 0.8rem; color: #4A5568; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .highlight-card { background: #FFFFFF; border-left: 4px solid var(--linkblue); padding: 15px 18px; border-radius: 0 8px 8px 0; border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray); box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
+        .highlight-card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.05); }
+        .highlight-card h3 { font-size: 1.3rem; color: var(--techslate); font-weight: 800; margin-bottom: 2px; }
+        .highlight-card p { font-size: 0.8rem; color: #4A5568; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
 
         /* --- Clean Publications List --- */
         .pub-list { list-style: none; margin-bottom: 20px; }
-        .pub-item { margin-bottom: 22px; padding-left: 15px; border-left: 3px solid var(--bordergray); transition: border-color 0.2s; }
+        .pub-item { margin-bottom: 25px; padding-left: 18px; border-left: 3px solid var(--bordergray); transition: border-color 0.2s; }
         .pub-item:hover { border-left-color: var(--linkblue); }
         .pub-year { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 2px; }
-        .pub-title { font-weight: 700; font-size: 1.05rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
-        .pub-venue { font-size: 0.9rem; color: #4A5568; font-style: italic; margin-bottom: 10px; }
+        .pub-title { font-weight: 700; font-size: 1.1rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
+        .pub-venue { font-size: 0.95rem; color: #4A5568; font-style: italic; margin-bottom: 12px; }
         .pub-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-        .btn-small { font-size: 0.8rem; padding: 5px 12px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; }
-        .btn-small:hover { background: var(--bordergray); }
+        
+        /* ADDED: Smooth reveal animation for the drawer */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .drawer-anim { animation: fadeInDown 0.4s ease-out forwards; }
 
         /* --- Hardware Demonstrations Portfolio --- */
-        .project-block { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 20px; }
+        .project-block { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 25px; }
         .project-info { flex: 1 1 400px; }
         .project-media { flex: 1 1 500px; }
-        .project-objective { font-size: 1rem; margin-bottom: 20px; color: var(--textgray); line-height: 1.7; }
+        .project-objective { font-size: 1.05rem; margin-bottom: 20px; color: var(--textgray); line-height: 1.7; }
         .spec-list { list-style: none; margin-bottom: 20px; }
-        .spec-list li { font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: baseline; gap: 8px; }
+        .spec-list li { font-size: 0.95rem; margin-bottom: 10px; display: flex; align-items: baseline; gap: 10px; }
         .spec-list li i { color: var(--linkblue); font-size: 0.85rem; padding-top: 4px; }
-        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-        .tech-tags span { background: var(--lightbg); color: var(--linkblue); font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--bordergray); }
+        
+        /* UPDATED: Tech Tags are now polished pills */
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
+        .tech-tags span { background: var(--lightbg); color: var(--linkblue); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--bordergray); }
 
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid var(--bordergray); margin-bottom: 20px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; cursor: pointer; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid var(--bordergray); margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+        .video-container:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
         .video-container iframe, .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
         .play-overlay-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255, 255, 255, 0.9); z-index: 2; pointer-events: none; text-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s, color 0.2s; }
         .video-container:hover .play-overlay-btn { color: var(--ytred); transform: translate(-50%, -50%) scale(1.1); }
 
-        /* --- Research Themes --- */
-        .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
-        .repo-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--linkblue); }
-        .repo-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-        .repo-header i { font-size: 1.1rem; color: var(--techslate); }
-        .repo-description { font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
+        /* --- Research Themes & Timeline Grids --- */
+        .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .repo-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--linkblue); transition: transform 0.2s, box-shadow 0.2s; }
+        .repo-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .repo-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .repo-header i { font-size: 1.2rem; color: var(--techslate); }
+        .repo-description { font-size: 0.95rem; color: #4A5568; line-height: 1.5; }
+
+        .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .timeline-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 4px solid var(--techslate); padding: 16px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: border-color 0.2s; }
+        .timeline-card:hover { border-left-color: var(--linkblue); }
+        .timeline-year { font-size: 1.2rem; font-weight: 800; color: var(--linkblue); margin-bottom: 4px; }
+        .timeline-title { font-size: 0.95rem; font-weight: 600; color: var(--techslate); line-height: 1.4; }
 
         /* --- Technical Skills Matrix --- */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 15px; }
-        .skills-category { background: var(--lightbg); padding: 16px; border-radius: 6px; border: 1px solid var(--bordergray); }
-        .skills-category h3 { font-size: 1rem; color: var(--techslate); margin-bottom: 10px; border-bottom: 2px solid var(--bordergray); padding-bottom: 4px; }
-        .skills-category p { font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .skills-category { background: var(--lightbg); padding: 20px; border-radius: 8px; border: 1px solid var(--bordergray); }
+        .skills-category h3 { font-size: 1.05rem; color: var(--techslate); margin-bottom: 12px; border-bottom: 2px solid var(--bordergray); padding-bottom: 6px; }
+        .skills-category p { font-size: 0.95rem; color: #4A5568; line-height: 1.5; }
 
-        /* --- Grants, Teaching & Awards --- */
-        .academic-block { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--bordergray); }
-        .academic-block-title { font-weight: 700; color: var(--techslate); font-size: 1.05rem; }
-        .academic-block-meta { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
-        .academic-block-desc { font-size: 0.9rem; color: #4A5568; margin-top: 4px; }
+        /* --- Global Buttons (WITH NEW HOVER LIFTS) --- */
+        .btn-small { font-size: 0.85rem; padding: 6px 14px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-small:hover { background: var(--bordergray); transform: translateY(-2px); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-        /* --- Career Timeline --- */
-        .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
-        .timeline-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 3px solid var(--techslate); padding: 14px; border-radius: 0 6px 6px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-        .timeline-year { font-size: 1.15rem; font-weight: 800; color: var(--linkblue); margin-bottom: 4px; }
-        .timeline-title { font-size: 0.9rem; font-weight: 600; color: var(--techslate); line-height: 1.4; }
-
-        /* --- Global Buttons --- */
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background-color: var(--techslate); color: #FFFFFF; font-weight: 600; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; transition: background 0.2s; }
-        .btn:hover { background-color: var(--linkblue); color: #FFFFFF; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background-color: var(--techslate); color: #FFFFFF; font-weight: 600; border-radius: 8px; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { background-color: var(--linkblue); color: #FFFFFF; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
         .btn-secondary { background-color: #718096; }
 
         /* --- Professional Footer --- */
-        footer { background: var(--techslate); padding: 40px 0; color: #FFFFFF; border-top: 1px solid var(--bordergray); margin-top: 20px; }
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; }
-        .footer-text { font-size: 0.95rem; color: #CBD5E0; line-height: 1.6; }
-        .footer-links a { color: #3498DB; display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; }
+        footer { background: var(--techslate); padding: 50px 0; color: #FFFFFF; border-top: 1px solid var(--bordergray); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: left; }
+        .footer-text { font-size: 0.95rem; color: #CBD5E0; line-height: 1.7; }
+        .footer-links a { color: #3498DB; display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
         .footer-links a:hover { color: #FFFFFF; }
 
-        /* --- Responsive Design & Mobile Menu --- */
+        /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            .hero-layout { flex-direction: column; text-align: center; gap: 20px; }
-            .hero-photo-container { order: -1; } /* Moves photo to top on mobile */
+            .hero-layout { flex-direction: column; text-align: center; gap: 25px; }
+            .hero-photo-container { order: -1; } 
             body { padding-top: 60px; }
-            
-            /* Mobile Navigation Drawer */
             .menu-toggle { display: block; }
-            .nav-links { 
-                display: none; flex-direction: column; position: absolute; 
-                top: 60px; left: 0; width: 100%; background-color: rgba(33, 47, 61, 0.98); 
-                padding: 15px 20px; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background-color: rgba(33, 47, 61, 0.98); padding: 15px 20px; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
             .nav-links.active { display: flex; }
+            .project-actions { justify-content: center; }
         }
+
     </style>
 </head>
 <body>
@@ -272,7 +274,7 @@
         </div>
     </section>
 
-    <section id="publications">
+    <section id="publications" class="bg-light">
         <div class="container">
             <h2>Publications & Research Output</h2>
             
@@ -309,7 +311,7 @@
 
             <div id="extended-pubs" style="display: none; padding-top: 10px; border-top: 1px dashed var(--bordergray);">
                 
-                <h3 style="font-size: 1.05rem; margin: 15px 0; color: var(--techslate);">Peer-Reviewed Conference Proceedings</h3>
+                <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--techslate);">Peer-Reviewed Conference Proceedings</h3>
                 <ul class="pub-list">
                     <li class="pub-item">
                         <div class="pub-year">2025</div>
@@ -361,7 +363,7 @@
                     </li>
                 </ul>
 
-                <h3 style="font-size: 1.05rem; margin: 15px 0; color: var(--techslate);">Preprints & Manuscripts Under Review</h3>
+                <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--techslate);">Preprints & Manuscripts Under Review</h3>
                 <ul class="pub-list">
                     <li class="pub-item">
                         <div class="pub-year">2026</div>
@@ -685,10 +687,13 @@
         </div>
     </footer>
 
+    <!-- ==========================================
+         INTERACTIVE SCRIPTS
+         ========================================== -->
     <script>
         // YouTube Lazy-Load Injection
         function injectActiveStream(container, videoId) {
-            container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="border-radius: 8px;"></iframe>`;
+            container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="border-radius: 10px;"></iframe>`;
             container.removeAttribute('onclick'); 
         }
 
@@ -697,17 +702,19 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-        
-        // Publication Drawer Toggle
+
+        // Publication Drawer Toggle (Now with animation class)
         function togglePublications() {
             var drawer = document.getElementById("extended-pubs");
             var btn = document.getElementById("togglePubBtn");
             
-            if (drawer.style.display === "none") {
+            if (drawer.style.display === "none" || drawer.style.display === "") {
                 drawer.style.display = "block";
+                drawer.classList.add("drawer-anim"); // Triggers CSS slide-down
                 btn.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less Publications';
             } else {
                 drawer.style.display = "none";
+                drawer.classList.remove("drawer-anim");
                 btn.innerHTML = '<i class="fas fa-chevron-down"></i> View Full Publication Catalog (11 Papers)';
             }
         }

@@ -16,19 +16,24 @@ I focus on enabling robots (such as the Franka Emika Panda, UR3, and mobile base
 
 ## 🏗️ Repository Architecture
 
-This site is engineered as a high-performance, zero-dependency static Single-Page Application (SPA). It completely avoids heavy JavaScript frameworks (like React or Node modules) to ensure instantaneous load times and maximum SEO accessibility for academic web crawlers.
+This site is engineered as a high-performance, zero-dependency **Single-Page Application (SPA)**. It completely avoids heavy JavaScript frameworks (like React or Vue) to ensure instantaneous load times, robust mobile responsiveness, and maximum SEO accessibility for academic web crawlers.
 
-*   `index.html` - The core portfolio entry point (Hero, Vision, Hardware Demos, Publications, Timeline).
-*   `publications.html` - Comprehensive, standalone catalog of all 11 peer-reviewed indexations and preprints.
-*   `*.pdf` - Hosted academic CVs, industry resumes, and publication lists.
+* **`index.html`** - The singular, core portfolio entry point housing the Hero, Research Vision, Hardware Projects, Publications, and Career Timeline.
+* **`*.pdf`** - Hosted academic CVs, industry resumes, and full publication lists directly accessible from the hero section.
+
+### Interactive UI Mechanics (Vanilla JS)
+The frontend utilizes lightweight Vanilla JavaScript to execute fluid DOM manipulation without external library bloat:
+* **Lazy-Load Video Injection:** Hardware demonstration videos display as static placeholder images, swapping to active YouTube `iframe` embeds only upon user click (`injectActiveStream`). This saves significant initial bandwidth.
+* **Expandable Publication Drawer:** The publication catalog features an animated accordion (`togglePublications`) that dynamically reveals extended conference proceedings and preprints via CSS transitions (`drawer-anim`) without navigating away from the page.
+* **Responsive Mobile Drawer:** A native `toggleMenu` function handles the mobile navigation state, ensuring clean accessibility on smaller screens.
 
 ## 🛠️ Tech Stack & Integrations
 
-*   **Markup & Styling:** Native HTML5 & CSS3 (CSS Variables, Flexbox, CSS Grid).
-*   **Interactivity:** Vanilla JavaScript (ES6) for modal navigation and lazy-loaded YouTube iFrame injections.
-*   **Mathematical Rendering:** [KaTeX](https://katex.org/) auto-render engine for sub-millisecond LaTeX equation compiling directly in the DOM.
-*   **Typography & Icons:** Native system fonts (`-apple-system`, `Segoe UI`) and FontAwesome 6.4.0.
-*   **SEO:** Integrated JSON-LD Schema markup mapping to ORCID and Google Scholar identities.
+* **Markup & Styling:** Native HTML5 & CSS3 (CSS Variables, Flexbox, CSS Grid, custom scroll-padding).
+* **Interactivity:** Vanilla JavaScript (ES6).
+* **Mathematical Rendering:** [KaTeX](https://katex.org/) auto-render engine for sub-millisecond LaTeX equation compiling directly in the DOM.
+* **Typography & Icons:** Native system fonts (`-apple-system`, `Segoe UI`) and FontAwesome 6.4.0.
+* **SEO:** Integrated JSON-LD Schema markup mapping to ORCID and Google Scholar identities.
 
 ## 🚀 Local Deployment & Testing
 

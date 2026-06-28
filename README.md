@@ -1,24 +1,45 @@
-# Personal Portfolio & Robotics R&D Website
+# Mertcan Kaya | Academic Portfolio & Robotics Dossier
 
-This repository hosts the source code and deployment assets for my professional portfolio website, accessible live at **[mertcan-kaya.github.io](https://mertcan-kaya.github.io/)**.
+[![Website](https://img.shields.io/badge/Website-mertcan--kaya.github.io-2980B9?style=flat-square&logo=google-chrome)](https://mertcan-kaya.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-mertcan--kaya-212F3D?style=flat-square&logo=github)](https://github.com/mertcan-kaya)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mertcan_Kaya-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mertcankaya/)
 
-The site serves as an interactive hub for my work as a Robotics Engineer and Doctoral Researcher, bridging advanced kinematic and control theory with hands-on physical hardware implementations.
+This repository contains the source code for my personal academic and professional portfolio. It serves as a centralized hub for my research publications, hardware deployment demonstrations, and professional dossiers.
 
----
+## 🔬 About Me
 
-## 🚀 Live Page Quick Access
-*   **Website:** [https://mertcan-kaya.github.io](https://mertcan-kaya.github.io)
-*   **Domain Focus:** Human-Aware Motion Planning, Trajectory Optimization, Adaptive Control, and Human-Robot Interaction (HRI).
-*   **Target Availability:** Postdoctoral Fellowships and Industrial Robotics R&D roles starting **December 2026**.
+I am a Doctoral Candidate at the Technical University of Munich (TUM) and a Research Associate at Coburg University of Applied Sciences. My research bridges control theory, motion planning, and human biomechanics to develop **predictive, human-aware motion-planning frameworks**. 
 
----
+I focus on enabling robots (such as the Franka Emika Panda, UR3, and mobile bases like TurtleBot 4) to coordinate naturally and safely with human movement in shared physical workspaces.
 
-## 🛠️ Repository Architecture
+**Status:** Open to Postdoctoral Fellowships and Robotics R&D roles starting **December 2026**.
 
-The project is built entirely using lightweight, semantic HTML5 and responsive CSS3, ensuring optimal load times and perfect indexation for search engine optimization (SEO) and automated technical sourcing tools.
+## 🏗️ Repository Architecture
 
-```text
-├── index.html                           # Core structure, styling, and video grid embedded cards
-├── Mertcan_Kaya_Industry_Resume.pdf     # Optimized corporate parsing resume (ATS-friendly)
-├── Mertcan_Kaya_Academic_CV.pdf         # Comprehensive dossier for postdoc/faculty review panels
-└── README.md                            # Repository documentation
+This site is engineered as a high-performance, zero-dependency static Single-Page Application (SPA). It completely avoids heavy JavaScript frameworks (like React or Node modules) to ensure instantaneous load times and maximum SEO accessibility for academic web crawlers.
+
+*   `index.html` - The core portfolio entry point (Hero, Vision, Hardware Demos, Publications, Timeline).
+*   `publications.html` - Comprehensive, standalone catalog of all 11 peer-reviewed indexations and preprints.
+*   `*.pdf` - Hosted academic CVs, industry resumes, and publication lists.
+
+## 🛠️ Tech Stack & Integrations
+
+*   **Markup & Styling:** Native HTML5 & CSS3 (CSS Variables, Flexbox, CSS Grid).
+*   **Interactivity:** Vanilla JavaScript (ES6) for modal navigation and lazy-loaded YouTube iFrame injections.
+*   **Mathematical Rendering:** [KaTeX](https://katex.org/) auto-render engine for sub-millisecond LaTeX equation compiling directly in the DOM.
+*   **Typography & Icons:** Native system fonts (`-apple-system`, `Segoe UI`) and FontAwesome 6.4.0.
+*   **SEO:** Integrated JSON-LD Schema markup mapping to ORCID and Google Scholar identities.
+
+## 🚀 Local Deployment & Testing
+
+To preview the website locally and test formatting changes before pushing to GitHub Pages, run a simple local HTTP server from the root directory:
+
+```bash
+# Clone the repository
+git clone [https://github.com/mertcan-kaya/mertcan-kaya.github.io.git](https://github.com/mertcan-kaya/mertcan-kaya.github.io.git)
+
+# Navigate to the project directory
+cd mertcan-kaya.github.io
+
+# Start a local web server (Python 3)
+python3 -m http.server 8000

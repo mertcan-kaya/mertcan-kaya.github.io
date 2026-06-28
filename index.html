@@ -7,6 +7,7 @@
     
     <meta name="description" content="Mertcan Kaya - Doctoral Researcher specializing in human-aware motion planning, control systems, and Human-Robot Interaction (HRI).">
     <meta name="author" content="Mertcan Kaya">
+
     <link rel="canonical" href="https://mertcan-kaya.github.io/">
 
     <meta property="og:type" content="website">
@@ -46,67 +47,96 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
     
     <style>
+        /* --- CSS Custom Properties (Theme Palette) --- */
         :root {
-            --techslate: #212F3D;      
-            --textgray: #2D3748;       
-            --linkblue: #2980B9;       
-            --lightbg: #F8F9FA;        
-            --ytred: #CC0000;          
-            --bordergray: #E2E8F0;     
+            --techslate: #212F3D;      /* Deep slate for headers/accents */
+            --textgray: #2D3748;       /* Legible charcoal for body text */
+            --linkblue: #2980B9;       /* Interactive link color */
+            --lightbg: #F8F9FA;        /* Soft gray for section backgrounds */
+            --ytred: #CC0000;          /* YouTube icon hover color */
+            --bordergray: #E2E8F0;     /* Subtle border lines */
         }
 
+        /* --- CSS Reset & Base Typography --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--textgray); line-height: 1.6; background-color: #FFFFFF; padding-top: 60px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--textgray);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+            padding-top: 60px; /* Accommodates sticky navbar */
+        }
         a { color: var(--linkblue); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--techslate); }
 
-        /* --- Sticky Navigation --- */
-        .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: rgba(33, 47, 61, 0.96); backdrop-filter: blur(8px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        /* --- Sticky Navigation Header --- */
+        .navbar {
+            position: fixed; top: 0; left: 0; width: 100%; height: 60px;
+            background-color: rgba(33, 47, 61, 0.96); backdrop-filter: blur(8px);
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
         .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; }
         .nav-links { display: flex; gap: 24px; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
         .nav-links a:hover { color: #FFFFFF; }
 
-        /* --- Layout Containers --- */
+        /* --- Layout Containers & Section Spacing --- */
         .container { max-width: 1050px; margin: 0 auto; padding: 0 20px; }
         section { padding: 50px 0; border-bottom: 1px solid var(--bordergray); }
-        .bg-light { background-color: var(--lightbg); }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section Styling --- */
         header { background-color: var(--techslate); color: #FFFFFF; padding: 45px 0; }
         .hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
         .hero-text { flex: 1; }
         .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
         .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 8px 0; font-weight: 400; color: #E2E8F0; line-height: 1.4; }
+        
+        /* Research Keywords Strip */
         .keyword-strip { font-size: 0.9rem; color: #63B3ED; font-weight: 600; margin-bottom: 18px; letter-spacing: 0.3px; }
+        
+        /* Headshot Image Formatting */
         .hero-photo-container { flex-shrink: 0; margin: 0; }
-        .hero-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.2); background-color: #ECEFF1; }
+        .hero-photo {
+            width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.2); background-color: #ECEFF1;
+        }
+
+        /* Hero Links & Availability Banner */
         .social-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 16px 0; }
         .social-links a { color: #FFFFFF; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; opacity: 0.85; }
         .social-links a:hover { opacity: 1; color: #3498DB; }
-        .cta-banner { background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF; padding: 8px 14px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.88rem; margin-bottom: 15px; }
+        .cta-banner {
+            background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF;
+            padding: 8px 14px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.88rem; margin-bottom: 15px;
+        }
 
         /* --- General Headings --- */
-        h2 { font-size: 1.6rem; color: var(--techslate); margin-bottom: 25px; position: relative; padding-bottom: 8px; }
+        h2 { font-size: 1.6rem; color: var(--techslate); margin-bottom: 20px; position: relative; padding-bottom: 8px; }
         h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background-color: var(--linkblue); }
         h3 { font-size: 1.15rem; color: var(--techslate); font-weight: 700; margin-bottom: 8px; }
+
+        /* --- About Section Narrative --- */
         .about-text { font-size: 1.05rem; color: var(--textgray); line-height: 1.7; margin-bottom: 10px; max-width: 900px; }
 
-        /* --- Metrics Strip --- */
+        /* --- Quantitative Metrics Strip --- */
         .highlights-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-        .highlight-card { background: #FFFFFF; border-left: 4px solid var(--linkblue); padding: 12px 15px; border-radius: 0 6px 6px 0; border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .highlight-card {
+            background: #FFFFFF; border-left: 4px solid var(--linkblue); padding: 12px 15px;
+            border-radius: 0 6px 6px 0; border-top: 1px solid var(--bordergray); border-right: 1px solid var(--bordergray); border-bottom: 1px solid var(--bordergray);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
         .highlight-card h3 { font-size: 1.4rem; color: var(--techslate); font-weight: 700; margin-bottom: 2px; }
         .highlight-card p { font-size: 0.8rem; color: #4A5568; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* --- Career Timeline --- */
+        /* --- Career Timeline Component --- */
         .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
         .timeline-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 3px solid var(--techslate); padding: 14px; border-radius: 0 6px 6px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .timeline-year { font-size: 1.15rem; font-weight: 800; color: var(--linkblue); margin-bottom: 4px; }
         .timeline-title { font-size: 0.9rem; font-weight: 600; color: var(--techslate); line-height: 1.4; }
 
-        /* --- DEEP-DIVE HARDWARE PROJECT STYLES --- */
+        /* --- Hardware Demonstrations Portfolio Grid (Deep-Dive Layout) --- */
         .project-block { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 20px; }
         .project-info { flex: 1 1 400px; }
         .project-media { flex: 1 1 500px; }
@@ -115,6 +145,7 @@
         .spec-list li { font-size: 0.9rem; margin-bottom: 8px; display: flex; align-items: baseline; gap: 8px; }
         .spec-list li i { color: var(--linkblue); font-size: 0.85rem; padding-top: 4px; }
         .spec-list strong { color: var(--techslate); }
+        
         .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .tech-tags span { background: var(--lightbg); color: var(--linkblue); font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--bordergray); }
 
@@ -125,26 +156,30 @@
 
         .project-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
 
-        /* --- Research Themes Grid --- */
+        /* --- Research Themes & Repositories Grid --- */
         .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
-        .repo-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
+        .repo-card { 
+            background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;
+        }
         .repo-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
         .repo-header i { font-size: 1.1rem; color: var(--techslate); }
         .repo-description { font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
 
-        /* --- Grants & Teaching Blocks --- */
+        /* --- Grants & Teaching Academic Blocks --- */
         .academic-block { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--bordergray); }
         .academic-block-title { font-weight: 700; color: var(--techslate); font-size: 1.05rem; }
         .academic-block-meta { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
         .academic-block-desc { font-size: 0.9rem; color: #4A5568; margin-top: 4px; }
 
-        /* --- Publications List --- */
+        /* --- Clean Publications List --- */
         .pub-list { list-style: none; }
         .pub-item { margin-bottom: 22px; padding-left: 15px; border-left: 3px solid var(--bordergray); transition: border-color 0.2s; }
         .pub-item:hover { border-left-color: var(--linkblue); }
         .pub-year { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 2px; }
         .pub-title { font-weight: 700; font-size: 1.05rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
         .pub-venue { font-size: 0.9rem; color: #4A5568; font-style: italic; margin-bottom: 10px; }
+        /* Publication Action Buttons */
         .pub-actions { display: flex; gap: 8px; flex-wrap: wrap; }
         .btn-small { font-size: 0.8rem; padding: 5px 12px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 5px; }
         .btn-small:hover { background: var(--bordergray); }
@@ -155,13 +190,14 @@
         .btn:hover { background-color: var(--linkblue); color: #FFFFFF; }
         .btn-secondary { background-color: #718096; }
 
-        /* --- Footer --- */
+        /* --- Professional Footer --- */
         footer { background: var(--techslate); padding: 40px 0; color: #FFFFFF; border-top: 1px solid var(--bordergray); margin-top: 20px; }
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; }
         .footer-text { font-size: 0.95rem; color: #CBD5E0; line-height: 1.6; }
         .footer-links a { color: #3498DB; display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; }
         .footer-links a:hover { color: #FFFFFF; }
 
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
             .hero-layout { flex-direction: column; text-align: center; gap: 15px; }
             .nav-links { display: none; }
@@ -251,7 +287,7 @@
         </div>
     </section>
 
-    <section id="timeline" class="bg-light">
+    <section id="timeline" style="background-color: var(--lightbg); padding: 40px 0;">
         <div class="container">
             <h2>Career Trajectory</h2>
             <div class="timeline-grid">
@@ -278,7 +314,7 @@
     <section id="demos">
         <div class="container">
             <h2>Hardware Projects & Deployments</h2>
-            <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Detailed breakdowns of physical robot deployments, tracing the engineering stack from low-level embedded microcontrollers up to high-level ROS 2 behavior trees.</p>
+            <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Detailed breakdowns of physical robot deployments, tracing the engineering stack from low-level embedded microcontrollers up to high-level system behaviors.</p>
             
             <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
                 <div class="project-info">
@@ -316,10 +352,6 @@
 
             <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
                 <div class="project-media">
-                    <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
-                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/maxresdefault.jpg" alt="Manipulator Arm Teleoperation">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
                     <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
                         <img src="https://img.youtube.com/vi/B89a4sofGeU/maxresdefault.jpg" alt="Human-Robot Physical Compliance Tracking">
                         <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
@@ -331,19 +363,19 @@
                 </div>
 
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Compliant Teleoperation & Physical HRI</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Compliant Physical HRI & Force Control</h3>
                     <p class="project-objective">
-                        Implementing hybrid position/force control loops and telemanipulation frameworks. The goal is to ensure stable industrial trajectories while allowing continuous, safe kinetic adaptation during direct human contact or multi-agent load sharing.
+                        Implementing hybrid position/force control loops for physical human-robot interaction. The goal is to ensure stable industrial trajectories while allowing continuous, safe kinetic adaptation during direct human contact or multi-agent load sharing.
                     </p>
                     
                     <ul class="spec-list">
-                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Franka Emika Panda (7-DoF), Universal Robots (UR3).</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS Noetic, MoveIt, libfranka.</li>
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Stäubli RX160, Stäubli RX160L.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Low Level Interface (LLI), C/C++.</li>
                         <li><i class="fas fa-project-diagram"></i> <strong>Control:</strong> Impedance Control, Hybrid Position/Force Control, Inverse Kinematics.</li>
                     </ul>
 
                     <div class="tech-tags">
-                        <span>Franka Panda</span><span>Teleoperation</span><span>Force Control</span><span>MoveIt</span>
+                        <span>Stäubli RX160</span><span>Physical HRI</span><span>Force Control</span><span>LLI</span>
                     </div>
 
                     <div class="project-actions">
@@ -354,19 +386,19 @@
 
             <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Real-Time Predictive Human Tracking</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Teleoperation & Predictive Human Tracking</h3>
                     <p class="project-objective">
-                        Empirical verification of predictive manipulator tracking loops. The system executes seamless task-space path updates to follow human spatial vectors actively in real time, serving as the foundational layer for evaluating motor interference.
+                        Executing seamless task-space path updates via real-time teleoperation and predictive manipulator tracking loops. The system tracks human spatial vectors actively using marker-based optical tracking to control manipulator behavior and evaluate motor interference.
                     </p>
                     
                     <ul class="spec-list">
-                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Pepper, NAO Systems, RGB-D Vision Systems.</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS, OpenCV, Python, C++.</li>
-                        <li><i class="fas fa-project-diagram"></i> <strong>Control:</strong> Visual Servoing, Trajectory Optimization, Intent Prediction.</li>
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Universal Robots (UR3), OptiTrack Motion Capture System.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Universal Robots RTDE (Real-Time Data Exchange), Python, C++.</li>
+                        <li><i class="fas fa-project-diagram"></i> <strong>Control:</strong> Marker Tracking, Trajectory Optimization, Intent Prediction.</li>
                     </ul>
 
                     <div class="tech-tags">
-                        <span>Visual Servoing</span><span>Anthropomorphism</span><span>OpenCV</span>
+                        <span>UR3</span><span>OptiTrack</span><span>RTDE</span><span>Teleoperation</span>
                     </div>
 
                     <div class="project-actions">
@@ -375,6 +407,10 @@
                 </div>
 
                 <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
+                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/maxresdefault.jpg" alt="Manipulator Arm Teleoperation">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
                     <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
                         <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/maxresdefault.jpg" alt="Hand Following Robot Tracking Loop">
                         <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
@@ -419,7 +455,7 @@
         </div>
     </section>
 
-    <section id="research" class="bg-light">
+    <section id="research" style="background-color: var(--lightbg);">
         <div class="container">
             <h2>Research Themes & Current Focus</h2>
             
@@ -452,7 +488,45 @@
         </div>
     </section>
 
-    <section id="funding">
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Core Stacks</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Domain Expertise</h3>
+                    <ul>
+                        <li>Motion Planning & Trajectory Tuning</li>
+                        <li>Recursive Adaptive Robot Control</li>
+                        <li>Mobile Base Navigation & SLAM Maps</li>
+                        <li>Human Intention Prediction Trajectories</li>
+                        <li>Multi-Agent Position/Force Loops</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Software Architecture</h3>
+                    <ul>
+                        <li>ROS & ROS 2 (Nav2 Nodes, MoveIt API)</li>
+                        <li>Object-Oriented C++, Python, Linux</li>
+                        <li>MATLAB, Simulink Core, App Designer</li>
+                        <li>Git Versioning, CMake Pipelines</li>
+                        <li>Gazebo Physics, CoppeliaSim Engine</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Physical Platforms Deployed</h3>
+                    <ul>
+                        <li>Franka Emika Panda (7-DoF Manipulator)</li>
+                        <li>Universal Robots (UR3) via RTDE</li>
+                        <li>Stäubli RX160 & RX160L Industrial Arms</li>
+                        <li>OptiTrack Motion Capture Systems</li>
+                        <li>AgileX Scout Mini & TurtleBot 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funding" style="background-color: var(--lightbg);">
         <div class="container">
             <h2>Funding & Teaching Experience</h2>
             
@@ -483,7 +557,7 @@
         </div>
     </section>
 
-    <section id="publications" class="bg-light">
+    <section id="publications">
         <div class="container">
             <h2>Selected Publications</h2>
             

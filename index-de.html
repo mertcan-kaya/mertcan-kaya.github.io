@@ -87,17 +87,17 @@
 
         /* --- Sticky Navigation & Mobile Menu --- */
         .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: rgba(33, 47, 61, 0.98); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; align-items: center; padding: 0 20px; }
         .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; transition: opacity 0.2s; }
         .nav-brand:hover { opacity: 0.8; }
         
-        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links { display: flex; gap: 24px; list-style: none; margin-left: auto; margin-right: 30px; }
         .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
         .nav-links a:hover { color: #FFFFFF; }
         .menu-toggle { display: none; color: #FFFFFF; font-size: 1.5rem; cursor: pointer; background: none; border: none; }
 
         /* --- Language Switcher --- */
-        .lang-switch { display: flex; gap: 8px; align-items: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 700; margin-left: auto; margin-right: 20px; }
+        .lang-switch { display: flex; gap: 8px; align-items: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 700; }
         .lang-switch a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
         .lang-switch a:hover { color: #FFFFFF; }
         .lang-switch a.active { color: #3498DB; pointer-events: none; }
@@ -248,9 +248,12 @@
             .social-links, .btn-group { justify-content: center; }
             body { padding-top: 60px; }
             .menu-toggle { display: block; }
-            .lang-switch { margin-right: 15px; }
+            
+            /* Mobile adjustment for language switcher */
+            .lang-switch { margin-left: auto; margin-right: 20px; }
+            
             .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background-color: rgba(33, 47, 61, 0.98); padding: 15px 20px; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-            .nav-links.active { display: flex; }
+            .nav-links.active { display: flex; margin-left: 0; margin-right: 0; }
             .pub-actions { justify-content: flex-start; }
         }
     </style>

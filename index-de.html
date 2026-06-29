@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- ==========================================
+         DOCUMENT METADATA & SEO CONFIGURATION
+         ========================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mertcan Kaya | Forscher für Mensch-Roboter-Interaktion & Robotik</title>
+    
+    <meta name="description" content="Mertcan Kaya - Doktorand spezialisiert auf menschenbezogene Bewegungsplanung, Regelungstechnik und Mensch-Roboter-Interaktion (HRI).">
+    <meta name="keywords" content="Mensch-Roboter-Interaktion, Menschenbezogene Bewegungsplanung, Robotik, Bewegungsplanung, Motorische Interferenz, Roboterregelung, ROS, Intention Prediction, Embedded Systems">
+    <meta name="author" content="Mertcan Kaya">
+    <link rel="canonical" href="https://mertcan-kaya.github.io/index-de.html">
+
+    <!-- OpenGraph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mertcan-kaya.github.io/index-de.html">
+    <meta property="og:title" content="Mertcan Kaya | Robotik-Forscher">
+    <meta property="og:description" content="Doktorand in der Entwicklung menschenbezogener Bewegungsplanung, Prädiktion und Regelungsmethoden für eine sichere und effiziente Mensch-Roboter-Kollaboration.">
+    <meta property="og:image" content="https://mertcan-kaya.github.io/profile.jpg">
+
+    <!-- JSON-LD SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mertcan Kaya",
+      "jobTitle": "Wissenschaftlicher Mitarbeiter & Doktorand",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Hochschule Coburg"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Technische Universität München"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Istanbul Technical University"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Koç University"
+        }
+      ],
+      "knowsAbout": [
+        "Human-Robot Interaction",
+        "Motion Planning",
+        "Robot Control",
+        "ROS",
+        "Human Intention Prediction",
+        "Motor Interference",
+        "Embedded Systems"
+      ],
+      "sameAs": [
+        "https://scholar.google.com/citations?user=cU3jkSAAAAAJ",
+        "https://orcid.org/0000-0002-3174-9394",
+        "https://github.com/mertcan-kaya",
+        "https://linkedin.com/in/mertcankaya/"
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🤖</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ==========================================
+         GLOBAL CSS STYLESHEET
+         ========================================== -->
+    <style>
+        :root {
+            --techslate: #212F3D;      
+            --textgray: #2D3748;       
+            --linkblue: #2980B9;       
+            --lightbg: #F8F9FA;        
+            --ytred: #CC0000;          
+            --bordergray: #E2E8F0;     
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--textgray); line-height: 1.6; background-color: #FFFFFF; padding-top: 60px; }
+        a { color: var(--linkblue); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--techslate); }
+
+        /* --- Sticky Navigation & Mobile Menu --- */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: rgba(33, 47, 61, 0.98); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-container { max-width: 1050px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .nav-brand { color: #FFFFFF; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.3px; transition: opacity 0.2s; }
+        .nav-brand:hover { opacity: 0.8; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600; }
+        .nav-links a:hover { color: #FFFFFF; }
+        .menu-toggle { display: none; color: #FFFFFF; font-size: 1.5rem; cursor: pointer; background: none; border: none; }
+
+        /* --- Language Switcher --- */
+        .lang-switch { display: flex; gap: 8px; align-items: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 700; margin-left: auto; margin-right: 20px; }
+        .lang-switch a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+        .lang-switch a:hover { color: #FFFFFF; }
+        .lang-switch a.active { color: #3498DB; pointer-events: none; }
+        
+        /* --- Layout Containers --- */
+        .container { max-width: 1050px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 60px 0; border-bottom: 1px solid var(--bordergray); }
+        .bg-light { background-color: var(--lightbg); }
+
+        /* --- Hero Section & Banner --- */
+        header { background-color: var(--techslate); color: #FFFFFF; padding: 55px 0; }
+        .hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 2.8rem; font-weight: 800; margin: 0 0 6px 0; letter-spacing: -0.5px; line-height: 1.2; }
+        .hero-text .subtitle { font-size: 1.15rem; opacity: 0.95; margin: 0 0 8px 0; font-weight: 400; color: #E2E8F0; line-height: 1.5; }
+        .keyword-strip { font-size: 0.9rem; color: #63B3ED; font-weight: 600; margin-bottom: 22px; letter-spacing: 0.3px; }
+        
+        .hero-photo-container { flex-shrink: 0; margin: 0; }
+        .hero-photo { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 24px rgba(0,0,0,0.3); background-color: #ECEFF1; }
+        
+        .social-links { display: flex; gap: 18px; flex-wrap: wrap; margin: 0 0 20px 0; }
+        .social-links a { color: #FFFFFF; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; opacity: 0.85; transition: opacity 0.2s, transform 0.2s; }
+        .social-links a:hover { opacity: 1; color: #3498DB; transform: translateY(-2px); }
+        .cta-banner { background-color: rgba(41, 128, 185, 0.2); border: 1px solid #3498DB; color: #FFFFFF; padding: 10px 16px; border-radius: 6px; display: inline-block; font-weight: 600; font-size: 0.9rem; margin-bottom: 15px; }
+        .btn-group { margin: 12px 0 20px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+
+        /* --- Section Headings --- */
+        h2 { font-size: 1.8rem; color: var(--techslate); margin-bottom: 25px; position: relative; padding-bottom: 10px; font-weight: 800; }
+        h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 4px; background-color: var(--linkblue); border-radius: 2px; }
+        h3 { font-size: 1.2rem; color: var(--techslate); font-weight: 700; margin-bottom: 8px; }
+
+        /* --- Research Vision & Impact --- */
+        .vision-text { font-size: 1.1rem; color: var(--textgray); line-height: 1.7; margin-bottom: 20px; max-width: 900px; }
+        .focus-block { background-color: #EBF5FB; border-left: 4px solid var(--linkblue); padding: 18px 20px; border-radius: 0 8px 8px 0; margin-bottom: 25px; font-size: 1.05rem; color: var(--techslate); line-height: 1.6; }
+        .focus-block strong { color: var(--linkblue); font-weight: 800; display: block; margin-bottom: 6px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        
+        .news-ticker { background-color: var(--lightbg); border: 1px solid var(--bordergray); padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; }
+        .news-ticker h3 { font-size: 1.05rem; margin-bottom: 10px; color: var(--techslate); }
+        .news-ticker ul { list-style: none; font-size: 0.95rem; color: var(--textgray); }
+        .news-ticker li { margin-bottom: 6px; display: flex; gap: 8px; }
+        .news-ticker li strong { color: var(--techslate); min-width: 80px; flex-shrink: 0; }
+
+        /* --- Impact Grid --- */
+        .contrib-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 15px; }
+        .contrib-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; border-top: 4px solid var(--linkblue); transition: transform 0.2s, box-shadow 0.2s; }
+        .contrib-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .contrib-card h3 { font-size: 1.15rem; color: var(--techslate); font-weight: 700; margin-bottom: 10px; }
+        .contrib-card p { font-size: 0.95rem; color: #4A5568; line-height: 1.5; }
+
+        /* --- Publications --- */
+        .pub-list { list-style: none; margin-bottom: 20px; }
+        .pub-item { margin-bottom: 25px; padding-left: 18px; border-left: 3px solid var(--bordergray); transition: border-color 0.2s; }
+        .pub-item:hover { border-left-color: var(--linkblue); }
+        .pub-year { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 2px; }
+        .pub-title { font-weight: 700; font-size: 1.1rem; color: var(--techslate); margin-bottom: 4px; line-height: 1.3; }
+        .pub-venue { font-size: 0.95rem; color: #4A5568; font-weight: 600; margin-bottom: 4px; }
+        .pub-summary { font-size: 0.95rem; color: #4A5568; font-style: italic; margin-bottom: 12px; line-height: 1.5; max-width: 850px; }
+        .pub-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .drawer-anim { animation: fadeInDown 0.4s ease-out forwards; }
+
+        /* --- Hardware Projects --- */
+        .project-block { display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 35px; }
+        .project-info { flex: 1 1 400px; }
+        .project-media { flex: 1 1 500px; }
+        .project-objective { font-size: 1.05rem; margin-bottom: 15px; color: var(--textgray); line-height: 1.7; }
+        .project-role { font-size: 0.95rem; background-color: #F0F4F8; padding: 12px 15px; border-left: 3px solid var(--techslate); border-radius: 4px; margin-bottom: 15px; color: var(--textgray); }
+        .project-outcome { font-size: 0.95rem; font-weight: 500; color: var(--linkblue); background-color: var(--lightbg); padding: 12px 15px; border-left: 3px solid var(--linkblue); border-radius: 4px; margin-bottom: 20px; }
+        
+        .spec-list { list-style: none; margin-bottom: 20px; }
+        .spec-list li { font-size: 0.95rem; margin-bottom: 10px; display: flex; align-items: baseline; gap: 10px; }
+        .spec-list li i { color: var(--linkblue); font-size: 0.85rem; padding-top: 4px; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
+        .tech-tags span { background: var(--lightbg); color: var(--linkblue); font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--bordergray); }
+
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; cursor: pointer; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid var(--bordergray); margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+        .video-container:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .video-container iframe, .video-container img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+        .play-overlay-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255, 255, 255, 0.9); z-index: 2; pointer-events: none; text-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s, color 0.2s; }
+        .video-container:hover .play-overlay-btn { color: var(--ytred); transform: translate(-50%, -50%) scale(1.1); }
+
+        /* --- Sim Grid --- */
+        .sim-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px; }
+        .sim-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+        .sim-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .sim-card .video-container { margin-bottom: 0; border-radius: 10px 10px 0 0; border: none; border-bottom: 1px solid var(--bordergray); box-shadow: none; }
+        .sim-card .video-container iframe { border-radius: 10px 10px 0 0; }
+        .sim-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .sim-content h3 { font-size: 1.1rem; color: var(--techslate); margin-bottom: 8px; line-height: 1.3; font-weight: 700; }
+        .sim-content p { font-size: 0.95rem; color: #4A5568; line-height: 1.5; margin-bottom: 15px; flex-grow: 1; }
+        .sim-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin-top: auto; }
+        .sim-tags li { background: var(--lightbg); color: var(--linkblue); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--bordergray); }
+
+        /* --- Research Themes Grid --- */
+        .repo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .repo-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--linkblue); transition: transform 0.2s, box-shadow 0.2s; }
+        .repo-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.06); }
+        .repo-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .repo-header i { font-size: 1.2rem; color: var(--techslate); }
+        .repo-description { font-size: 0.95rem; color: #4A5568; line-height: 1.5; }
+
+        /* --- Education & Appointments Timeline --- */
+        .timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .timeline-card { background: #FFFFFF; border: 1px solid var(--bordergray); border-left: 4px solid var(--techslate); padding: 16px; border-radius: 0 8px 8px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: border-color 0.2s; }
+        .timeline-card:hover { border-left-color: var(--linkblue); }
+        .timeline-year { font-size: 1.2rem; font-weight: 800; color: var(--linkblue); margin-bottom: 4px; }
+        .timeline-title { font-size: 0.95rem; font-weight: 600; color: var(--techslate); line-height: 1.4; }
+
+        /* --- Technical Skills Matrix --- */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+        .skills-category { background: var(--lightbg); padding: 20px; border-radius: 8px; border: 1px solid var(--bordergray); }
+        .skills-category h3 { font-size: 1.05rem; color: var(--techslate); margin-bottom: 12px; border-bottom: 2px solid var(--bordergray); padding-bottom: 6px; }
+        .skills-category ul { list-style: none; font-size: 0.95rem; color: #4A5568; line-height: 1.7; }
+        .skills-category ul li::before { content: '▹'; color: var(--linkblue); margin-right: 6px; font-weight: bold; }
+
+        /* --- Academic Block Elements (Funding/Awards) --- */
+        .academic-block { margin-bottom: 25px; padding-left: 15px; border-left: 3px solid var(--bordergray); }
+        .academic-block-title { font-weight: 700; color: var(--techslate); font-size: 1.05rem; }
+        .academic-block-meta { font-size: 0.85rem; color: var(--linkblue); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
+        .academic-block-desc { font-size: 0.9rem; color: #4A5568; margin-top: 4px; }
+
+        /* --- Buttons --- */
+        .btn-small { font-size: 0.85rem; padding: 6px 14px; background: var(--lightbg); color: var(--techslate); border: 1px solid var(--bordergray); border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-small:hover { background: var(--bordergray); transform: translateY(-2px); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background-color: var(--techslate); color: #FFFFFF; font-weight: 600; border-radius: 8px; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { background-color: var(--linkblue); color: #FFFFFF; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        .btn-secondary { background-color: #718096; }
+
+        /* --- Call to Action & Footer --- */
+        #opportunities { background-color: var(--linkblue); color: #FFFFFF; text-align: center; padding: 60px 20px; }
+        #opportunities h2 { color: #FFFFFF; font-weight: 800; }
+        #opportunities h2::after { display: none; }
+        
+        footer { background: var(--techslate); padding: 50px 0; color: #FFFFFF; border-top: 1px solid var(--bordergray); }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: left; }
+        .footer-text { font-size: 0.95rem; color: #CBD5E0; line-height: 1.7; }
+        .footer-links a { color: #3498DB; display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        .footer-links a:hover { color: #FFFFFF; }
+        .availability-list { list-style: none; margin-top: 10px; font-size: 0.9rem; color: #A0AEC0; }
+        .availability-list li { margin-bottom: 4px; }
+        .availability-list li::before { content: '•'; color: var(--linkblue); margin-right: 6px; }
+
+        /* --- Responsive Viewport Logic --- */
+        @media (max-width: 768px) {
+            .hero-layout { flex-direction: column; text-align: center; gap: 25px; }
+            .hero-photo-container { order: -1; } 
+            .social-links, .btn-group { justify-content: center; }
+            body { padding-top: 60px; }
+            .menu-toggle { display: block; }
+            .lang-switch { margin-right: 15px; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background-color: rgba(33, 47, 61, 0.98); padding: 15px 20px; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .pub-actions { justify-content: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         STICKY NAVIGATION HEADER
+         ========================================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Mertcan Kaya // Robotik</div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#vision" onclick="toggleMenu()">Vision & Wirkung</a></li>
+                <li><a href="#publications" onclick="toggleMenu()">Publikationen</a></li>
+                <li><a href="#demos" onclick="toggleMenu()">Hardware</a></li>
+                <li><a href="#simulations" onclick="toggleMenu()">Simulationen</a></li>
+                <li><a href="#themes" onclick="toggleMenu()">Themen</a></li>
+                <li><a href="#funding" onclick="toggleMenu()">Forschung & Lehre</a></li>
+            </ul>
+
+            <!-- Language Switcher -->
+            <div class="lang-switch">
+                <a href="index.html">EN</a> | <a href="index-de.html" class="active">DE</a>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION (ACADEMIC PROFILE)
+         ========================================== -->
+    <header>
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <h1>Mertcan Kaya</h1>
+                    
+                    <div class="subtitle">Doktorand in der Entwicklung menschenbezogener Bewegungsplanung, Prädiktion und Regelungsmethoden für eine sichere und effiziente Mensch-Roboter-Kollaboration.</div>
+                    
+                    <div class="keyword-strip">
+                        Mensch-Roboter-Interaktion &bull; Menschenbezogene Bewegungsplanung &bull; Motorische Interferenz &bull; Roboterregelung &bull; Handlungsprädiktion
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://scholar.google.com/citations?user=cU3jkSAAAAAJ" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-3174-9394" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
+                        <a href="https://linkedin.com/in/mertcankaya/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/mertcan-kaya" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+
+                    <div class="btn-group">
+                        <a href="Mertcan_Kaya_Academic_CV.pdf" class="btn" style="background-color: var(--linkblue);" download><i class="fas fa-university"></i> Akademischer Lebenslauf</a>
+                        <a href="Mertcan_Kaya_Industry_Resume.pdf" class="btn btn-secondary" style="background-color: #34495E;" download><i class="fas fa-briefcase"></i> Industrie-Lebenslauf</a>
+                        <a href="Mertcan_Kaya_Research_Statement.pdf" class="btn btn-secondary" style="background-color: #4A6B8C;" download><i class="fas fa-file-alt"></i> Forschungsstatement</a>
+                        <a href="Mertcan_Kaya_Complete_Publications.pdf" class="btn btn-secondary" style="background-color: #5D6D7E;" download><i class="fas fa-book-open"></i> Alle Publikationen</a>
+                    </div>
+
+                    <div class="cta-banner">
+                        <i class="fas fa-bullseye"></i> Offen für Postdoc-Forschung und R&D-Positionen in der Robotik ab Dezember 2026.
+                    </div>
+                </div>
+                <div class="hero-photo-container">
+                    <img src="profile.jpg" alt="Porträt von Mertcan Kaya" class="hero-photo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         RESEARCH VISION & FOCUS
+         ========================================== -->
+    <section id="vision">
+        <div class="container">
+            <h2>Forschungsvision</h2>
+            <p class="vision-text">
+                Meine Forschung zielt darauf ab, Robotern zu ermöglichen, menschliches Verhalten während kollaborativer Aufgaben zu antizipieren, zu verstehen und sich daran anzupassen. Ich untersuche, wie Menschen Roboterbewegungen wahrnehmen, wie menschliche Handlungen aus beobachtetem Verhalten vorhergesagt werden können und wie diese Prädiktionen in Bewegungsplanungs- und Regelungssysteme integriert werden können, um Sicherheit und betriebliche Effizienz zu verbessern.
+            </p>
+
+            <div class="focus-block">
+                <strong>Aktueller Forschungsschwerpunkt</strong>
+                Meine Doktorarbeit untersucht, wie Roboter-Embodiment, Trajektorienkinematik und menschliche Handlungsprädiktion die räumliche Anpassung bei kollaborativen Aufgaben beeinflussen. Diese Arbeit trägt zur menschenbezogenen Bewegungsplanung bei, indem sie quantifiziert, wie Menschen räumliche Arbeitsbereichsbeschränkungen rund um Roboter physisch aushandeln.
+            </div>
+
+            <div class="news-ticker">
+                <h3><i class="fas fa-bullhorn" style="color: var(--linkblue); margin-right: 8px;"></i> Aktuelle Meldungen</h3>
+                <ul>
+                    <li><strong>Jun 2026:</strong> <span>Einreichung einer großen Manuskriptüberarbeitung zu Distractor-Aligned Variance (DAV) in der HRI.</span></li>
+                    <li><strong>Mai 2026:</strong> <span>Bereitstellung einer hochstrukturierten HRI-Bewegungsanalyse-Architektur in MATLAB.</span></li>
+                    <li><strong>Anfang 2026:</strong> <span>Veröffentlichung der Ergebnisse zur motorischen Interferenz durch Ellenbogenkonfigurationen in <em>Interaction Studies</em>.</span></li>
+                    <li><strong>Nov 2025:</strong> <span>Erfolgreicher Abschluss des Integrationskurses und Erwerb des B1-Sprachzertifikats.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RESEARCH IMPACT (IDENTITY)
+         ========================================== -->
+    <section id="impact" class="bg-light">
+        <div class="container">
+            <h2>Forschungswirkung</h2>
+            <p style="font-size: 1.05rem; color: #4A5568; margin-bottom: 20px;">Synthese theoretischer Verhaltensmodelle mit physischer Hardware-Validierung.</p>
+            
+            <div class="contrib-grid">
+                <div class="contrib-card">
+                    <h3><i class="fas fa-users" style="color: var(--linkblue); margin-right: 8px;"></i> Mensch-Roboter-Interaktion</h3>
+                    <p>5 begutachtete Publikationen zur Untersuchung motorischer Interferenz und objektiver Verhaltensmarker für die wahrgenommene Menschenähnlichkeit von Robotern durch synchronisierte Bewegungsexperimente.</p>
+                </div>
+                <div class="contrib-card">
+                    <h3><i class="fas fa-brain" style="color: var(--linkblue); margin-right: 8px;"></i> Menschenbezogene Planung</h3>
+                    <p>Aktuelle Doktorandenforschung zur Quantifizierung der Anpassung von Trajektorien und Arbeitsraumnutzung während Interaktionen. Entwicklung prädiktiver Planungsmethoden unter Einbeziehung von Aufgabenunsicherheit.</p>
+                </div>
+                <div class="contrib-card">
+                    <h3><i class="fas fa-cogs" style="color: var(--linkblue); margin-right: 8px;"></i> Robotersysteme</h3>
+                    <p>Algorithmenintegration, rekursives Reglerdesign und experimentelle Validierung, erfolgreich eingesetzt auf UR3, Stäubli RX160, TurtleBot 4 und AgileX Scout Mini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED PUBLICATIONS (WITH SUMMARIES)
+         ========================================== -->
+    <section id="publications">
+        <div class="container">
+            <h2>Ausgewählte Publikationen</h2>
+            
+            <ul class="pub-list">
+                <!-- Paper 1 -->
+                <li class="pub-item">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-title">Motor interference of elbow configuration changes in human-robot interaction</div>
+                    <div class="pub-venue">Interaction Studies (2026)</div>
+                    <p class="pub-summary">Zeigt, dass die Gliedmaßenkonfiguration des Roboters die menschliche Bewegungsausführung beeinflusst und ein objektives Maß für wahrgenommene Menschenähnlichkeit liefert.</p>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1075/is.25026.kay" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <button class="btn-small" onclick="copyBibtex(this)" data-bibtex="@article{kaya2026motor, title={Motor interference of elbow configuration changes in human-robot interaction}, author={Kaya, Mertcan and Becker, K. and Greve, J. and Keller, J. and Meserle, M. and Först, C. and Siegel, R. and Stelzer, J. and Kühnlenz, Kolja}, journal={Interaction Studies}, volume={26}, number={1}, pages={130--149}, year={2026}, publisher={John Benjamins} }"><i class="fas fa-quote-right"></i> BibTeX kopieren</button>
+                    </div>
+                </li>
+                <!-- Paper 2 -->
+                <li class="pub-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-title">Subjective task-load influences anthropomorphism during cooperative human and robot hand movements</div>
+                    <div class="pub-venue">at - Automatisierungstechnik (2025)</div>
+                    <p class="pub-summary">Untersucht, wie kognitive Belastung die menschliche Wahrnehmung kollaborativer Roboter bei kontinuierlichen, synchronen Bewegungsaufgaben verändert.</p>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1515/auto-2024-0031" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <button class="btn-small" onclick="copyBibtex(this)" data-bibtex="@article{kaya2025subjective, title={Subjective task-load influences anthropomorphism during cooperative human and robot hand movements}, author={Kaya, Mertcan and Kühnlenz, Kolja}, journal={at-Automatisierungstechnik}, volume={73}, number={1}, pages={22--28}, year={2025}, publisher={De Gruyter} }"><i class="fas fa-quote-right"></i> BibTeX kopieren</button>
+                    </div>
+                </li>
+                <!-- Paper 3 -->
+                <li class="pub-item">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
+                    <div class="pub-venue">Journal of Intelligent & Robotic Systems (2024)</div>
+                    <p class="pub-summary">Formuliert eine rekursive Tracking-Architektur, die explizite Matrixaufbauparameter für komplexe Industrieroboter eliminiert.</p>
+                    <div class="pub-actions">
+                        <a href="https://doi.org/10.1007/s10846-024-02135-x" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        <a href="https://rdcu.be/dPJo1" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-file-pdf"></i> PDF</a>
+                        <button class="btn-small" onclick="copyBibtex(this)" data-bibtex="@article{kaya2024novel, title={A novel recursive algorithm for the implementation of adaptive robot controllers}, author={Kaya, Mertcan and Akbulut, M. A. and Bayraktaroglu, Z. Y. and Kühnlenz, Kolja}, journal={Journal of Intelligent \& Robotic Systems}, volume={110}, number={3}, pages={115}, year={2024}, publisher={Springer} }"><i class="fas fa-quote-right"></i> BibTeX kopieren</button>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Expandable Drawer for remaining papers -->
+            <div id="extended-pubs" style="display: none; padding-top: 10px; border-top: 1px dashed var(--bordergray);">
+                
+                <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--techslate);">Begutachtete Konferenzbeiträge</h3>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-year">2025</div>
+                        <div class="pub-title">Towards motor interference of limb configuration changes — A potential measure for human-likeness of robots</div>
+                        <div class="pub-venue">Artificial Intelligence in HCI. HCII 2025</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1007/978-3-031-93429-2_9" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-title">Explorative study on motor interference during synchronous human and robot arm movements under varied presence of a robot head</div>
+                        <div class="pub-venue">IEEE International Conference on Robotics and Biomimetics (ROBIO)</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/ROBIO64047.2024.10907577" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-title">Towards prediction of motor interference during synchronous human-robot arm movements using subjective ratings of anthropomorphism</div>
+                        <div class="pub-venue">IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1109/RO-MAN57019.2023.10309618" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-title">Motor interference of incongruent hand motions in HRI depends on movement velocity</div>
+                        <div class="pub-venue">Social Robotics. ICSR 2022</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.1007/978-3-031-24667-8_30" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-title">İşbirlikçi robot uygulamaları için hibrit konum/kuvvet kontrolü</div>
+                        <div class="pub-venue">TOK2018 Otomatik Kontrol Ulusal Toplantısı</div>
+                        <div class="pub-actions">
+                            <a href="https://www.researchgate.net/publication/327819785_Isbirlikci_Robot_Uygulamalari_icin_Hibrit_KonumKuvvet_Kontrolu" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-external-link-alt"></i> ResearchGate</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-title">6-eksenli endüstriyel manipülatörün eklem sürtünmelerinin tanılanması</div>
+                        <div class="pub-venue">TOK2018 Otomatik Kontrol Ulusal Toplantısı</div>
+                        <div class="pub-actions">
+                            <a href="https://www.researchgate.net/publication/327821137_6-eksenli_Endustriyel_Manipulatorun_Eklem_Surtunmelerinin_Tanilanmasi" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-external-link-alt"></i> ResearchGate</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--techslate);">Preprints & Eingereichte Manuskripte</h3>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-title">Disentangling Hardware Embodiment and Trajectory Kinematics During Human-Robot Spatial Negotiation</div>
+                        <div class="pub-venue">Under Review: Advanced Robotics Research</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.5281/zenodo.20611666" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> Preprint DOI</a>
+                        </div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-title">The Geometry of Interference: Quantifying Spatial Leakage and Biomechanical Adaptation During Human-Robot Collaboration</div>
+                        <div class="pub-venue">Preprint Archive</div>
+                        <div class="pub-actions">
+                            <a href="https://doi.org/10.5281/zenodo.20609858" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-link"></i> Preprint DOI</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Interactive Buttons -->
+            <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                <button id="togglePubBtn" onclick="togglePublications()" class="btn" style="background-color: var(--linkblue);">
+                    <i class="fas fa-chevron-down"></i> Vollständigen Publikationskatalog anzeigen (11 Arbeiten)
+                </button>
+                <a href="https://scholar.google.com/citations?user=cU3jkSAAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i> Google Scholar Profil anzeigen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         DEEP-DIVE HARDWARE PROJECTS (WITH ROLES)
+         ========================================== -->
+    <section id="demos" class="bg-light">
+        <div class="container">
+            <h2>Hardware-Projekte & Implementierungen</h2>
+            <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Direkte empirische Validierung, die den gesamten Entwicklungsstack von Low-Level-Mikrocontrollern bis hin zu High-Level-Systemverhalten abbildet.</p>
+            
+            <!-- Project 1: Physical HRI & Force Control -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
+                        <img src="https://img.youtube.com/vi/B89a4sofGeU/maxresdefault.jpg" alt="Stäubli RX160 demonstrating physical human-robot compliance tracking">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'FfO-nDWP9zw')">
+                        <img src="https://img.youtube.com/vi/FfO-nDWP9zw/maxresdefault.jpg" alt="Two Stäubli robots executing collaborative force optimization">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">1. Nachgiebige Physische HRI & Kraftregelung</h3>
+                    <p class="project-objective">
+                        Implementierung hybrider Positions-/Kraftregelkreise für die physische Mensch-Roboter-Interaktion. Gewährleistung stabiler Industrietrajektorien bei gleichzeitiger sicherer kinetischer Anpassung bei direktem menschlichem Kontakt.
+                    </p>
+                    <div class="project-role">
+                        <strong>Beiträge:</strong> Entwurf der Regelungsarchitektur, Implementierung von inverser Kinematik und Impedanzalgorithmen in C/C++ sowie Durchführung von Hardwareexperimenten via LLI.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Ergebnis:</strong> Nachweis einer stabilen kraftgeregelten Manipulation bei physischer Mensch-Roboter-Interaktion.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Stäubli RX160, Stäubli RX160L.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Low Level Interface (LLI), C/C++.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>Stäubli RX160</span><span>Physical HRI</span><span>Force Control</span><span>LLI</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/mertcan-kaya/adaptive-newton-euler-algorithm-simulation" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fab fa-github"></i> Controller Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Predictive Tracking & Teleoperation -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Teleoperation & Prädiktives Human Tracking</h3>
+                    <p class="project-objective">
+                        Entwicklung von Echtzeit-Teleoperations- und prädiktiven Manipulator-Tracking-Schleifen. Aktive Verfolgung menschlicher räumlicher Vektoren mithilfe markerbasierten optischen Trackings zur Steuerung des Manipulatorverhaltens.
+                    </p>
+                    <div class="project-role">
+                        <strong>Beiträge:</strong> Leitung des experimentellen Designs; Entwicklung der Datenbrücke zwischen OptiTrack und UR3 via Python RTDE und Durchführung von Mehrpersonen-Nutzerstudien.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Ergebnis:</strong> Tracking- und Teleoperationsexperimente zur Unterstützung peer-reviewter HRI-Studien.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Universal Robots (UR3), OptiTrack Motion Capture System.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Universal Robots RTDE, Python, C++.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>UR3</span><span>OptiTrack</span><span>RTDE</span><span>Teleoperation</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://doi.org/10.1075/is.25026.kay" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-book-open"></i> Publikation: Motorische Interferenz</a>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
+                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/maxresdefault.jpg" alt="UR3 robot teleoperation experiment using OptiTrack motion capture">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
+                        <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/maxresdefault.jpg" alt="Manipulator executing real-time task-space hand following">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Embedded Firmware -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
+                        <img src="https://img.youtube.com/vi/VcGA7Ie5stE/maxresdefault.jpg" alt="Timorous mobile robot executing custom crawler locomotion">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'uuwwoLcsMk8')">
+                        <img src="https://img.youtube.com/vi/uuwwoLcsMk8/maxresdefault.jpg" alt="Multi-axis servo array commanded via ROS">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Embedded Actuation & Firmware</h3>
+                    <p class="project-objective">
+                        Implementierung eingebetteter Steuerungsarchitekturen, die Mikrocontroller, NVIDIA Jetson und ROS-basierte Robotersysteme verknüpfen.
+                    </p>
+                    <div class="project-role">
+                        <strong>Beiträge:</strong> Full-Stack-Entwicklung; Programmierung der FreeRTOS-Firmware, Konfiguration von I2C/PWM-Ausgängen und Entwicklung benutzerdefinierter ROS-Hardwareknoten.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Ergebnis:</strong> Validierung der Full-Stack-Robotikkompetenz, die eine benutzerdefinierte Hardware-Aktuierung durch High-Level-ROS-Befehle ermöglicht.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> NVIDIA Jetson, Raspberry Pi Pico, Multi-Axis Servos.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS, FreeRTOS, C/C++, UART/I2C/SPI.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>Embedded C</span><span>NVIDIA Jetson</span><span>ROS</span><span>Raspberry Pi Pico</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Navigation -->
+            <div class="project-block" style="margin-bottom: 0;">
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">4. Autonome Mobile Navigation & SLAM</h3>
+                    <p class="project-objective">
+                        Konfiguration und Validierung autonomer Navigationssysteme unter Verwendung von Nav2, Cartographer SLAM und LiDAR-basierter Wahrnehmung auf TurtleBot 4 und AgileX Scout Mini Plattformen.
+                    </p>
+                    <div class="project-role">
+                        <strong>Beiträge:</strong> Leitung der Laborimplementierung; Algorithmenintegration und Cartographer-Parameterabstimmung zum Aufbau zuverlässiger Basisarchitekturen für studentische akademische Projekte.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Ergebnis:</strong> Autonome Echtzeit-Navigation, kartiert und eingesetzt auf TurtleBot 4 und AgileX Scout Mini Plattformen.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> TurtleBot 4, AgileX Scout Mini, 2D/3D LiDAR, OAK-D.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS 2 (Humble/Iron), Nav2 Framework, Cartographer SLAM, Python, C++.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>ROS 2</span><span>Nav2</span><span>SLAM</span><span>AgileX</span><span>TurtleBot 4</span>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'wKTWUI6W_yU')">
+                        <img src="https://img.youtube.com/vi/wKTWUI6W_yU/maxresdefault.jpg" alt="TurtleBot 4 autonomous navigation experiment executing SLAM mapping">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'zq1n08jojjY')">
+                        <img src="https://img.youtube.com/vi/zq1n08jojjY/maxresdefault.jpg" alt="AgileX Scout Mini executing indoor LiDAR mapping">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SIMULATION & SOFTWARE ENGINEERING
+         ========================================== -->
+    <section id="simulations">
+        <div class="container">
+            <h2>Simulationen & Algorithmische Frameworks</h2>
+            <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Computergestützte Implementierungen und Algorithmensimulationen zur Validierung von kinematischen Solvern, probabilistischem Mapping und Kraftregelkreisen vor dem Hardware-Einsatz.</p>
+            
+            <div class="sim-grid">
+                <!-- Card 1 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, '5aXs2z0-k20')">
+                        <img src="https://img.youtube.com/vi/5aXs2z0-k20/maxresdefault.jpg" alt="EKF-SLAM Demonstration in MATLAB mapping environments">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>EKF-SLAM Mapping & Navigation</h3>
+                        <p>Implementierung von Extended Kalman Filter Simultaneous Localization and Mapping für die probabilistische Umgebungsmodellierung.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB</li><li>EKF-SLAM</li><li>Navigation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'hYqvL2lM8AM')">
+                        <img src="https://img.youtube.com/vi/hYqvL2lM8AM/maxresdefault.jpg" alt="FastSLAM Rao-Blackwellized Particle Filter simulation">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>FastSLAM (Rao-Blackwellized Particle Filter)</h3>
+                        <p>Erweitertes SLAM-Framework, das Partikelfilter nutzt, um komplexe nichtlineare Trajektorien und Grid-Karten zu schätzen.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB</li><li>Particle Filter</li><li>FastSLAM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, '71y0swKdNmU')">
+                        <img src="https://img.youtube.com/vi/71y0swKdNmU/maxresdefault.jpg" alt="Dual-Arm Robot Interaction in Simulink simulating force control">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Dual-Arm Compliance Control</h3>
+                        <p>Simulink-basierte Architektur für Multi-Agenten-Interaktion, die eine stabile Kraftregelung in einer geschlossenen kinematischen Kette demonstriert.</p>
+                        <ul class="sim-tags">
+                            <li>Simulink</li><li>Force Control</li><li>Dual-Arm</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'noft-dm6Gng')">
+                        <img src="https://img.youtube.com/vi/noft-dm6Gng/maxresdefault.jpg" alt="Robot compliance control simulation adjusting to surface tilt">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Multi-Axis Surface Tilt Compliance</h3>
+                        <p>Simulierter physischer Nachgiebigkeitsregelkreis (Compliance), der Echtzeit-Werkzeugtrajektorien an veränderte planare Einschränkungen anpasst.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB</li><li>Compliance</li><li>Kinematics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'Jq6Gz3_m04o')">
+                        <img src="https://img.youtube.com/vi/Jq6Gz3_m04o/maxresdefault.jpg" alt="Simulating Stäubli RX160 rigid-body dynamics for control tuning">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Stäubli RX160 Dynamik & Tuning</h3>
+                        <p>Mathematische Modellierung der Rigid-Body-Dynamik des Stäubli RX160 zur Erleichterung der Echtzeit-Abstimmung von PID- und adaptiven Reglern.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB</li><li>Dynamics</li><li>Control Theory</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'CrSR1my7nMs')">
+                        <img src="https://img.youtube.com/vi/CrSR1my7nMs/maxresdefault.jpg" alt="Controlling a UR3 robot arm using Python and MATLAB RTDE">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>UR3 Steuerung via Python/MATLAB RTDE</h3>
+                        <p>Plattformübergreifende Trajektorienausführung, die Arrays der MATLAB-Pfadplanung mit dem RTDE-Stream von Universal Robots verknüpft.</p>
+                        <ul class="sim-tags">
+                            <li>Python</li><li>MATLAB</li><li>RTDE</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'r2KRwtLdDbg')">
+                        <img src="https://img.youtube.com/vi/r2KRwtLdDbg/maxresdefault.jpg" alt="UR3 inverse kinematics simulation with minimum-jerk trajectory tracking">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Minimum-Jerk Inverse Kinematics</h3>
+                        <p>Generierung reibungsloser, biologisch inspirierter Minimum-Jerk-Trajektorien, die durch die Gelenkgrenzen des UR3 abgebildet werden.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB</li><li>Inverse Kinematics</li><li>Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'dfl15NNtMaI')">
+                        <img src="https://img.youtube.com/vi/dfl15NNtMaI/maxresdefault.jpg" alt="Task-space robot control simulated within a custom MATLAB GUI">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Task-Space Robot Control Interface</h3>
+                        <p>Eine maßgeschneiderte Applikationsoberfläche, die direkte kartesische Manipulation und inverse kinematische Lösung ermöglicht.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB GUI</li><li>Task-Space</li><li>Robotics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="sim-card">
+                    <div class="video-container" onclick="injectActiveStream(this, 'qGfQyo6yixs')">
+                        <img src="https://img.youtube.com/vi/qGfQyo6yixs/maxresdefault.jpg" alt="Interactive 6-axis joint control app built in MATLAB">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="sim-content">
+                        <h3>Interaktive 6-Achsen-Gelenksteuerungs-App</h3>
+                        <p>Eigenständige MATLAB-Executable, die die Echtzeit-Visualisierung von 6-DoF Forward-Kinematics-Zuständen ermöglicht.</p>
+                        <ul class="sim-tags">
+                            <li>MATLAB GUI</li><li>Forward Kinematics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RESEARCH AREAS & METHODOLOGIES
+         ========================================== -->
+    <section id="themes" class="bg-light">
+        <div class="container">
+            <h2>Forschungsbereiche & Methoden</h2>
+            
+            <div class="repo-grid">
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-users"></i><h3>Mensch-Roboter-Interaktion</h3></div>
+                    <p class="repo-description">Entwicklung sicherer, intuitiver und kollaborativer Verhaltensweisen für Robotersysteme, die in gemeinsam genutzten physischen Umgebungen arbeiten.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-brain"></i><h3>Menschenbezogene Bewegungsplanung</h3></div>
+                    <p class="repo-description">Entwicklung von Bewegungsplanungsmethoden, die Robotertrajektorien entsprechend prädiktierter menschlicher Handlungen anpassen.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-map-marked-alt"></i><h3>Räumliche Anpassung (Spatial Negotiation)</h3></div>
+                    <p class="repo-description">Untersuchung, wie Menschen ihre Positionen und räumlichen Bewegungsprofile bei der Interaktion in gemeinsamen Arbeitsbereichen anpassen.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-wave-square"></i><h3>Motorische Interferenz</h3></div>
+                    <p class="repo-description">Untersuchung der motorischen Interferenz als objektives Maß für die wahrgenommene Menschenähnlichkeit bei Roboterbewegungen.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-clock"></i><h3>Prädiktion menschlicher Intentionen</h3></div>
+                    <p class="repo-description">Einsatz stochastischer Modellierung, um menschliche Absichten abzuleiten und mit zeitlicher Unsicherheit in gemeinsamen Montageaufgaben umzugehen.</p>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-header"><i class="fas fa-cogs"></i><h3>Roboter-Regelungssysteme</h3></div>
+                    <p class="repo-description">Formulierung und Implementierung entkoppelter Optimierungsziele, hybrider Kraftregelung und adaptiver Tracking-Algorithmen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TECHNICAL COMPETENCY MATRIX
+         ========================================== -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technische Kompetenzen</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Robotik-Software</h3>
+                    <ul>
+                        <li>ROS / ROS 2</li>
+                        <li>Nav2 Framework</li>
+                        <li>MoveIt API</li>
+                        <li>Cartographer SLAM</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Regelung & Planung</h3>
+                    <ul>
+                        <li>Adaptive Control</li>
+                        <li>Impedance Control</li>
+                        <li>Motion Planning</li>
+                        <li>Trajectory Optimization</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Wahrnehmung & Tracking</h3>
+                    <ul>
+                        <li>LiDAR Processing</li>
+                        <li>OptiTrack MoCap</li>
+                        <li>OAK-D Spatial Cameras</li>
+                        <li>OpenCV</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Programmiersprachen & Simulation</h3>
+                    <ul>
+                        <li>C / C++</li>
+                        <li>Python</li>
+                        <li>MATLAB / Simulink</li>
+                        <li>Gazebo / CoppeliaSim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FUNDING, TEACHING & SERVICE
+         ========================================== -->
+    <section id="funding" class="bg-light">
+        <div class="container">
+            <h2>Forschungsförderung, Lehre & Engagement</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px;">
+                <!-- Funding & Awards Column -->
+                <div>
+                    <h3 style="margin-bottom: 15px;"><i class="fas fa-project-diagram" style="color: var(--linkblue);"></i> Forschungsförderung</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">2025 – Heute</div>
+                        <div class="academic-block-title">DFG Projekt: CoSMoC</div>
+                        <div class="academic-block-desc">Congruency-Sensitive Human-Robot Motion Coordination.<br><em>Rolle: Wissenschaftlicher Mitarbeiter</em></div>
+                    </div>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">2021 – 2025</div>
+                        <div class="academic-block-title">DFG Projekt: Motor Interference</div>
+                        <div class="academic-block-desc">Motor Interference Models for Human-Robot Interaction.<br><em>Rolle: Wissenschaftlicher Mitarbeiter</em></div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; margin-bottom: 15px;"><i class="fas fa-award" style="color: var(--linkblue);"></i> Auszeichnungen & Anerkennung</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-title">Vehbi Koç Scholar Award</div>
+                        <div class="academic-block-desc">Zweimalig für herausragende akademische Leistungen (GPA &ge; 3.60/4.00) ausgezeichnet.</div>
+                    </div>
+                    <div class="academic-block">
+                        <div class="academic-block-title">Merit Scholarship (Top 5%)</div>
+                        <div class="academic-block-desc">Stipendium der Koç-Universität für landesweite Spitzenplatzierung.</div>
+                    </div>
+                </div>
+
+                <!-- Academic Instruction & Service Column -->
+                <div>
+                    <h3 style="margin-bottom: 15px;"><i class="fas fa-chalkboard-teacher" style="color: var(--linkblue);"></i> Akademische Lehre</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-meta">Sommersemester 2025</div>
+                        <div class="academic-block-title">Gastdozent</div>
+                        <div class="academic-block-desc">Modul: Regelungstechnik 2<br><em>Hochschule Coburg</em></div>
+                    </div>
+
+                    <h3 style="margin-top: 30px; margin-bottom: 15px;"><i class="fas fa-handshake" style="color: var(--linkblue);"></i> Akademisches Engagement & Peer-Review</h3>
+                    <div class="academic-block">
+                        <div class="academic-block-title">Mitherausgeber (Associate Editor)</div>
+                        <div class="academic-block-desc">IEEE International Workshop on Advanced Robotics and its Social Impacts (ARSO 2026)</div>
+                    </div>
+                    <div class="academic-block">
+                        <div class="academic-block-title">Gutachter (Peer Reviewer)</div>
+                        <div class="academic-block-desc">
+                            &bull; IEEE RO-MAN 2026<br>
+                            &bull; IEEE ICSR (Social Robotics)<br>
+                            &bull; International Journal of Social Robotics (Springer)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EDUCATION & ACADEMIC APPOINTMENTS
+         ========================================== -->
+    <section id="timeline">
+        <div class="container">
+            <h2>Ausbildung & Akademischer Werdegang</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <div class="timeline-year">2009–2014</div>
+                    <div class="timeline-title">B.Sc. Maschinenbau<br>Koç University</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2015–2019</div>
+                    <div class="timeline-title">M.Sc. Regelungstechnik<br>Istanbul Technical University</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2021–Heute</div>
+                    <div class="timeline-title">Wissenschaftlicher Mitarbeiter<br>Hochschule Coburg</div>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-year">2023–Heute</div>
+                    <div class="timeline-title">Doktorand<br>Technische Universität München</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         OPPORTUNITIES SECTION
+         ========================================== -->
+    <section id="opportunities" style="background-color: var(--linkblue); color: #FFFFFF; text-align: center; padding: 60px 20px;">
+        <div class="container">
+            <h2 style="color: #FFFFFF; font-weight: 800;">Offene Forschungsmöglichkeiten</h2>
+            <style>#opportunities h2::after { display: none; }</style>
+            <p style="font-size: 1.15rem; max-width: 850px; margin: 0 auto; line-height: 1.6; padding-top: 15px;">
+                Ich suche ab <strong>Dezember 2026</strong> nach Postdoc-Positionen sowie R&D-Möglichkeiten in der Robotik. Meine Interessen umfassen menschenbezogene Bewegungsplanung, kollaborative Robotik, das Lernen von Robotern aus menschlichem Verhalten und die Mensch-Roboter-Interaktion.
+            </p>
+            <div style="margin-top: 30px;">
+                <a href="mailto:mertcan.kaya@hs-coburg.de" class="btn" style="background-color: #FFFFFF; color: var(--linkblue);"><i class="fas fa-envelope"></i> Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PROFESSIONAL ACADEMIC FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <h2 style="color: #FFFFFF; font-size: 1.4rem;">Mertcan Kaya</h2>
+                    <p class="footer-text">
+                        <strong>Wissenschaftlicher Mitarbeiter & Doktorand</strong><br>Hochschule Coburg &amp; Technische Universität München<br>
+                    </p>
+                    <ul class="availability-list">
+                        <li>Verfügbar für Postdoc-Forschungspositionen</li>
+                        <li>Verfügbar für R&D-Rollen in der Robotik</li>
+                        <li>Expertise in der Mensch-Roboter-Interaktion</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 12px;">Akademische Profile & Kontakt</h3>
+                    <a href="mailto:mertcan.kaya@hs-coburg.de"><i class="fas fa-envelope" style="width: 20px;"></i> E-Mail</a>
+                    <a href="https://scholar.google.com/citations?user=cU3jkSAAAAAJ" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap" style="width: 20px;"></i> Google Scholar</a>
+                    <a href="https://orcid.org/0000-0002-3174-9394" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid" style="width: 20px;"></i> ORCID</a>
+                    <a href="https://linkedin.com/in/mertcankaya/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" style="width: 20px;"></i> LinkedIn</a>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center; color: #A0AEC0; font-size: 0.85rem;">
+                &copy; 2026 Mertcan Kaya<br>
+                Mensch-Roboter-Interaktion &bull; Bewegungsplanung &bull; Roboterregelung
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         INTERACTIVE SCRIPTS
+         ========================================== -->
+    <script>
+        // YouTube Lazy-Load Injection
+        function injectActiveStream(container, videoId) {
+            container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen style="border-radius: 10px;"></iframe>`;
+            container.removeAttribute('onclick'); 
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Publication Drawer Toggle
+        function togglePublications() {
+            var drawer = document.getElementById("extended-pubs");
+            var btn = document.getElementById("togglePubBtn");
+            
+            if (drawer.style.display === "none" || drawer.style.display === "") {
+                drawer.style.display = "block";
+                drawer.classList.add("drawer-anim"); 
+                btn.innerHTML = '<i class="fas fa-chevron-up"></i> Weniger Publikationen anzeigen';
+            } else {
+                drawer.style.display = "none";
+                drawer.classList.remove("drawer-anim");
+                btn.innerHTML = '<i class="fas fa-chevron-down"></i> Vollständigen Publikationskatalog anzeigen (11 Arbeiten)';
+            }
+        }
+
+        // Copy BibTeX Functionality
+        function copyBibtex(button) {
+            const bibtex = button.getAttribute('data-bibtex');
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(bibtex).then(() => {
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Kopiert!';
+                    setTimeout(() => { button.innerHTML = originalText; }, 2000);
+                });
+            } else {
+                let textArea = document.createElement("textarea");
+                textArea.value = bibtex;
+                textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Kopiert!';
+                    setTimeout(() => { button.innerHTML = originalText; }, 2000);
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+    </script>
+
+</body>
+</html>

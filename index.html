@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ==========================================
-         DOCUMENT METADATA & SEO CONFIGURATION
-         ========================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mertcan Kaya | Human-Robot Interaction & Robotics Researcher</title>
@@ -13,14 +10,12 @@
     <meta name="author" content="Mertcan Kaya">
     <link rel="canonical" href="https://mertcan-kaya.github.io/">
 
-    <!-- OpenGraph Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mertcan-kaya.github.io/">
     <meta property="og:title" content="Mertcan Kaya | Human-Robot Interaction & Robotics Researcher">
     <meta property="og:description" content="Doctoral Researcher developing human-aware motion planning, prediction, and control methods for safe and efficient human-robot collaboration.">
     <meta property="og:image" content="https://mertcan-kaya.github.io/profile.jpg">
 
-    <!-- JSON-LD SCHEMA MARKUP -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,9 +61,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🤖</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ==========================================
-         GLOBAL CSS STYLESHEET
-         ========================================== -->
     <style>
         :root {
             --techslate: #212F3D;      
@@ -250,9 +242,6 @@
 </head>
 <body>
 
-    <!-- ==========================================
-         STICKY NAVIGATION HEADER
-         ========================================== -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">Mertcan Kaya // Robotics</div>
@@ -269,9 +258,6 @@
         </div>
     </nav>
 
-    <!-- ==========================================
-         HERO SECTION (ACADEMIC PROFILE)
-         ========================================== -->
     <header>
         <div class="container">
             <div class="hero-layout">
@@ -309,9 +295,6 @@
         </div>
     </header>
 
-    <!-- ==========================================
-         RESEARCH VISION & FOCUS
-         ========================================== -->
     <section id="vision">
         <div class="container">
             <h2>Research Vision</h2>
@@ -327,17 +310,15 @@
             <div class="news-ticker">
                 <h3><i class="fas fa-bullhorn" style="color: var(--linkblue); margin-right: 8px;"></i> Recent Updates</h3>
                 <ul>
-                    <li><strong>Jun 2026:</strong> <span>Successfully completed the German integration course and attained B1 Language Certification.</span></li>
                     <li><strong>Jun 2026:</strong> <span>Submitted major manuscript revision on Distractor-Aligned Variance (DAV) in HRI.</span></li>
                     <li><strong>May 2026:</strong> <span>Deployed highly structured HRI Motion Analysis architecture in MATLAB.</span></li>
+                    <li><strong>Early 2026:</strong> <span>Published findings on elbow configuration motor interference in <em>Interaction Studies</em>.</span></li>
+                    <li><strong>Nov 2025:</strong> <span>Successfully completed the German integration course and attained B1 Language Certification.</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================
-         RESEARCH IMPACT (IDENTITY)
-         ========================================== -->
     <section id="impact" class="bg-light">
         <div class="container">
             <h2>Research Impact</h2>
@@ -360,15 +341,11 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         FEATURED PUBLICATIONS (WITH SUMMARIES)
-         ========================================== -->
     <section id="publications">
         <div class="container">
             <h2>Featured Publications</h2>
             
             <ul class="pub-list">
-                <!-- Paper 1 -->
                 <li class="pub-item">
                     <div class="pub-year">2026</div>
                     <div class="pub-title">Motor interference of elbow configuration changes in human-robot interaction</div>
@@ -379,7 +356,6 @@
                         <button class="btn-small" onclick="copyBibtex(this)" data-bibtex="@article{kaya2026motor, title={Motor interference of elbow configuration changes in human-robot interaction}, author={Kaya, Mertcan and Becker, K. and Greve, J. and Keller, J. and Meserle, M. and Först, C. and Siegel, R. and Stelzer, J. and Kühnlenz, Kolja}, journal={Interaction Studies}, volume={26}, number={1}, pages={130--149}, year={2026}, publisher={John Benjamins} }"><i class="fas fa-quote-right"></i> Copy BibTeX</button>
                     </div>
                 </li>
-                <!-- Paper 2 -->
                 <li class="pub-item">
                     <div class="pub-year">2025</div>
                     <div class="pub-title">Subjective task-load influences anthropomorphism during cooperative human and robot hand movements</div>
@@ -390,7 +366,6 @@
                         <button class="btn-small" onclick="copyBibtex(this)" data-bibtex="@article{kaya2025subjective, title={Subjective task-load influences anthropomorphism during cooperative human and robot hand movements}, author={Kaya, Mertcan and Kühnlenz, Kolja}, journal={at-Automatisierungstechnik}, volume={73}, number={1}, pages={22--28}, year={2025}, publisher={De Gruyter} }"><i class="fas fa-quote-right"></i> Copy BibTeX</button>
                     </div>
                 </li>
-                <!-- Paper 3 -->
                 <li class="pub-item">
                     <div class="pub-year">2024</div>
                     <div class="pub-title">A novel recursive algorithm for the implementation of adaptive robot controllers</div>
@@ -404,7 +379,6 @@
                 </li>
             </ul>
 
-            <!-- Expandable Drawer for remaining papers -->
             <div id="extended-pubs" style="display: none; padding-top: 10px; border-top: 1px dashed var(--bordergray);">
                 
                 <h3 style="font-size: 1.15rem; margin: 25px 0 15px 0; color: var(--techslate);">Peer-Reviewed Conference Proceedings</h3>
@@ -480,7 +454,6 @@
                 </ul>
             </div>
 
-            <!-- Interactive Buttons -->
             <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
                 <button id="togglePubBtn" onclick="togglePublications()" class="btn" style="background-color: var(--linkblue);">
                     <i class="fas fa-chevron-down"></i> View Full Publication Catalog (11 Papers)
@@ -492,23 +465,132 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         DEEP-DIVE HARDWARE PROJECTS (WITH ROLES)
-         ========================================== -->
     <section id="demos" class="bg-light">
         <div class="container">
             <h2>Hardware Projects & Deployments</h2>
             <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Direct empirical validation tracing the engineering stack from low-level embedded microcontrollers up to high-level system behaviors.</p>
             
-            <!-- Project 1: Navigation -->
             <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
+                        <img src="https://img.youtube.com/vi/B89a4sofGeU/maxresdefault.jpg" alt="Stäubli RX160 demonstrating physical human-robot compliance tracking">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'FfO-nDWP9zw')">
+                        <img src="https://img.youtube.com/vi/FfO-nDWP9zw/maxresdefault.jpg" alt="Two Stäubli robots executing collaborative force optimization">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">1. Autonomous Mobile Navigation & SLAM</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">1. Compliant Physical HRI & Force Control</h3>
                     <p class="project-objective">
-                        Developed autonomous navigation systems using Nav2, Cartographer SLAM, and LiDAR-based perception on TurtleBot 4 and AgileX Scout Mini platforms.
+                        Implemented hybrid position/force control loops for physical human-robot interaction. Ensured stable industrial trajectories while allowing safe kinetic adaptation during direct human contact.
                     </p>
                     <div class="project-role">
-                        <strong>Contributions:</strong> Lead developer; performed algorithm integration, Cartographer parameter tuning, ROS 2 deployment, and physical lab validation.
+                        <strong>Contributions:</strong> Designed control architecture, implemented inverse kinematics and impedance algorithms in C/C++, and executed hardware experiments via LLI.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Outcome:</strong> Demonstrated stable force-regulated manipulation under physical human interaction.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Stäubli RX160, Stäubli RX160L.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Low Level Interface (LLI), C/C++.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>Stäubli RX160</span><span>Physical HRI</span><span>Force Control</span><span>LLI</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/mertcan-kaya/adaptive-newton-euler-algorithm-simulation" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fab fa-github"></i> Controller Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Teleoperation & Predictive Human Tracking</h3>
+                    <p class="project-objective">
+                        Developed real-time teleoperation and predictive manipulator tracking loops. Tracked human spatial vectors actively using marker-based optical tracking to control manipulator behavior.
+                    </p>
+                    <div class="project-role">
+                        <strong>Contributions:</strong> Lead experimental designer; engineered the OptiTrack-to-UR3 data bridge via Python RTDE and conducted multi-participant user studies.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Outcome:</strong> Human tracking and teleoperation experiments supporting peer-reviewed HRI studies.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Universal Robots (UR3), OptiTrack Motion Capture System.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Universal Robots RTDE, Python, C++.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>UR3</span><span>OptiTrack</span><span>RTDE</span><span>Teleoperation</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://doi.org/10.1075/is.25026.kay" target="_blank" rel="noopener noreferrer" class="btn-small"><i class="fas fa-book-open"></i> Paper: Motor Interference</a>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
+                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/maxresdefault.jpg" alt="UR3 robot teleoperation experiment using OptiTrack motion capture">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
+                        <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/maxresdefault.jpg" alt="Manipulator executing real-time task-space hand following">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
+                        <img src="https://img.youtube.com/vi/VcGA7Ie5stE/maxresdefault.jpg" alt="Timorous mobile robot executing custom crawler locomotion">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'uuwwoLcsMk8')">
+                        <img src="https://img.youtube.com/vi/uuwwoLcsMk8/maxresdefault.jpg" alt="Multi-axis servo array commanded via ROS">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Embedded Actuation & Firmware</h3>
+                    <p class="project-objective">
+                        Implemented embedded control architectures linking microcontrollers, NVIDIA Jetson, and ROS-based robotic systems.
+                    </p>
+                    <div class="project-role">
+                        <strong>Contributions:</strong> Full-stack development; wrote FreeRTOS firmware, configured I2C/PWM outputs, and developed custom ROS hardware nodes.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Outcome:</strong> Validated full-stack robotics competence enabling custom hardware actuation from high-level ROS commands.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> NVIDIA Jetson, Raspberry Pi Pico, Multi-Axis Servos.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS, FreeRTOS, C/C++, UART/I2C/SPI.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>Embedded C</span><span>NVIDIA Jetson</span><span>ROS</span><span>Raspberry Pi Pico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-block" style="margin-bottom: 0;">
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">4. Autonomous Mobile Navigation & SLAM</h3>
+                    <p class="project-objective">
+                        Configured and validated autonomous navigation systems using Nav2, Cartographer SLAM, and LiDAR-based perception on TurtleBot 4 and AgileX Scout Mini platforms.
+                    </p>
+                    <div class="project-role">
+                        <strong>Contributions:</strong> Lab deployment lead; performed algorithm integration and Cartographer parameter tuning to establish reliable baseline architectures for student academic projects.
                     </div>
                     <div class="project-outcome">
                         <strong>Outcome:</strong> Real-time autonomous navigation mapped and deployed on TurtleBot 4 and AgileX Scout Mini platforms.
@@ -536,127 +618,15 @@
                 </div>
             </div>
 
-            <!-- Project 2: Physical HRI & Force Control -->
-            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
-                <div class="project-media">
-                    <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
-                        <img src="https://img.youtube.com/vi/B89a4sofGeU/maxresdefault.jpg" alt="Stäubli RX160 demonstrating physical human-robot compliance tracking">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="video-container" onclick="injectActiveStream(this, 'FfO-nDWP9zw')">
-                        <img src="https://img.youtube.com/vi/FfO-nDWP9zw/maxresdefault.jpg" alt="Two Stäubli robots executing collaborative force optimization">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                </div>
-
-                <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Compliant Physical HRI & Force Control</h3>
-                    <p class="project-objective">
-                        Implemented hybrid position/force control loops for physical human-robot interaction. Ensured stable industrial trajectories while allowing safe kinetic adaptation during direct human contact.
-                    </p>
-                    <div class="project-role">
-                        <strong>Contributions:</strong> Designed control architecture, implemented inverse kinematics and impedance algorithms in C/C++, and executed hardware experiments via LLI.
-                    </div>
-                    <div class="project-outcome">
-                        <strong>Outcome:</strong> Demonstrated stable force-regulated manipulation under physical human interaction.
-                    </div>
-                    
-                    <ul class="spec-list">
-                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Stäubli RX160, Stäubli RX160L.</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Low Level Interface (LLI), C/C++.</li>
-                    </ul>
-
-                    <div class="tech-tags">
-                        <span>Stäubli RX160</span><span>Physical HRI</span><span>Force Control</span><span>LLI</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Predictive Tracking & Teleoperation -->
-            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
-                <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Teleoperation & Predictive Human Tracking</h3>
-                    <p class="project-objective">
-                        Developed real-time teleoperation and predictive manipulator tracking loops. Tracked human spatial vectors actively using marker-based optical tracking to control manipulator behavior.
-                    </p>
-                    <div class="project-role">
-                        <strong>Contributions:</strong> Lead experimental designer; engineered the OptiTrack-to-UR3 data bridge via Python RTDE and conducted multi-participant user studies.
-                    </div>
-                    <div class="project-outcome">
-                        <strong>Outcome:</strong> Human tracking and teleoperation experiments supporting peer-reviewed HRI studies.
-                    </div>
-                    
-                    <ul class="spec-list">
-                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Universal Robots (UR3), OptiTrack Motion Capture System.</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> Universal Robots RTDE, Python, C++.</li>
-                    </ul>
-
-                    <div class="tech-tags">
-                        <span>UR3</span><span>OptiTrack</span><span>RTDE</span><span>Teleoperation</span>
-                    </div>
-                </div>
-
-                <div class="project-media">
-                    <div class="video-container" onclick="injectActiveStream(this, 'aLx3pHwVC0A')">
-                        <img src="https://img.youtube.com/vi/aLx3pHwVC0A/maxresdefault.jpg" alt="UR3 robot teleoperation experiment using OptiTrack motion capture">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="video-container" onclick="injectActiveStream(this, 'zUnmRKnR9GQ')">
-                        <img src="https://img.youtube.com/vi/zUnmRKnR9GQ/maxresdefault.jpg" alt="Manipulator executing real-time task-space hand following">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: Embedded Firmware -->
-            <div class="project-block" style="margin-bottom: 0;">
-                <div class="project-media">
-                    <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
-                        <img src="https://img.youtube.com/vi/VcGA7Ie5stE/maxresdefault.jpg" alt="Timorous mobile robot executing custom crawler locomotion">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                    <div class="video-container" onclick="injectActiveStream(this, 'uuwwoLcsMk8')">
-                        <img src="https://img.youtube.com/vi/uuwwoLcsMk8/maxresdefault.jpg" alt="Multi-axis servo array commanded via ROS">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                </div>
-
-                <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">4. Embedded Actuation & Firmware</h3>
-                    <p class="project-objective">
-                        Implemented embedded control architectures linking microcontrollers, NVIDIA Jetson, and ROS-based robotic systems to validate device abstraction to high-level execution graphs.
-                    </p>
-                    <div class="project-role">
-                        <strong>Contributions:</strong> Full-stack development; wrote FreeRTOS firmware, configured I2C/PWM outputs, and wrote custom ROS hardware nodes.
-                    </div>
-                    <div class="project-outcome">
-                        <strong>Outcome:</strong> Validated full-stack robotics competence enabling custom hardware actuation from high-level ROS commands.
-                    </div>
-                    
-                    <ul class="spec-list">
-                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> NVIDIA Jetson, Raspberry Pi Pico, Multi-Axis Servos, Scissor-Lift.</li>
-                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS, FreeRTOS, C/C++, UART/I2C/SPI.</li>
-                    </ul>
-
-                    <div class="tech-tags">
-                        <span>Embedded C</span><span>NVIDIA Jetson</span><span>ROS</span><span>Raspberry Pi Pico</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- ==========================================
-         SIMULATION & SOFTWARE ENGINEERING
-         ========================================== -->
     <section id="simulations">
         <div class="container">
             <h2>Simulation & Algorithmic Frameworks</h2>
             <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Computational implementations and algorithm simulations validating kinematic solvers, probabilistic mapping, and force-control loops prior to hardware deployment.</p>
             
             <div class="sim-grid">
-                <!-- Card 1 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, '5aXs2z0-k20')">
                         <img src="https://img.youtube.com/vi/5aXs2z0-k20/maxresdefault.jpg" alt="EKF-SLAM Demonstration in MATLAB mapping environments">
@@ -671,7 +641,6 @@
                     </div>
                 </div>
                 
-                <!-- Card 2 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'hYqvL2lM8AM')">
                         <img src="https://img.youtube.com/vi/hYqvL2lM8AM/maxresdefault.jpg" alt="FastSLAM Rao-Blackwellized Particle Filter simulation">
@@ -686,7 +655,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, '71y0swKdNmU')">
                         <img src="https://img.youtube.com/vi/71y0swKdNmU/maxresdefault.jpg" alt="Dual-Arm Robot Interaction in Simulink simulating force control">
@@ -701,7 +669,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'noft-dm6Gng')">
                         <img src="https://img.youtube.com/vi/noft-dm6Gng/maxresdefault.jpg" alt="Robot compliance control simulation adjusting to surface tilt">
@@ -716,7 +683,6 @@
                     </div>
                 </div>
 
-                <!-- Card 5 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'Jq6Gz3_m04o')">
                         <img src="https://img.youtube.com/vi/Jq6Gz3_m04o/maxresdefault.jpg" alt="Simulating Stäubli RX160 rigid-body dynamics for control tuning">
@@ -731,7 +697,6 @@
                     </div>
                 </div>
 
-                <!-- Card 6 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'CrSR1my7nMs')">
                         <img src="https://img.youtube.com/vi/CrSR1my7nMs/maxresdefault.jpg" alt="Controlling a UR3 robot arm using Python and MATLAB RTDE">
@@ -746,7 +711,6 @@
                     </div>
                 </div>
 
-                <!-- Card 7 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'r2KRwtLdDbg')">
                         <img src="https://img.youtube.com/vi/r2KRwtLdDbg/maxresdefault.jpg" alt="UR3 inverse kinematics simulation with minimum-jerk trajectory tracking">
@@ -761,7 +725,6 @@
                     </div>
                 </div>
 
-                <!-- Card 8 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'dfl15NNtMaI')">
                         <img src="https://img.youtube.com/vi/dfl15NNtMaI/maxresdefault.jpg" alt="Task-space robot control simulated within a custom MATLAB GUI">
@@ -776,7 +739,6 @@
                     </div>
                 </div>
 
-                <!-- Card 9 -->
                 <div class="sim-card">
                     <div class="video-container" onclick="injectActiveStream(this, 'qGfQyo6yixs')">
                         <img src="https://img.youtube.com/vi/qGfQyo6yixs/maxresdefault.jpg" alt="Interactive 6-axis joint control app built in MATLAB">
@@ -794,9 +756,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         RESEARCH AREAS & METHODOLOGIES
-         ========================================== -->
     <section id="themes" class="bg-light">
         <div class="container">
             <h2>Research Areas & Methodologies</h2>
@@ -830,9 +789,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         TECHNICAL COMPETENCY MATRIX
-         ========================================== -->
     <section id="skills">
         <div class="container">
             <h2>Technical Competencies</h2>
@@ -877,15 +833,11 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         FUNDING, TEACHING & SERVICE
-         ========================================== -->
     <section id="funding" class="bg-light">
         <div class="container">
             <h2>Funding, Teaching & Service</h2>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px;">
-                <!-- Funding & Awards Column -->
                 <div>
                     <h3 style="margin-bottom: 15px;"><i class="fas fa-project-diagram" style="color: var(--linkblue);"></i> Research Funding</h3>
                     <div class="academic-block">
@@ -910,7 +862,6 @@
                     </div>
                 </div>
 
-                <!-- Academic Instruction & Service Column -->
                 <div>
                     <h3 style="margin-bottom: 15px;"><i class="fas fa-chalkboard-teacher" style="color: var(--linkblue);"></i> Academic Teaching</h3>
                     <div class="academic-block">
@@ -937,9 +888,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         EDUCATION & ACADEMIC APPOINTMENTS
-         ========================================== -->
     <section id="timeline">
         <div class="container">
             <h2>Education & Academic Appointments</h2>
@@ -964,9 +912,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         OPPORTUNITIES SECTION
-         ========================================== -->
     <section id="opportunities" style="background-color: var(--linkblue); color: #FFFFFF; text-align: center; padding: 60px 20px;">
         <div class="container">
             <h2 style="color: #FFFFFF; font-weight: 800;">Open Research Opportunities</h2>
@@ -980,9 +925,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         PROFESSIONAL ACADEMIC FOOTER
-         ========================================== -->
     <footer>
         <div class="container">
             <div class="contact-grid">
@@ -1013,9 +955,6 @@
         </div>
     </footer>
 
-    <!-- ==========================================
-         INTERACTIVE SCRIPTS
-         ========================================== -->
     <script>
         // YouTube Lazy-Load Injection
         function injectActiveStream(container, videoId) {

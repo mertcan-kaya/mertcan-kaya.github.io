@@ -255,16 +255,23 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">Mertcan Kaya // Robotics</div>
-            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="#vision" onclick="toggleMenu()">Vision & Impact</a></li>
                 <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
                 <li><a href="#demos" onclick="toggleMenu()">Hardware</a></li>
+                <li><a href="#simulations" onclick="toggleMenu()">Simulations</a></li>
                 <li><a href="#themes" onclick="toggleMenu()">Themes</a></li>
                 <li><a href="#funding" onclick="toggleMenu()">Grants & Service</a></li>
             </ul>
+
+            <div class="lang-switch">
+                <a href="index.html" class="active">EN</a> | <a href="index-de.html">DE</a>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 

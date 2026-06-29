@@ -227,6 +227,16 @@
         .availability-list li { margin-bottom: 4px; }
         .availability-list li::before { content: '•'; color: var(--linkblue); margin-right: 6px; }
 
+        /* --- Language Switcher --- */
+        .lang-switch { display: flex; gap: 8px; align-items: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; font-weight: 700; margin-left: auto; margin-right: 20px; }
+        .lang-switch a { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+        .lang-switch a:hover { color: #FFFFFF; }
+        .lang-switch a.active { color: #3498DB; pointer-events: none; }
+        
+        @media (max-width: 768px) {
+            .lang-switch { margin-right: 15px; } /* Adjusts spacing for mobile */
+        }
+        
         /* --- Responsive Viewport Logic --- */
         @media (max-width: 768px) {
             .hero-layout { flex-direction: column; text-align: center; gap: 25px; }

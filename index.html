@@ -303,7 +303,44 @@
             <h2>Hardware Projects & Deployments</h2>
             <p style="margin-bottom: 40px; font-size: 1.05rem; color: #4A5568;">Direct empirical validation tracing the engineering stack from low-level embedded microcontrollers up to high-level system behaviors.</p>
             
-            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+            <!-- PROJECT 1: Franka Panda Optical Tracking -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 40px; margin-bottom: 40px;">
+                <div class="project-info">
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">1. Real-Time Optical Tracking & 6-DOF Control</h3>
+                    <p class="project-objective">
+                        Developed and deployed low-latency optical motion tracking pipelines and 6-DOF Cartesian controllers for the Franka Emika Panda manipulator.
+                    </p>
+                    <div class="project-role">
+                        <strong>Contributions:</strong> Integrated OptiTrack motion capture systems with ROS, implementing Quaternion SLERP (Spherical Linear Interpolation) for smooth, singularity-free orientation tracking and real-time positional control.
+                    </div>
+                    <div class="project-outcome">
+                        <strong>Outcome:</strong> Demonstrated highly responsive, real-time teleoperation and target following using external optical data streams.
+                    </div>
+                    
+                    <ul class="spec-list">
+                        <li><i class="fas fa-microchip"></i> <strong>Hardware:</strong> Franka Emika Panda, OptiTrack Motion Capture System.</li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Software:</strong> ROS, C++, Python, Cartesian Impedance Control.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span>Franka Panda</span><span>OptiTrack</span><span>6-DOF Control</span><span>Quaternion SLERP</span>
+                    </div>
+                </div>
+
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'Fbi0rVN-31E')">
+                        <img src="https://img.youtube.com/vi/Fbi0rVN-31E/maxresdefault.jpg" alt="Real-Time Optical Position Tracking with Franka Emika Panda">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                    <div class="video-container" onclick="injectActiveStream(this, 'Oq5vycvKSBs')">
+                        <img src="https://img.youtube.com/vi/Oq5vycvKSBs/maxresdefault.jpg" alt="6-DOF Optical Motion Tracking & Quaternion SLERP Control on Franka Panda">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: Stäubli RX160 -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 40px; margin-bottom: 40px;">
                 <div class="project-media">
                     <div class="video-container" onclick="injectActiveStream(this, 'B89a4sofGeU')">
                         <img src="https://img.youtube.com/vi/B89a4sofGeU/maxresdefault.jpg" alt="Stäubli RX160 demonstrating physical human-robot compliance tracking">
@@ -316,7 +353,7 @@
                 </div>
 
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">1. Compliant Physical HRI & Force Control</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Compliant Physical HRI & Force Control</h3>
                     <p class="project-objective">
                         Implemented hybrid position/force control loops for physical human-robot interaction. Ensured stable industrial trajectories while allowing safe kinetic adaptation during direct human contact.
                     </p>
@@ -342,9 +379,10 @@
                 </div>
             </div>
 
-            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+            <!-- PROJECT 3: UR3 Teleoperation -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 40px; margin-bottom: 40px;">
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">2. Teleoperation & Predictive Human Tracking</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Teleoperation & Predictive Human Tracking</h3>
                     <p class="project-objective">
                         Developed real-time teleoperation and predictive manipulator tracking loops. Tracked human spatial vectors actively using marker-based optical tracking to control manipulator behavior.
                     </p>
@@ -381,7 +419,8 @@
                 </div>
             </div>
 
-            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 30px;">
+            <!-- PROJECT 4: Embedded Actuation -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 40px; margin-bottom: 40px;">
                 <div class="project-media">
                     <div class="video-container" onclick="injectActiveStream(this, 'VcGA7Ie5stE')">
                         <img src="https://img.youtube.com/vi/VcGA7Ie5stE/maxresdefault.jpg" alt="Timorous mobile robot executing custom crawler locomotion">
@@ -394,7 +433,7 @@
                 </div>
 
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">3. Embedded Actuation & Firmware</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">4. Embedded Actuation & Firmware</h3>
                     <p class="project-objective">
                         Implemented embedded control architectures linking microcontrollers, NVIDIA Jetson, and ROS-based robotic systems.
                     </p>
@@ -416,9 +455,10 @@
                 </div>
             </div>
 
-            <div class="project-block" style="margin-bottom: 0;">
+            <!-- PROJECT 5: Autonomous Navigation -->
+            <div class="project-block" style="border-bottom: 1px solid var(--bordergray); padding-bottom: 40px; margin-bottom: 40px;">
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">4. Autonomous Mobile Navigation & SLAM</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">5. Autonomous Mobile Navigation & SLAM</h3>
                     <p class="project-objective">
                         Configured and validated autonomous navigation systems using Nav2, Cartographer SLAM, and LiDAR-based perception on TurtleBot 4 and AgileX Scout Mini platforms.
                     </p>
@@ -451,9 +491,17 @@
                 </div>
             </div>
 
-            <div class="project-block" style="margin-bottom: 0; padding-top: 30px; border-top: 1px solid var(--bordergray);">
+            <!-- PROJECT 6: Stair-Climbing Robot -->
+            <div class="project-block" style="margin-bottom: 0;">
+                <div class="project-media">
+                    <div class="video-container" onclick="injectActiveStream(this, 'NlYYPoEO4zo')">
+                        <img src="https://img.youtube.com/vi/NlYYPoEO4zo/hqdefault.jpg" alt="Stair-Climbing Mobile Robot Platform in action">
+                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
+                    </div>
+                </div>
+                
                 <div class="project-info">
-                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">5. Stair-Climbing Mobile Robot Platform</h3>
+                    <h3 style="font-size: 1.4rem; border:none; margin-bottom: 5px;">6. Stair-Climbing Mobile Robot Platform</h3>
                     <p class="project-objective">
                         Designed and fabricated a physical stair-climbing mobile robot platform from scratch, focusing on terrain adaptation and complex mechanical locomotion.
                     </p>
@@ -473,15 +521,8 @@
                         <span>Mechanical Kinematics</span><span>Terrain Adaptation</span><span>Hardware Build</span>
                     </div>
                 </div>
-                
-                <div class="project-media">
-                    <!-- YouTube Video Container -->
-                    <div class="video-container" onclick="injectActiveStream(this, 'NlYYPoEO4zo')">
-                        <img src="https://img.youtube.com/vi/NlYYPoEO4zo/hqdefault.jpg" alt="Stair-Climbing Mobile Robot Platform in action">
-                        <div class="play-overlay-btn"><i class="fab fa-youtube"></i></div>
-                    </div>
-                </div>
             </div>
+
         </div>
     </section>
 
